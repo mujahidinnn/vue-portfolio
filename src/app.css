@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #7a6355; /* Darker brown */
+  --color-secondary: #5f5f5f; /* Darker muted grey */
+  --color-accent: #9e6245; /* Darker clay */
+
+  --tw-shadow-color: rgba(165, 141, 127, 0.3);
+
+  --color-dark-bg: #1a1a1a;
+  --color-dark-text: #eaeaea;
+}
+
+@custom-variant dark (&:where(.dark *));
+
+body {
+  @apply w-full dark:bg-dark-bg dark:text-dark-text;
+
+  @media (min-width: 1024px) {
+    @apply w-[60%] mx-auto;
+  }
+}
+
+@layer utilities {
+  .shadow-bottom {
+    box-shadow: 0 1.5px 0.5px rgba(165, 141, 127, 0.3);
+  }
+}
