@@ -2,9 +2,7 @@
   <footer
     class="mt-16 border-t border-gray-200 dark:border-gray-700 bg-background dark:bg-background-dark text-secondary dark:text-secondary-dark"
   >
-    <div
-      class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
-    >
+    <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 gap-8">
       <!-- Brand / About -->
       <div class="hidden sm:block">
         <h2 class="text-lg font-semibold text-primary dark:text-primary-dark">

@@ -115,11 +115,9 @@ function handleScroll() {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  // cari posisi slot navbar (kiri atas)
   const slot = document.querySelector(".navbar-avatar-slot");
   if (slot) {
     const rect = slot.getBoundingClientRect();
-    // simpan posisi relatif
     targetX.value = rect.left;
     targetY.value = rect.top;
   }

@@ -20,9 +20,9 @@
       class="flex justify-center gap-6 flex-wrap text-primary dark:text-primary-dark text-lg mb-8"
     >
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/mujahidinnn"
         target="_blank"
-        aria-label="GitHub"
+        rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
         <FontAwesomeIcon
@@ -33,9 +33,9 @@
       </a>
 
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://www.linkedin.com/in/mujahidin18"
         target="_blank"
-        aria-label="LinkedIn"
+        rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
         <FontAwesomeIcon
@@ -46,9 +46,9 @@
       </a>
 
       <a
-        href="https://www.instagram.com/mujahidin1802/"
+        href="https://www.instagram.com/mujahidin1802"
         target="_blank"
-        aria-label="Instagram"
+        rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
         <FontAwesomeIcon
@@ -60,7 +60,6 @@
 
       <a
         href="mailto:mujahidin23894@gmail.com"
-        aria-label="Email"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
         <FontAwesomeIcon
