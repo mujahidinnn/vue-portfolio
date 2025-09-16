@@ -8,7 +8,7 @@
       @click.prevent="scrollToSection(link.to)"
     >
       <li
-        class="w-full px-0 md:px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
+        class="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
       >
         <span class="hover:text-primary">{{ link.label }}</span>
       </li>
@@ -23,10 +23,14 @@
       @click="$emit('link-clicked')"
     >
       <li
-        class="w-full px-0 md:px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
+        class="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
       >
         <span
-          :class="['hover:text-primary', isActive && 'font-bold text-primary']"
+          :class="[
+            'text-secondary dark:text-secondary-dark transition-colors duration-200',
+            'hover:text-primary dark:hover:text-primary-dark',
+            isActive && 'font-bold text-primary dark:text-primary-dark',
+          ]"
         >
           {{ link.label }}
         </span>
@@ -36,7 +40,7 @@
 
   <!-- Toggle Theme -->
   <li
-    class="mt-2 md:mt-0 px-0 md:px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
+    class="mt-2 md:mt-0 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
     @click="$emit('toggle-theme')"
   >
     {{ isDark ? "🌙" : "☀️" }}
@@ -53,7 +57,7 @@ const emit = defineEmits(["toggle-theme", "link-clicked"]);
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/portfolio", label: "Portfolio" },
+  { to: "/portfolios", label: "Portfolio" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];

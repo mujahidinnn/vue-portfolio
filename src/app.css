@@ -3,28 +3,52 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", sans-serif;
 
-  --color-primary: #7a6355; /* Darker brown */
-  --color-secondary: #5f5f5f; /* Darker muted grey */
-  --color-accent: #9e6245; /* Darker clay */
+  /* Light mode */
+  --color-primary: #18181b;
+  --color-secondary: #52525b;
+  --color-accent: #38bdf8;
+  --color-background-body: #fafafa;
+  --color-background: #ffffff;
+  --color-background-2: #f4f4f5;
 
-  --tw-shadow-color: rgba(165, 141, 127, 0.3);
+  /* Shadows */
+  --tw-shadow-color: rgba(0, 0, 0, 0.15);
 
-  --color-dark-bg: #1a1a1a;
-  --color-dark-text: #eaeaea;
+  /* Dark mode */
+  --color-primary-dark: #f4f4f5;
+  --color-secondary-dark: #a1a1aa;
+  --color-accent-dark: #38bdf8;
+  --color-background-body-dark: #000000;
+  --color-background-dark: #18171b;
+  --color-background-2-dark: #27272a;
 }
 
 @custom-variant dark (&:where(.dark *));
 
+/* @media (min-width: 576px) { */
+/* @apply bg-white text-primary */
+/* dark:bg-black dark:text-primary-dark; */
+/* } */
+
 body {
-  @apply w-full dark:bg-dark-bg dark:text-dark-text;
+  @apply w-full bg-background-body text-primary dark:bg-background-body-dark dark:text-primary-dark;
 
   @media (min-width: 1024px) {
+    @apply w-[80%] mx-auto;
+  }
+  @media (min-width: 1280px) {
+    @apply w-[70%] mx-auto;
+  }
+  @media (min-width: 1536px) {
     @apply w-[60%] mx-auto;
   }
 }
 
 @layer utilities {
   .shadow-bottom {
-    box-shadow: 0 1.5px 0.5px rgba(165, 141, 127, 0.3);
+    box-shadow: 0 1.5px 0.5px rgba(0, 0, 0, 0.05);
+  }
+  .dark .shadow-bottom {
+    box-shadow: 0 1.5px 0.5px rgba(255, 255, 255, 0.08);
   }
 }

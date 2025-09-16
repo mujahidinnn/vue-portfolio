@@ -1,0 +1,16 @@
+[
+  {
+    "image": "/education/PIT.png",
+    "alt": "Pondok IT",
+    "name": "Pondok IT Yogyakarta, Indonesia",
+    "subname": " | 2022 — 2024",
+    "description": "Non-formal school similar to a bootcamp, combined with character and personal development education."
+  },
+  {
+    "image": "/education/PIN.png",
+    "alt": "PPTQ Imam An Nawawi",
+    "name": "PPTQ Imam An Nawawi Tegal, Indonesia",
+    "subname": " | 2017 — 2021",
+    "description": "High school equivalent with an Islamic boarding school curriculum."
+  }
+]

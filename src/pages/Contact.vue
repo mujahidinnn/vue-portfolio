@@ -1,58 +1,84 @@
 <template>
-  <section id="contact" class="p-8 max-w-xl mx-auto text-center">
-    <h2 class="text-xl sm:text-3xl font-semibold text-primary mb-4">
-      Let's Connect!
+  <section id="contact" class="py-20 max-w-2xl mx-auto text-center px-4">
+    <!-- Title -->
+    <h2
+      class="text-2xl sm:text-4xl font-bold text-primary dark:text-primary-dark mb-4"
+    >
+      Let’s Connect 🤝
     </h2>
-    <p class="text-secondary mb-6 text-xs sm:text-base">
-      Lagi nyari partner ngoding keren? Atau cuma mau say hi? Slide aja ke salah
-      satu platform di bawah ini ✨
+
+    <!-- Subtitle -->
+    <p
+      class="text-secondary dark:text-secondary-dark mb-8 text-sm sm:text-base"
+    >
+      Looking for a coding partner, a new opportunity, or just want to say
+      hello? Reach out through any of the platforms below ✨
     </p>
 
-    <div class="flex justify-center gap-6 flex-wrap text-primary text-lg mb-4">
+    <!-- Social Links -->
+    <div
+      class="flex justify-center gap-6 flex-wrap text-primary dark:text-primary-dark text-lg mb-8"
+    >
       <a
         href="https://github.com/yourusername"
         target="_blank"
         aria-label="GitHub"
-        class="hover:text-accent transition flex items-center gap-1 text-xs sm:text-base"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
+        <FontAwesomeIcon
+          :icon="['fab', 'github']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">GitHub</span>
       </a>
+
       <a
         href="https://linkedin.com/in/yourusername"
         target="_blank"
         aria-label="LinkedIn"
-        class="hover:text-accent transition flex items-center gap-1 text-xs sm:text-base"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
+        <FontAwesomeIcon
+          :icon="['fab', 'linkedin']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">LinkedIn</span>
       </a>
+
       <a
-        href="https://instagram.com/yourusername"
+        href="https://www.instagram.com/mujahidin1802/"
         target="_blank"
         aria-label="Instagram"
-        class="hover:text-accent transition flex items-center gap-1 text-xs sm:text-base"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
+        <FontAwesomeIcon
+          :icon="['fab', 'instagram']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">Instagram</span>
       </a>
+
       <a
-        href="mailto:paduka@example.com"
+        href="mailto:mujahidin23894@gmail.com"
         aria-label="Email"
-        class="hover:text-accent transition flex items-center gap-1 text-xs sm:text-base"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
-        <i class="fas fa-envelope"></i>
-        <span>Email</span>
+        <FontAwesomeIcon
+          :icon="['fas', 'envelope']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">Email</span>
       </a>
     </div>
 
-    <p class="text-secondary text-xs sm:text-base">
-      Atau langsung drop email ke 👉
+    <!-- Direct Email -->
+    <p class="text-secondary dark:text-secondary-dark text-sm sm:text-base">
+      Or drop me a direct email 👉
       <a
-        href="mailto:paduka@example.com"
-        class="text-primary underline hover:text-accent"
+        href="mailto:mujahidin23894@gmail.com"
+        class="text-primary dark:text-primary-dark underline hover:text-accent transition-colors"
       >
-        paduka@example.com
+        mujahidin23894@gmail.com
       </a>
     </p>
   </section>

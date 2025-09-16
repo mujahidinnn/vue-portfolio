@@ -1,0 +1,23 @@
+[
+  {
+    "image": "/work-experience/Sandbox.png",
+    "alt": "Sandbox Indonesia Juara",
+    "name": "Frontend Web Developer",
+    "subname": " | Sandbox Indonesia Juara (Mar 2023 — Present)",
+    "description": "Building modern and responsive web applications: administration, management, geospatial, and company profile systems."
+  },
+  {
+    "image": "/work-experience/P-Programmer.png",
+    "alt": "Pondok Programmer",
+    "name": "Mentor Frontend",
+    "subname": " | Pondok IT Yogyakarta (Jan 2023 — Jun 2023)",
+    "description": "Taught HTML, CSS, JavaScript, and React.js to new learners."
+  },
+  {
+    "image": "/work-experience/1000-Startup.png",
+    "alt": "1000 StartUp Digital",
+    "name": "Frontend Web Developer",
+    "subname": " | 1000 StartUp Digital, Gadjah Mada University (Nov 2022 — Mar 2023)",
+    "description": "Developed an incubator website for university start-ups (Team Up)."
+  }
+]

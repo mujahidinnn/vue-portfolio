@@ -1,135 +1,138 @@
 [
   {
+    "id": "muhammdiyah-expo",
     "title": "Muhammadiyah Expo 2023",
-    "description": "Situs pendaftaran resmi untuk acara Muhammadiyah Expo Jogja 2023.",
+    "description": "The official registration website for Muhammadiyah Expo Yogyakarta 2023.",
     "image": "/projects/Muhammadiyah-Expo.svg",
-    "tech": "CSS, Javascript, React Js, Laravel",
+    "tech": "CSS, JavaScript, React.js, Laravel",
     "visit_link": ""
   },
   {
+    "id": "darussalam-turgo",
     "title": "Darussalam Turgo",
-    "description": "Situs profil Pondok Pesantren Yatim & Dhuafa Darussalam Turgo, Boyolali.",
+    "description": "Profile website for Darussalam Turgo Islamic Boarding School for Orphans & the Underprivileged, Boyolali.",
     "image": "/projects/Darussalam-Turgo.svg",
-    "tech": "HTML, CSS, Javascript",
+    "tech": "HTML, CSS, JavaScript",
     "visit_link": ""
   },
   {
+    "id": "team-up",
     "title": "Team Up",
-    "description": "Platform matchmaking untuk menemukan anggota tim startup yang tepat.",
+    "description": "A matchmaking platform to connect startup founders with the right team members, created in support of the 1000 Digital Startups Yogyakarta 2023 program.",
     "image": "/projects/Team-Up.svg",
-    "tech": "Tailwind CSS, Javascript, React Js, Laravel",
+    "tech": "Tailwind CSS, JavaScript, React.js, Laravel",
     "visit_link": ""
   },
   {
+    "id": "simpus",
     "title": "Simpus",
-    "description": "Sistem informasi administrasi untuk manajemen layanan di Puskesmas.",
+    "description": "An administrative information system for healthcare service management in community health centers (Puskesmas).",
     "image": "/projects/Simpus.svg",
-    "tech": "Tailwind CSS, Bootstrap CSS, Javascript, React Js, Laravel, Golang",
+    "tech": "Tailwind CSS, Bootstrap, JavaScript, React.js, Laravel, Golang",
     "visit_link": ""
   },
   {
-    "title": "Simpatiku",
-    "description": "Sistem pelayanan terintegrasi untuk wilayah Kutai Timur.",
+    "id": "simpatiku",
+    "title": "Simpatiku — Admin & Landing Page",
+    "description": "An integrated public service system for Kutai Timur Regency.",
     "image": "/projects/Simpatiku.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Django",
     "visit_link": ""
   },
   {
+    "id": "siap",
     "title": "Siap",
-    "description": "Sistem informasi administrasi pertanahan berbasis web, dilengkapi dengan fitur geospasial untuk visualisasi data bidang tanah.",
+    "description": "A web-based land administration information system with geospatial features for visualizing land parcel data.",
     "image": "/projects/Siap.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Leaflet, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django",
     "visit_link": ""
   },
   {
+    "id": "siperjadin",
     "title": "Siperjadin",
-    "description": "Sistem manajemen perjalanan dinas untuk lembaga pemerintahan.",
+    "description": "A business trip management system for government institutions.",
     "image": "/projects/Siperjadin.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Golang",
+    "tech": "Bootstrap, JavaScript, React.js, Golang",
     "visit_link": ""
   },
   {
-    "title": "Profitku",
-    "description": "Platform manajemen terpadu untuk perusahaan, lembaga, dan organisasi, dilengkapi dengan fitur analisis SWOT, KPI, dan modul kinerja lainnya.",
+    "id": "profitku",
+    "title": "Profitku — Admin & Landing Page",
+    "description": "An integrated management platform for companies, institutions, and organizations, featuring SWOT analysis, KPI tracking, and other performance modules.",
     "image": "/projects/Profitku.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Golang",
+    "tech": "Bootstrap, JavaScript, React.js, Golang",
     "visit_link": ""
   },
   {
-    "title": "Sifortuna",
-    "description": "Sistem informasi peramalan (forecasting) nasional berbasis data, dilengkapi dengan fitur monitoring OPT (Organisme Pengganggu Tumbuhan).",
+    "id": "sifortuna",
+    "title": "Sifortuna — Admin & Landing Page",
+    "description": "A national data-driven forecasting information system, equipped with geospatial monitoring of plant pests and diseases (OPT) using interactive maps.",
     "image": "/projects/Sifortuna.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Leaflet, Django, GEE, Google Collab",
+    "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django, GEE, Google Colab",
     "visit_link": ""
   },
   {
+    "id": "kanal-tapem",
     "title": "Kanal Tapem",
-    "description": "Portal informasi untuk kanal tata kelola pemerintahan daerah.",
+    "description": "An information portal for regional governance and administrative management.",
     "image": "/projects/Kanal-Tapem.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Golang",
+    "tech": "Bootstrap, JavaScript, React.js, Golang",
     "visit_link": ""
   },
   {
-    "title": "Disambi",
-    "description": "Digitalisasi layanan publik Kalurahan Sambirejo, Prambanan, Sleman.",
+    "id": "disambi",
+    "title": "Disambi — Admin & Self-Service Kiosk",
+    "description": "Digital public service platform for Sambirejo Village, Prambanan, Sleman, Yogyakarta.",
     "image": "/projects/Disambi.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Golang",
+    "tech": "Bootstrap, JavaScript, React.js, Golang",
     "visit_link": ""
   },
   {
+    "id": "simpan-ternate",
     "title": "Simpan Ternate",
-    "description": "Sistem administrasi dan pengarsipan digital Kota Ternate.",
+    "description": "A digital administration and archiving system for Ternate City.",
     "image": "/projects/Simpan.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Golang",
+    "tech": "Bootstrap, JavaScript, React.js, Golang",
     "visit_link": ""
   },
   {
-    "title": "Desa Pintar - Admin Portal",
-    "description": "Platform desa pintar untuk tata kelola dan pelayanan berbasis digital, dilengkapi fitur pengadministrasian wilayah berbasis geospasial.",
+    "id": "desa-pintar",
+    "title": "Desa Pintar — Admin & Landing Page",
+    "description": "A smart village platform for digital governance and services, featuring geospatial-based regional administration tools.",
     "image": "/projects/Despin.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Leaflet, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Tailwind CSS, Next.js, Leaflet, Django",
     "visit_link": ""
   },
   {
-    "title": "Desa Pintar -  Landing Page",
-    "description": "Platform desa pintar untuk tata kelola dan pelayanan berbasis digital, dilengkapi fitur pengadministrasian wilayah berbasis geospasial.",
-    "image": "/projects/Despin.svg",
-    "tech": "tailwind CSS, Javascript, Next Js, Leaflet, Django",
-    "visit_link": ""
-  },
-  {
-    "title": "Dilan - Admin Portal",
-    "description": "Platform desa di Kabupaten Klaten untuk tata kelola dan pelayanan berbasis digital, dilengkapi fitur pengadministrasian wilayah berbasis geospasial.",
+    "id": "dilan",
+    "title": "Dilan — Admin & Landing Page",
+    "description": "A digital governance and service platform for villages in Klaten Regency, equipped with geospatial-based regional administration features.",
     "image": "/projects/Dilan.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Leaflet, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Tailwind CSS, Next.js, Leaflet, Django",
     "visit_link": ""
   },
   {
-    "title": "Dilan -  Landing Page",
-    "description": "Platform desa di Kabupaten Klaten untuk tata kelola dan pelayanan berbasis digital, dilengkapi fitur pengadministrasian wilayah berbasis geospasial.",
-    "image": "/projects/Dilan.svg",
-    "tech": "tailwind CSS, Javascript, Next Js, Leaflet, Django",
-    "visit_link": ""
-  },
-  {
+    "id": "adis",
     "title": "Adis",
-    "description": "Sistem pengembangan infrastruktur digital Adis.",
+    "description": "A digital infrastructure development system for Adis.",
     "image": "/projects/Adis.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Django",
     "visit_link": ""
   },
   {
-    "title": "Template React Admin",
-    "description": "Template dashboard admin berbasis React yang dirancang dengan struktur modular dan dilengkapi berbagai komponen reusable, dikembangkan dari pengalaman berbagai proyek real-world.",
+    "id": "template",
+    "title": "React Admin Template Sandbox",
+    "description": "A modular React-based admin dashboard template with reusable components, designed and refined through real-world project experience.",
     "image": "/projects/Template-Sandbox.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Leaflet, Django",
+    "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django",
     "visit_link": ""
   },
   {
+    "id": "broom",
     "title": "Broom",
-    "description": "Platform manajemen untuk pemesanan dan pengelolaan lapangan padel.",
+    "description": "A management platform for booking and organizing padel courts.",
     "image": "/projects/Broom.svg",
-    "tech": "Bootstrap CSS, Javascript, React Js, Phyton",
+    "tech": "Bootstrap, JavaScript, React.js, Python",
     "visit_link": ""
   }
 ]

@@ -1,16 +1,18 @@
 [
   {
+    "id": "sakifi",
     "title": "SakiFi",
-    "description": "Platform rujukan praktis untuk transaksi muamalah berbasis syariah, dilengkapi tulisan, dokumen, dan referensi dalil.",
-    "image": "/portfolios/Sakifi.svg",
-    "tech": "CSS, Javascript, Next Js",
+    "description": "A practical reference platform for Sharia-compliant financial transactions, featuring articles, documents, and reliable source references.",
+    "image": "/portfolios/sakifi.svg",
+    "tech": "CSS, JavaScript, Next.js",
     "visit_link": ""
   },
   {
+    "id": "mojepict",
     "title": "Mojepict",
-    "description": "Kumpulan alat online serbaguna untuk membantu aktivitas harianmu, dari editing cepat hingga utilitas praktis lainnya.",
+    "description": "A versatile set of online tools to make your daily tasks easier, from quick editing to other handy utilities.",
     "image": "/portfolios/mojepict.svg",
-    "tech": "CSS, Javascript, Next Js",
+    "tech": "CSS, JavaScript, Next.js",
     "visit_link": "https://mojepict.vercel.app"
   }
 ]

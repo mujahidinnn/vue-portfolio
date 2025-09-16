@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Landing from "../pages/Landing.vue";
 import About from "../pages/About.vue";
 import Contact from "../pages/Contact.vue";
-import Home from "../pages/Home.vue";
-import Portfolio from "../pages/Portfolio.vue";
+import Portfolios from "../pages/Portfolios.vue";
 import Projects from "../pages/Projects.vue";
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
+  { path: "/", name: "Landing", component: Landing },
   { path: "/about", name: "About", component: About },
-  { path: "/portfolio", name: "Portfolio", component: Portfolio },
+  { path: "/portfolios", name: "Portfolios", component: Portfolios },
   { path: "/projects", name: "Projects", component: Projects },
   { path: "/contact", name: "Contact", component: Contact },
 ];
@@ -16,6 +16,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;

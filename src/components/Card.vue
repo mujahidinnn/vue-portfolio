@@ -1,79 +1,75 @@
 <template>
-  <!-- Desktop -->
+  <!-- Card -->
   <div
-    class="relative group p-6 rounded-xl shadow bg-white hover:shadow-md hover:shadow-primary/30 transition hidden md:flex flex-col"
+    class="group p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col gap-4 @container"
   >
-    <!-- Corner Visit Ribbon -->
-    <a
-      v-if="visitLink"
-      :href="visitLink"
-      target="_blank"
-      rel="noopener"
-      class="absolute top-0 right-0 z-10 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-tr-xl rounded-bl-xl shadow-md hover:bg-accent transition-all flex items-center gap-1"
-    >
-      Visit
-      <i class="fas fa-external-link-alt text-[0.7rem]"></i>
-    </a>
+    <!-- Content -->
+    <div class="flex flex-col @[325px]:flex-row items-start gap-4">
+      <!-- Image wrapper -->
+      <div
+        class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-white rounded-lg"
+      >
+        <!-- Skeleton -->
+        <div
+          v-if="!loaded"
+          class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-md"
+        ></div>
 
-    <!-- Main content area -->
-    <div class="flex flex-col justify-between flex-1 gap-4">
-      <div class="flex">
+        <!-- Real Image -->
         <img
           :src="image"
           :alt="title"
-          class="w-30 h-30 rounded-md border border-gray-100 p-2"
+          loading="lazy"
+          @load="loaded = true"
+          @error="loaded = true"
+          class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-md transition-opacity duration-300"
+          :class="loaded ? 'opacity-100' : 'opacity-0'"
         />
-        <div class="flex-1 ml-4">
-          <h3 class="text-xl font-semibold text-primary mb-2">{{ title }}</h3>
-          <p class="text-sm text-secondary mb-2">{{ description }}</p>
-          <slot />
-        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="flex-1 flex flex-col">
+        <h3
+          class="text-base md:text-xl font-semibold text-gray-900 dark:text-gray-100 leading-snug"
+        >
+          {{ title }}
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-3">
+          {{ description }}
+        </p>
+
+        <a
+          v-if="visitLink"
+          :href="visitLink"
+          target="_blank"
+          rel="noopener"
+          class="text-xs font-medium flex items-center gap-1 text-primary dark:text-primary-dark my-2 hover:text-accent hover:underline transition-all w-max"
+        >
+          <FontAwesomeIcon :icon="['fas', 'link']" />
+          <p>{{ visitLink.replace("https://", "") }}</p>
+        </a>
+        <slot />
       </div>
     </div>
 
-    <!-- Always at the bottom -->
-    <div v-if="tech" class="mt-auto pt-3">
-      <p class="text-sm text-primary">Tech: {{ tech }}</p>
+    <!-- Footer -->
+    <div
+      v-if="tech"
+      class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800"
+    >
+      <p
+        class="text-[10px] sm:text-xs font-medium text-primary dark:text-primary-dark"
+      >
+        Tech: {{ tech }}
+      </p>
       <slot name="footer" />
     </div>
-  </div>
-
-  <!-- Mobile -->
-  <div
-    class="relative group p-4 rounded-xl shadow bg-white hover:shadow-md hover:shadow-primary/30 transition flex flex-col md:hidden gap-1"
-  >
-    <!-- Corner Visit Ribbon -->
-    <a
-      v-if="visitLink"
-      :href="visitLink"
-      target="_blank"
-      rel="noopener"
-      class="absolute top-0 right-0 z-10 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-tr-xl rounded-bl-xl shadow-md hover:bg-accent transition-all flex items-center gap-1"
-    >
-      Visit
-      <i class="fas fa-external-link-alt text-[0.7rem]"></i>
-    </a>
-
-    <div class="flex gap-4 items-center">
-      <img
-        :src="image"
-        :alt="title"
-        class="w-20 h-20 rounded-md border border-gray-100"
-      />
-      <h3 class="text-base font-semibold text-primary">{{ title }}</h3>
-    </div>
-
-    <p class="text-xs text-secondary mt-1">{{ description }}</p>
-    <slot />
-
-    <p v-if="tech" class="text-xs text-primary mt-auto pt-4">
-      Tech: {{ tech }}
-    </p>
-    <slot name="footer" />
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 defineProps({
   image: String,
   title: String,
@@ -81,4 +77,6 @@ defineProps({
   tech: String,
   visitLink: String,
 });
+
+const loaded = ref(false);
 </script>

@@ -1,59 +1,86 @@
 <template>
-  <section id="projects" class="p-8 max-w-7xl mx-auto">
-    <h2 class="text-xl sm:text-3xl font-semibold text-primary text-center mb-6">
-      Proyek Pilihan
-    </h2>
+  <section id="projects" class="py-8 container mx-auto max-w-7xl">
+    <div class="relative flex items-center justify-center mb-6">
+      <RouterLink
+        v-if="
+          !isFeatured && isMobile && projects.length > featuredProjects.length
+        "
+        to="/"
+        class="absolute left-0 flex items-center justify-center w-10 h-10 rounded-full hover:bg-background-2 dark:bg-background-2-dark text-primary dark:text-primary-dark shadow-sm transition-colors duration-200"
+      >
+        <FontAwesomeIcon :icon="['fas', 'chevron-left']" class="text-sm" />
+      </RouterLink>
 
-    <!-- Desktop -->
-    <div class="grid xl:grid-cols-2 gap-6 hidden md:grid">
-      <Card
-        v-for="(project, index) in projects"
-        :key="index"
-        :image="project.image"
-        :title="project.title"
-        :description="project.description"
-        :tech="project.tech"
-        :visitLink="project.visit_link"
-      />
+      <h2
+        class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark text-center"
+      >
+        Projects
+      </h2>
     </div>
 
-    <!-- Mobile -->
-    <div class="flex flex-col gap-4 md:hidden">
+    <!-- Featured projects -->
+    <div v-if="isFeatured && projects.length > featuredProjects.length">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <Card
+          v-for="project in featuredProjects"
+          :key="project.id"
+          :image="project.image"
+          :title="project.title"
+          :description="project.description"
+          :tech="project.tech"
+          :visitLink="project.visitLink"
+        />
+      </div>
+
+      <div class="flex justify-center mt-6">
+        <RouterLink
+          to="/projects"
+          class="inline-flex items-center text-sm px-6 py-2 bg-accent hover:bg-accent/80 text-white rounded-2xl transition-colors duration-200"
+        >
+          View More
+          <FontAwesomeIcon :icon="['fas', 'angles-right']" class="text-sm" />
+        </RouterLink>
+      </div>
+    </div>
+
+    <!-- All projects -->
+    <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <Card
-        v-for="(project, index) in visibleProjects"
-        :key="index"
+        v-for="project in projects"
+        :key="project.id"
         :image="project.image"
         :title="project.title"
         :description="project.description"
         :tech="project.tech"
-        :visitLink="project.visit_link"
+        :visitLink="project.visitLink"
       />
-
-      <!-- Show More / Less Button -->
-      <div v-if="projects.length > 4" class="text-center mt-4">
-        <button
-          @click="toggleShowAll"
-          class="px-4 py-2 text-sm font-semibold text-white bg-primary rounded-lg shadow hover:bg-accent transition"
-        >
-          {{ showAll ? "Tampil lebih sedikit" : "Tampil lebih banyak" }}
-        </button>
-      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { RouterLink } from "vue-router";
 import Card from "../components/Card.vue";
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
+import { inject } from "vue";
 
-const showAll = ref(false);
-
-const visibleProjects = computed(() => {
-  return showAll.value ? projects : projects.slice(0, 4);
+defineProps({
+  isFeatured: Boolean,
 });
 
-function toggleShowAll() {
-  showAll.value = !showAll.value;
-}
+const isMobile = inject("isMobile");
+
+const projects = projectsData.map((p) => ({
+  ...p,
+  visitLink: p.visit_link,
+}));
+
+const featuredIds = [
+  "team-up",
+  "profitku",
+  "sifortuna",
+  "desa-pintar",
+  "broom",
+];
+const featuredProjects = projects.filter((p) => featuredIds.includes(p.id));
 </script>

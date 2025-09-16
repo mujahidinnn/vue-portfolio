@@ -1,0 +1,31 @@
+[
+  { "icon": "/uses/html.png", "name": "HTML" },
+  { "icon": "/uses/css.png", "name": "CSS" },
+  { "icon": "/uses/javascript.png", "name": "Javascript" },
+  { "icon": "/uses/typescript.png", "name": "Typescript" },
+  { "icon": "/uses/sass.png", "name": "Sass" },
+
+  { "icon": "/uses/reactjs.png", "name": "React Js" },
+  { "icon": "/uses/nextjs.png", "name": "Next Js" },
+  { "icon": "/uses/vuejs.png", "name": "Vue Js" },
+  { "icon": "/uses/nuxtjs.png", "name": "Nuxt Js" },
+  { "icon": "/uses/redux.png", "name": "Redux" },
+
+  { "icon": "/uses/bootstrap.png", "name": "Bootstrap" },
+  { "icon": "/uses/tailwind.png", "name": "Tailwind" },
+
+  { "icon": "/uses/nodejs.png", "name": "Node Js" },
+  { "icon": "/uses/python.png", "name": "Python" },
+
+  { "icon": "/uses/npm.png", "name": "NPM" },
+  { "icon": "/uses/yarn.png", "name": "Yarn" },
+
+  { "icon": "/uses/git.png", "name": "Git" },
+  { "icon": "/uses/postman.png", "name": "Postman" },
+  { "icon": "/uses/figma.png", "name": "Figma" },
+  { "icon": "/uses/leaflet.png", "name": "Leaflet" },
+  { "icon": "/uses/nginx.png", "name": "Nginx" },
+
+  { "icon": "/uses/vercel.png", "name": "Vercel" },
+  { "icon": "/uses/netlify.png", "name": "Netlify" }
+]
