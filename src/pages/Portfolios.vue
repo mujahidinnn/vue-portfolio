@@ -76,6 +76,6 @@ const portfolios = portfoliosData.map((p) => ({
   visitLink: p.visit_link,
 }));
 
-const featuredIds = ["sakifi", "mojepict"];
+const featuredIds = ["sakifi", "mojepict", "randomix"];
 const featuredPortfolios = portfolios.filter((p) => featuredIds.includes(p.id));
 </script>

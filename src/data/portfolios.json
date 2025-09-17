@@ -12,7 +12,14 @@
     "title": "Mojepict",
     "description": "A versatile set of online tools to make your daily tasks easier, from quick editing to other handy utilities.",
     "image": "/portfolios/mojepict.svg",
-    "tech": "CSS, JavaScript, Next.js",
+    "tech": "CSS, JavaScript, Tailwind, Next.js",
     "visit_link": "https://mojepict.vercel.app"
+  },
+  {
+    "id": "randomix",
+    "title": "Randomix",
+    "description": "A smart and fun platform to create random yet balanced teams. Users can input player names along with their skill levels (newbie, middle, pro), and Randomix will generate fair and competitive matchups with evenly distributed opponents.",
+    "image": "/portfolios/randomix.png",
+    "tech": "CSS, JavaScript, Tailwind, Nuxt.js"
   }
 ]
