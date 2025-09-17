@@ -19,7 +19,7 @@
     "id": "randomix",
     "title": "Randomix",
     "description": "A smart and fun platform to create random yet balanced teams. Users can input player names along with their skill levels (newbie, middle, pro), and Randomix will generate fair and competitive matchups with evenly distributed opponents.",
-    "image": "/portfolios/randomix.png",
+    "image": "/portfolios/randomix.svg",
     "tech": "CSS, JavaScript, Tailwind, Nuxt.js"
   }
 ]
