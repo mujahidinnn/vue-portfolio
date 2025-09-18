@@ -1,25 +1,41 @@
 [
   {
-    "id": "sakifi",
+    "is_featured": true,
     "title": "SakiFi",
     "description": "A practical reference platform for Sharia-compliant financial transactions, featuring articles, documents, and reliable source references.",
     "image": "/portfolios/sakifi.svg",
     "tech": "CSS, JavaScript, Next.js",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://sakifi.vercel.app",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "mojepict",
+    "is_featured": true,
     "title": "Mojepict",
     "description": "A versatile set of online tools to make your daily tasks easier, from quick editing to other handy utilities.",
     "image": "/portfolios/mojepict.svg",
     "tech": "CSS, JavaScript, Tailwind, Next.js",
-    "visit_link": "https://mojepict.vercel.app"
+    "links": [
+      {
+        "link": "https://mojepict.vercel.app",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "randomix",
+    "is_featured": true,
     "title": "Randomix",
     "description": "A smart and fun platform to create random yet balanced teams. Users can input player names along with their skill levels (newbie, middle, pro), and Randomix will generate fair and competitive matchups with evenly distributed opponents.",
     "image": "/portfolios/randomix.svg",
-    "tech": "CSS, JavaScript, Tailwind, Nuxt.js"
+    "tech": "CSS, JavaScript, Tailwind, Nuxt.js",
+    "links": [
+      {
+        "link": "https://randomix.vercel.app",
+        "desc": ""
+      }
+    ]
   }
 ]

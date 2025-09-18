@@ -1,8 +1,31 @@
 <template>
   <!-- Card -->
   <div
-    class="group p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col gap-4 @container"
+    class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.02] transition-all duration-300 ease-out flex flex-col justify-between gap-2 @container"
   >
+    <!-- Tech Info Icon (pojok kanan atas) -->
+    <div v-if="tech" class="absolute top-3 right-3" ref="popoverWrapper">
+      <button
+        @click.stop="toggleTech"
+        class="text-gray-400 hover:text-gray-600 cursor-pointer text-sm transition-all"
+        ref="popoverButton"
+      >
+        <FontAwesomeIcon :icon="['fas', 'circle-info']" />
+      </button>
+
+      <!-- Popover -->
+      <div
+        v-if="showTech"
+        ref="popover"
+        class="absolute top-8 right-0 bg-white dark:bg-gray-800 text-[11px] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg px-3 py-2 w-max max-w-[220px] z-10"
+      >
+        <p class="font-semibold text-primary dark:text-primary-dark mb-1">
+          Tech Stack
+        </p>
+        <span>{{ tech }}</span>
+      </div>
+    </div>
+
     <!-- Content -->
     <div class="flex flex-col @[325px]:flex-row items-start gap-4">
       <!-- Image wrapper -->
@@ -38,45 +61,78 @@
           {{ description }}
         </p>
 
-        <a
-          v-if="visitLink"
-          :href="visitLink"
-          target="_blank"
-          rel="noopener"
-          class="text-xs font-medium flex items-center gap-1 text-primary dark:text-primary-dark my-2 hover:text-accent hover:underline transition-all w-max"
-        >
-          <FontAwesomeIcon :icon="['fas', 'link']" />
-          <p>{{ visitLink.replace("https://", "") }}</p>
-        </a>
         <slot />
       </div>
     </div>
 
     <!-- Footer -->
     <div
-      v-if="tech"
-      class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800"
+      class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-800 mt-auto relative"
     >
-      <p
-        class="text-[10px] sm:text-xs font-medium text-primary dark:text-primary-dark"
-      >
-        Tech: {{ tech }}
-      </p>
-      <slot name="footer" />
+      <!-- Multiple Links -->
+      <div v-if="links?.length" class="flex flex-col">
+        <a
+          v-for="(item, index) in links"
+          :key="index"
+          :href="item.link"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center gap-1 text-xs font-medium text-primary dark:text-primary-dark hover:text-accent hover:underline transition-all"
+        >
+          <FontAwesomeIcon v-if="item.link" :icon="['fas', 'link']" />
+          <span>{{ item.link.replace("https://", "") }}</span>
+          <p
+            v-if="item.link && item.desc"
+            class="text-secondary dark:text-secondary-dark text-[10px]"
+          >
+            ({{ item.desc }})
+          </p>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount, inject } from "vue";
 
-defineProps({
+const activePopoverId = inject("activePopoverId");
+
+const props = defineProps({
   image: String,
   title: String,
   description: String,
   tech: String,
-  visitLink: String,
+  links: {
+    type: Array,
+    default: () => [],
+  },
 });
 
 const loaded = ref(false);
+const popoverWrapper = ref(null);
+const uid = `${props.title}-${props.image}`;
+
+function toggleTech() {
+  activePopoverId.value = activePopoverId.value === uid ? null : uid;
+}
+
+function handleClickOutside(e) {
+  if (
+    activePopoverId.value === uid &&
+    popoverWrapper.value &&
+    !popoverWrapper.value.contains(e.target)
+  ) {
+    activePopoverId.value = null;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
+
+const showTech = computed(() => activePopoverId.value === uid);
 </script>

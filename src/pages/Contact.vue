@@ -68,6 +68,19 @@
         />
         <span class="group-hover:text-accent transition-colors">Email</span>
       </a>
+
+      <a
+        href="https://wa.me/6287730450690"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
+      >
+        <FontAwesomeIcon
+          :icon="['fab', 'whatsapp']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">WhatsApp</span>
+      </a>
     </div>
 
     <!-- Direct Email -->

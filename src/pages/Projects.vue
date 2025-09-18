@@ -28,7 +28,7 @@
           :title="project.title"
           :description="project.description"
           :tech="project.tech"
-          :visitLink="project.visitLink"
+          :links="project.links"
         />
       </div>
 
@@ -52,7 +52,7 @@
         :title="project.title"
         :description="project.description"
         :tech="project.tech"
-        :visitLink="project.visitLink"
+        :links="project.links"
       />
     </div>
   </section>
@@ -61,7 +61,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Card from "../components/Card.vue";
-import projectsData from "../data/projects.json";
+import projects from "../data/projects.json";
 import { inject } from "vue";
 
 defineProps({
@@ -70,17 +70,5 @@ defineProps({
 
 const isMobile = inject("isMobile");
 
-const projects = projectsData.map((p) => ({
-  ...p,
-  visitLink: p.visit_link,
-}));
-
-const featuredIds = [
-  "team-up",
-  "profitku",
-  "sifortuna",
-  "desa-pintar",
-  "broom",
-];
-const featuredProjects = projects.filter((p) => featuredIds.includes(p.id));
+const featuredProjects = projects.filter((p) => p.is_featured);
 </script>

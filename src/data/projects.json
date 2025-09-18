@@ -1,138 +1,246 @@
 [
   {
-    "id": "muhammdiyah-expo",
+    "is_featured": false,
     "title": "Muhammadiyah Expo 2023",
     "description": "The official registration website for Muhammadiyah Expo Yogyakarta 2023.",
     "image": "/projects/Muhammadiyah-Expo.svg",
     "tech": "CSS, JavaScript, React.js, Laravel",
-    "visit_link": ""
+    "links": []
   },
   {
-    "id": "darussalam-turgo",
+    "is_featured": false,
     "title": "Darussalam Turgo",
     "description": "Profile website for Darussalam Turgo Islamic Boarding School for Orphans & the Underprivileged, Boyolali.",
     "image": "/projects/Darussalam-Turgo.svg",
     "tech": "HTML, CSS, JavaScript",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://darussalamturgo.vercel.app",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "team-up",
+    "is_featured": true,
     "title": "Team Up",
     "description": "A matchmaking platform to connect startup founders with the right team members, created in support of the 1000 Digital Startups Yogyakarta 2023 program.",
     "image": "/projects/Team-Up.svg",
     "tech": "Tailwind CSS, JavaScript, React.js, Laravel",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://team-up.id",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "simpus",
+    "is_featured": false,
+    "title": "Sandbox Official Website",
+    "description": "Corporate profile website for PT Sandbox Indonesia Juara, based in Klaten, Central Java, Indonesia.",
+    "image": "/projects/Sandbox.svg",
+    "tech": "Bootstrap, JavaScript, React.js, Django",
+    "links": [
+      {
+        "link": "https://sandboxindonesia.id",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "is_featured": false,
     "title": "Simpus",
     "description": "An administrative information system for healthcare service management in community health centers (Puskesmas).",
     "image": "/projects/Simpus.svg",
     "tech": "Tailwind CSS, Bootstrap, JavaScript, React.js, Laravel, Golang",
-    "visit_link": ""
+    "links": []
   },
   {
-    "id": "simpatiku",
+    "is_featured": false,
     "title": "Simpatiku — Admin & Landing Page",
     "description": "An integrated public service system for Kutai Timur Regency.",
     "image": "/projects/Simpatiku.svg",
     "tech": "Bootstrap, JavaScript, React.js, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://simpatiku.kutaitimurkab.go.id",
+        "desc": "Landing page"
+      },
+      {
+        "link": "https://dash-simpatiku.kutaitimurkab.go.id",
+        "desc": "Admin"
+      }
+    ]
   },
   {
-    "id": "siap",
+    "is_featured": true,
     "title": "Siap",
     "description": "A web-based land administration information system with geospatial features for visualizing land parcel data.",
     "image": "/projects/Siap.svg",
     "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://siap.kutaitimurkab.go.id",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "siperjadin",
+    "is_featured": false,
     "title": "Siperjadin",
     "description": "A business trip management system for government institutions.",
     "image": "/projects/Siperjadin.svg",
     "tech": "Bootstrap, JavaScript, React.js, Golang",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://siperjadin.id",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "profitku",
+    "is_featured": true,
     "title": "Profitku — Admin & Landing Page",
     "description": "An integrated management platform for companies, institutions, and organizations, featuring SWOT analysis, KPI tracking, and other performance modules.",
     "image": "/projects/Profitku.svg",
     "tech": "Bootstrap, JavaScript, React.js, Golang",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://profitku.id",
+        "desc": "Landing page"
+      },
+      {
+        "link": "https://app.profitku.id",
+        "desc": "Admin"
+      }
+    ]
   },
   {
-    "id": "sifortuna",
+    "is_featured": true,
     "title": "Sifortuna — Admin & Landing Page",
     "description": "A national data-driven forecasting information system, equipped with geospatial monitoring of plant pests and diseases (OPT) using interactive maps.",
     "image": "/projects/Sifortuna.svg",
     "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django, GEE, Google Colab",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://sifortuna-bbpopt.org",
+        "desc": "Landing Page & Admin"
+      }
+    ]
   },
   {
-    "id": "kanal-tapem",
+    "is_featured": false,
     "title": "Kanal Tapem",
     "description": "An information portal for regional governance and administrative management.",
     "image": "/projects/Kanal-Tapem.svg",
     "tech": "Bootstrap, JavaScript, React.js, Golang",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "disambi",
+    "is_featured": false,
     "title": "Disambi — Admin & Self-Service Kiosk",
     "description": "Digital public service platform for Sambirejo Village, Prambanan, Sleman, Yogyakarta.",
     "image": "/projects/Disambi.svg",
     "tech": "Bootstrap, JavaScript, React.js, Golang",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://disambi.id",
+        "desc": "Admin"
+      },
+      {
+        "link": "https://disambi.id/anjungan",
+        "desc": "Self-Service Kiosk"
+      }
+    ]
   },
   {
-    "id": "simpan-ternate",
+    "is_featured": false,
     "title": "Simpan Ternate",
     "description": "A digital administration and archiving system for Ternate City.",
     "image": "/projects/Simpan.svg",
     "tech": "Bootstrap, JavaScript, React.js, Golang",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "desa-pintar",
+    "is_featured": true,
     "title": "Desa Pintar — Admin & Landing Page",
     "description": "A smart village platform for digital governance and services, featuring geospatial-based regional administration tools.",
     "image": "/projects/Despin.svg",
     "tech": "Bootstrap, JavaScript, React.js, Tailwind CSS, Next.js, Leaflet, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://demo-website-desapintar.istudios.id",
+        "desc": "Landing page"
+      },
+      {
+        "link": "",
+        "desc": "Admin"
+      }
+    ]
   },
   {
-    "id": "dilan",
+    "is_featured": false,
     "title": "Dilan — Admin & Landing Page",
     "description": "A digital governance and service platform for villages in Klaten Regency, equipped with geospatial-based regional administration features.",
     "image": "/projects/Dilan.svg",
     "tech": "Bootstrap, JavaScript, React.js, Tailwind CSS, Next.js, Leaflet, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "",
+        "desc": "Landing page"
+      },
+      {
+        "link": "",
+        "desc": "Admin"
+      }
+    ]
   },
   {
-    "id": "adis",
+    "is_featured": false,
     "title": "Adis",
     "description": "A digital infrastructure development system for Adis.",
     "image": "/projects/Adis.svg",
     "tech": "Bootstrap, JavaScript, React.js, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://adis.sandboxindonesia.id",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "template",
+    "is_featured": false,
     "title": "React Admin Template Sandbox",
     "description": "A modular React-based admin dashboard template with reusable components, designed and refined through real-world project experience.",
     "image": "/projects/Template-Sandbox.svg",
     "tech": "Bootstrap, JavaScript, React.js, Leaflet, Django",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "",
+        "desc": ""
+      }
+    ]
   },
   {
-    "id": "broom",
+    "is_featured": true,
     "title": "Broom",
     "description": "A management platform for booking and organizing padel courts.",
     "image": "/projects/Broom.svg",
     "tech": "Bootstrap, JavaScript, React.js, Python",
-    "visit_link": ""
+    "links": [
+      {
+        "link": "https://broombroom.co.id",
+        "desc": "Admin"
+      }
+    ]
   }
 ]

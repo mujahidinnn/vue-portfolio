@@ -21,6 +21,7 @@ import ToTop from "./components/ToTop.vue";
 import { ref, onMounted, onUnmounted, provide } from "vue";
 import { RouterView } from "vue-router";
 
+const activePopoverId = ref(null);
 const isMobile = ref(window.innerWidth < 768);
 
 const checkIsMobile = () => {
@@ -47,4 +48,5 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
 provide("scrollY", scrollY);
 provide("isMobile", isMobile);
+provide("activePopoverId", activePopoverId);
 </script>

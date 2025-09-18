@@ -30,7 +30,7 @@
           :title="portfolio.title"
           :description="portfolio.description"
           :tech="portfolio.tech"
-          :visitLink="portfolio.visitLink"
+          :links="portfolio.links"
         />
       </div>
 
@@ -53,7 +53,7 @@
         :title="portfolio.title"
         :description="portfolio.description"
         :tech="portfolio.tech"
-        :visitLink="portfolio.visitLink"
+        :links="portfolio.links"
       />
     </div>
   </section>
@@ -62,7 +62,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Card from "../components/Card.vue";
-import portfoliosData from "../data/portfolios.json";
+import portfolios from "../data/portfolios.json";
 import { inject } from "vue";
 
 defineProps({
@@ -71,11 +71,5 @@ defineProps({
 
 const isMobile = inject("isMobile");
 
-const portfolios = portfoliosData.map((p) => ({
-  ...p,
-  visitLink: p.visit_link,
-}));
-
-const featuredIds = ["sakifi", "mojepict", "randomix"];
-const featuredPortfolios = portfolios.filter((p) => featuredIds.includes(p.id));
+const featuredPortfolios = portfolios.filter((p) => p.is_featured);
 </script>
