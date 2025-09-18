@@ -19,13 +19,49 @@
         <h3 class="text-sm font-semibold uppercase tracking-wide mb-3">
           Quick Links
         </h3>
+
         <!-- Mobile -->
         <ul v-if="isMobile" class="space-y-2 text-sm">
-          <li><a href="#home" class="hover:text-accent">Home</a></li>
-          <li><a href="#about" class="hover:text-accent">About</a></li>
-          <li><a href="#portfolios" class="hover:text-accent">Portfolio</a></li>
-          <li><a href="#projects" class="hover:text-accent">Projects</a></li>
-          <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+          <li>
+            <a
+              href="#home"
+              @click.prevent="scrollToSection('/')"
+              class="hover:text-accent"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              @click.prevent="scrollToSection('/about')"
+              class="hover:text-accent"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolios"
+              @click.prevent="scrollToSection('/portfolios')"
+              class="hover:text-accent"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              @click.prevent="scrollToSection('/projects')"
+              class="hover:text-accent"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              @click.prevent="scrollToSection('/contact')"
+              class="hover:text-accent"
+              >Contact</a
+            >
+          </li>
         </ul>
 
         <!-- Desktop -->
@@ -38,7 +74,7 @@
           </li>
           <li>
             <RouterLink to="/portfolios" class="hover:text-accent"
-              >Porfolio</RouterLink
+              >Portfolio</RouterLink
             >
           </li>
           <li>
@@ -66,10 +102,7 @@
             rel="noreferrer noopener"
             class="flex gap-1 items-center hover:text-accent"
           >
-            <FontAwesomeIcon
-              :icon="['fab', 'linkedin']"
-              class="cursor-pointer hover:opacity-80 transition"
-            />
+            <FontAwesomeIcon :icon="['fab', 'linkedin']" />
             <p class="text-sm">LinkedIn</p>
           </a>
           <a
@@ -78,20 +111,14 @@
             rel="noreferrer noopener"
             class="flex gap-1 items-center hover:text-accent"
           >
-            <FontAwesomeIcon
-              :icon="['fab', 'github']"
-              class="cursor-pointer hover:opacity-80 transition"
-            />
+            <FontAwesomeIcon :icon="['fab', 'github']" />
             <p class="text-sm">Github</p>
           </a>
           <a
             href="mailto:mujahidin28394@gmail.com"
             class="flex gap-1 items-center hover:text-accent"
           >
-            <FontAwesomeIcon
-              :icon="['fas', 'envelope']"
-              class="cursor-pointer hover:opacity-80 transition"
-            />
+            <FontAwesomeIcon :icon="['fas', 'envelope']" />
             <p class="text-sm">Gmail</p>
           </a>
         </div>
@@ -111,5 +138,16 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { inject } from "vue";
+
 const isMobile = inject("isMobile");
+
+// Scroll to section (dengan offset 80px)
+function scrollToSection(path) {
+  const id = path === "/" ? "home" : path.slice(1);
+  const el = document.getElementById(id);
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+}
 </script>

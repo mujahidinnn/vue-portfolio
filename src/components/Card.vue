@@ -57,7 +57,7 @@
         >
           {{ title }}
         </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-3">
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
           {{ description }}
         </p>
 
