@@ -21,18 +21,26 @@
     <!-- Featured projects -->
     <div v-if="isFeatured && projects.length > featuredProjects.length">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <Card
-          v-for="project in featuredProjects"
-          :key="project.id"
-          :image="project.image"
-          :title="project.title"
-          :description="project.description"
-          :tech="project.tech"
-          :links="project.links"
-        />
+        <!-- Skeleton -->
+        <template v-if="loading">
+          <CardLoading v-for="n in 4" :key="n" />
+        </template>
+
+        <!-- Real data -->
+        <template v-else>
+          <Card
+            v-for="project in featuredProjects"
+            :key="project.id"
+            :image="project.image"
+            :title="project.title"
+            :description="project.description"
+            :tech="project.tech"
+            :links="project.links"
+          />
+        </template>
       </div>
 
-      <div class="flex justify-center mt-6">
+      <div v-if="!loading" class="flex justify-center mt-6">
         <RouterLink
           to="/projects"
           class="inline-flex items-center text-sm px-6 py-2 bg-accent hover:bg-accent/80 text-white rounded-2xl transition-colors duration-200"
@@ -45,24 +53,32 @@
 
     <!-- All projects -->
     <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <Card
-        v-for="project in projects"
-        :key="project.id"
-        :image="project.image"
-        :title="project.title"
-        :description="project.description"
-        :tech="project.tech"
-        :links="project.links"
-      />
+      <!-- Skeleton -->
+      <template v-if="loading">
+        <CardLoading v-for="n in 6" :key="n" />
+      </template>
+
+      <!-- Real data -->
+      <template v-else>
+        <Card
+          v-for="project in projects"
+          :key="project.id"
+          :image="project.image"
+          :title="project.title"
+          :description="project.description"
+          :tech="project.tech"
+          :links="project.links"
+        />
+      </template>
     </div>
   </section>
 </template>
 
 <script setup>
 import { RouterLink } from "vue-router";
+import { inject, ref, onMounted, computed } from "vue";
 import Card from "../components/Card.vue";
-import projects from "../data/projects.json";
-import { inject } from "vue";
+import CardLoading from "../components/CardLoading.vue";
 
 defineProps({
   isFeatured: Boolean,
@@ -70,5 +86,17 @@ defineProps({
 
 const isMobile = inject("isMobile");
 
-const featuredProjects = projects.filter((p) => p.is_featured);
+const projects = ref([]);
+const loading = ref(false);
+
+const featuredProjects = computed(() =>
+  projects.value.filter((p) => p.is_featured)
+);
+
+onMounted(async () => {
+  loading.value = true;
+  const res = await fetch("/data/projects.json");
+  projects.value = await res.json();
+  loading.value = false;
+});
 </script>

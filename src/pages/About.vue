@@ -91,6 +91,23 @@
       </p>
       <p class="mb-6">Here are the main stacks I often use in development:</p>
 
+      <!-- Skeleton loading -->
+      <div
+        v-if="loadingUses"
+        class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6"
+      >
+        <div
+          v-for="n in 8"
+          :key="n"
+          class="flex flex-col items-center text-center p-2 rounded-md border border-gray-200 dark:border-gray-800 animate-pulse"
+        >
+          <div
+            class="rounded-full bg-gray-200 dark:bg-gray-700 w-12 h-12 mb-2"
+          />
+          <div class="h-3 bg-gray-200 dark:bg-gray-600 w-1/3 rounded" />
+        </div>
+      </div>
+
       <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <div
           v-for="tool in uses"
@@ -120,14 +137,21 @@
 </template>
 
 <script setup>
-import uses from "../data/uses.json";
 import { inject, ref, watch, onMounted } from "vue";
 
 const scrollY = inject("scrollY");
 const isActive = ref(false);
 const usesSection = ref(null);
 
-onMounted(() => {
+const uses = ref([]);
+const loadingUses = ref(false);
+
+onMounted(async () => {
+  loadingUses.value = true;
+  const res = await fetch("/data/uses.json");
+  uses.value = await res.json();
+  loadingUses.value = false;
+
   watch(scrollY, () => {
     if (!usesSection.value) return;
     const rect = usesSection.value.getBoundingClientRect();

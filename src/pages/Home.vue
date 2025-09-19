@@ -80,7 +80,7 @@
       />
       Work Experience
     </h3>
-    <TimeLine :items="workExperiences" />
+    <TimeLine :items="workExperiences" :loading="loadingWork" />
 
     <!-- Education -->
     <h3
@@ -93,33 +93,54 @@
       />
       Education
     </h3>
-    <TimeLine :items="educations" />
+    <TimeLine :items="educations" :loading="loadingEdu" />
   </section>
 </template>
 
 <script setup>
 import TimeLine from "../components/TimeLine.vue";
-import workExperiences from "../data/work-experiences.json";
-import educations from "../data/educations.json";
-
 import { ref, onMounted, onUnmounted } from "vue";
 
 const scrollY = ref(0);
 const targetX = ref(0);
 const targetY = ref(0);
 
+const workExperiences = ref([]);
+const educations = ref([]);
+const loadingWork = ref(false);
+const loadingEdu = ref(false);
+
 function handleScroll() {
   scrollY.value = window.scrollY;
 }
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener("scroll", handleScroll);
 
+  // Ambil posisi navbar-avatar-slot
   const slot = document.querySelector(".navbar-avatar-slot");
   if (slot) {
     const rect = slot.getBoundingClientRect();
     targetX.value = rect.left;
     targetY.value = rect.top;
+  }
+
+  loadingWork.value = true;
+  loadingEdu.value = true;
+
+  try {
+    const [workRes, eduRes] = await Promise.all([
+      fetch("/data/work-experiences.json"),
+      fetch("/data/educations.json"),
+    ]);
+
+    workExperiences.value = await workRes.json();
+    educations.value = await eduRes.json();
+  } catch (err) {
+    console.error("Error fetching data:", err);
+  } finally {
+    loadingWork.value = false;
+    loadingEdu.value = false;
   }
 });
 

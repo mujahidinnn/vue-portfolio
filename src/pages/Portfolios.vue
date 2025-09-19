@@ -20,11 +20,50 @@
       </h2>
     </div>
 
-    <!-- Featured portfolios -->
-    <div v-if="isFeatured && portfolios.length > featuredPortfolios.length">
+    <!-- Featured proftfolios -->
+    <div v-if="isFeatured && proftfolios.length > featuredPortfolios.length">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Skeleton -->
+        <template v-if="loading">
+          <CardLoading v-for="n in 4" :key="n" />
+        </template>
+
+        <!-- Real data -->
+        <template v-else>
+          <Card
+            v-for="portfolio in featuredPortfolios"
+            :key="portfolio.id"
+            :image="portfolio.image"
+            :title="portfolio.title"
+            :description="portfolio.description"
+            :tech="portfolio.tech"
+            :links="portfolio.links"
+          />
+        </template>
+      </div>
+
+      <div v-if="!loading" class="flex justify-center mt-6">
+        <RouterLink
+          to="/portfolios"
+          class="inline-flex items-center text-sm px-6 py-2 bg-accent hover:bg-accent/80 text-white rounded-2xl transition-colors duration-200"
+        >
+          View More
+          <FontAwesomeIcon :icon="['fas', 'angles-right']" class="text-sm" />
+        </RouterLink>
+      </div>
+    </div>
+
+    <!-- All portfolios -->
+    <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Skeleton -->
+      <template v-if="loading">
+        <CardLoading v-for="n in 6" :key="n" />
+      </template>
+
+      <!-- Real data -->
+      <template v-else>
         <Card
-          v-for="portfolio in featuredPortfolios"
+          v-for="portfolio in portfolios"
           :key="portfolio.id"
           :image="portfolio.image"
           :title="portfolio.title"
@@ -32,29 +71,7 @@
           :tech="portfolio.tech"
           :links="portfolio.links"
         />
-      </div>
-
-      <div class="flex justify-center mt-6">
-        <RouterLink
-          to="/portfolios"
-          class="inline-flex items-center px-6 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg transition-colors duration-200"
-        >
-          View More
-        </RouterLink>
-      </div>
-    </div>
-
-    <!-- All portfolios -->
-    <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <Card
-        v-for="portfolio in portfolios"
-        :key="portfolio.id"
-        :image="portfolio.image"
-        :title="portfolio.title"
-        :description="portfolio.description"
-        :tech="portfolio.tech"
-        :links="portfolio.links"
-      />
+      </template>
     </div>
   </section>
 </template>
@@ -62,8 +79,8 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Card from "../components/Card.vue";
-import portfolios from "../data/portfolios.json";
-import { inject } from "vue";
+import CardLoading from "../components/CardLoading.vue";
+import { inject, ref, onMounted, computed } from "vue";
 
 defineProps({
   isFeatured: Boolean,
@@ -71,5 +88,17 @@ defineProps({
 
 const isMobile = inject("isMobile");
 
-const featuredPortfolios = portfolios.filter((p) => p.is_featured);
+const portfolios = ref([]);
+const loading = ref(false);
+
+const featuredPortfolios = computed(() =>
+  portfolios.value.filter((p) => p.is_featured)
+);
+
+onMounted(async () => {
+  loading.value = true;
+  const res = await fetch("/data/portfolios.json");
+  portfolios.value = await res.json();
+  loading.value = false;
+});
 </script>
