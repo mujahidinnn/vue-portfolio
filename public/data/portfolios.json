@@ -2,7 +2,7 @@
   {
     "is_featured": true,
     "title": "SakiFi",
-    "description": "A practical reference platform for Sharia-compliant financial transactions, featuring articles, documents, and reliable source references.",
+    "description": "A practical reference platform for Sharia-compliant financial transactions, featuring articles, documents, and trusted source references.",
     "image": "/portfolios/sakifi.svg",
     "tech": "CSS, JavaScript, Next.js",
     "links": [
@@ -15,7 +15,7 @@
   {
     "is_featured": true,
     "title": "Mojepict",
-    "description": "A versatile set of online tools to make your daily tasks easier, from quick editing to other handy utilities.",
+    "description": "A versatile collection of online tools designed to simplify everyday tasks, from quick editing to other handy utilities.",
     "image": "/portfolios/mojepict.svg",
     "tech": "CSS, JavaScript, Tailwind, Next.js",
     "links": [
@@ -28,12 +28,25 @@
   {
     "is_featured": true,
     "title": "Randomix",
-    "description": "A smart and fun platform to create random yet balanced teams. Users can input player names along with their skill levels (newbie, middle, pro), and Randomix will generate fair and competitive matchups with evenly distributed opponents.",
+    "description": "A smart and fun platform for generating random yet balanced teams. Users can input player names along with skill levels (beginner, intermediate, pro), and Randomix creates fair and competitive matchups with evenly distributed opponents.",
     "image": "/portfolios/randomix.svg",
     "tech": "CSS, JavaScript, Tailwind, Nuxt.js",
     "links": [
       {
         "link": "https://randomix.vercel.app",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "is_featured": true,
+    "title": "Voyage Pulse",
+    "description": "A lightweight analytics dashboard that tracks website visits, page activity, outbound link clicks, downloads, and user geolocation data. Voyage Pulse provides actionable insights in a simple and intuitive interface.",
+    "image": "/portfolios/voyagepulse.svg",
+    "tech": "CSS, JavaScript, Ant Design, React.js, Supabase, Node.js",
+    "links": [
+      {
+        "link": "https://voyagepulse.netlify.app",
         "desc": ""
       }
     ]
