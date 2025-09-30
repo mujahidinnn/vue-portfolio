@@ -32,7 +32,7 @@
       <li v-for="(item, idx) in items" :key="idx" class="mb-10 ms-6 last:mb-0">
         <!-- Dot -->
         <span
-          class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 rounded-full -start-3"
+          class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 rounded-full -start-3 mt-4"
         >
           <span class="w-3 h-3 bg-accent rounded-full"></span>
         </span>

@@ -127,7 +127,7 @@
 
     <!-- Bottom bar -->
     <div
-      class="text-center text-xs py-4 border-t border-gray-200 dark:border-gray-700"
+      class="text-center text-xs py-4 border-t border-gray-200 dark:border-gray-700 min-h-30 sm:min-h-0"
     >
       © {{ new Date().getFullYear() }} All rights reserved by
       <span class="font-semibold">Mujahidin</span>

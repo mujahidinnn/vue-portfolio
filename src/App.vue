@@ -10,11 +10,13 @@
     </div>
 
     <Footer />
+    <NavbarBottom />
   </div>
   <ToTop />
 </template>
 
 <script setup>
+import NavbarBottom from "./components/NavbarBottom.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import ToTop from "./components/ToTop.vue";
