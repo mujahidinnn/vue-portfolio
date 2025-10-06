@@ -71,6 +71,7 @@
 
     <!-- Work Experience -->
     <h3
+      id="work-experience"
       class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-8"
     >
       <FontAwesomeIcon
@@ -84,6 +85,7 @@
 
     <!-- Education -->
     <h3
+      id="education"
       class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-8"
     >
       <FontAwesomeIcon

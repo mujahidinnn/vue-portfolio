@@ -5,7 +5,7 @@
     <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 gap-8">
       <!-- Brand / About -->
       <div class="hidden sm:block">
-        <h2 class="text-lg font-semibold text-primary dark:text-primary-dark">
+        <h2 class="text-lg font-bold text-primary dark:text-primary-dark">
           Mujahidin
         </h2>
         <p class="text-sm mt-2">
@@ -16,32 +16,55 @@
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wide mb-3">
+        <h3 class="text-sm font-bold uppercase tracking-wide mb-3">
           Quick Links
         </h3>
 
-        <!-- Mobile -->
-        <ul v-if="isMobile" class="space-y-2 text-sm">
+        <ul class="space-y-2 text-sm">
           <li>
             <a
               href="#home"
-              @click.prevent="scrollToSection('/')"
+              @click.prevent="scrollToSection('/#home')"
               class="hover:text-accent"
               >Home</a
             >
           </li>
           <li>
             <a
+              href="#work-experience"
+              @click.prevent="scrollToSection('/#work-experience')"
+              class="hover:text-accent whitespace-nowrap"
+              >Work Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#education"
+              @click.prevent="scrollToSection('/#education')"
+              class="hover:text-accent"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
               href="#about"
-              @click.prevent="scrollToSection('/about')"
+              @click.prevent="scrollToSection('/about#about')"
               class="hover:text-accent"
               >About</a
             >
           </li>
           <li>
             <a
+              href="#uses"
+              @click.prevent="scrollToSection('/about#uses')"
+              class="hover:text-accent"
+              >Uses & Tools</a
+            >
+          </li>
+          <li>
+            <a
               href="#portfolios"
-              @click.prevent="scrollToSection('/portfolios')"
+              @click.prevent="scrollToSection('/portfolios#portfolios')"
               class="hover:text-accent"
               >Portfolio</a
             >
@@ -49,7 +72,7 @@
           <li>
             <a
               href="#projects"
-              @click.prevent="scrollToSection('/projects')"
+              @click.prevent="scrollToSection('/projects#projects')"
               class="hover:text-accent"
               >Projects</a
             >
@@ -57,34 +80,9 @@
           <li>
             <a
               href="#contact"
-              @click.prevent="scrollToSection('/contact')"
+              @click.prevent="scrollToSection('/contact#contact')"
               class="hover:text-accent"
               >Contact</a
-            >
-          </li>
-        </ul>
-
-        <!-- Desktop -->
-        <ul v-else class="space-y-2 text-sm">
-          <li>
-            <RouterLink to="/" class="hover:text-accent">Home</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/about" class="hover:text-accent">About</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/portfolios" class="hover:text-accent"
-              >Portfolio</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink to="/projects" class="hover:text-accent"
-              >Projects</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink to="/contact" class="hover:text-accent"
-              >Contact</RouterLink
             >
           </li>
         </ul>
@@ -92,9 +90,7 @@
 
       <!-- Social -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wide mb-3">
-          Connect
-        </h3>
+        <h3 class="text-sm font-bold uppercase tracking-wide mb-3">Connect</h3>
         <div class="flex flex-col gap-3">
           <a
             href="https://www.linkedin.com/in/mujahidin18"
@@ -136,18 +132,34 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
-import { inject } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-const isMobile = inject("isMobile");
+const router = useRouter();
+const route = useRoute();
 
-// Scroll to section (dengan offset 80px)
-function scrollToSection(path) {
-  const id = path === "/" ? "home" : path.slice(1);
+function smoothScrollTo(id) {
   const el = document.getElementById(id);
-  if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
+  if (!el) return;
+
+  const top = el.getBoundingClientRect().top + window.scrollY - 80; // offset
+  window.scrollTo({ top, behavior: "smooth" });
+}
+
+async function scrollToSection(path) {
+  const [basePath, hash] = path.split("#");
+
+  if (route.path === basePath) {
+    if (hash) {
+      setTimeout(() => smoothScrollTo(hash), 100);
+    } else {
+      smoothScrollTo("home");
+    }
+  } else {
+    await router.push(basePath);
+
+    if (hash) {
+      setTimeout(() => smoothScrollTo(hash), 400);
+    }
   }
 }
 </script>

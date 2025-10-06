@@ -59,6 +59,19 @@
       </a>
 
       <a
+        href="https://discord.com/users/1077911957719502938"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
+      >
+        <FontAwesomeIcon
+          :icon="['fab', 'discord']"
+          class="group-hover:text-accent transition-colors"
+        />
+        <span class="group-hover:text-accent transition-colors">Discord</span>
+      </a>
+
+      <a
         href="mailto:mujahidin23894@gmail.com"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
       >
@@ -66,7 +79,7 @@
           :icon="['fas', 'envelope']"
           class="group-hover:text-accent transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">Email</span>
+        <span class="group-hover:text-accent transition-colors">Gmail</span>
       </a>
     </div>
 

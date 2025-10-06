@@ -29,20 +29,18 @@
       >
         Beyond coding, I enjoy coffee — especially when it’s mixed with palm
         sugar, my absolute favorite. I’m also a fan of mie ayam, and I really
-        treasure quality time with people I care about. For me, these simple
-        joys fuel creativity and balance in life. I also love interior design,
+        treasure quality time with people I care about. These simple joys fuel
+        creativity and bring balance to my life. I also love interior design,
         movies, and games, as they often spark inspiration and give me fresh
-        ideas to bring into my work. At the same time, I treasure simple joys
-        like mie ayam or spending quality time with people I care about, because
-        those little things fuel creativity and balance in my life.
+        ideas to bring into my work.
       </p>
 
       <p
         class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
       >
-        I also love traveling — not only the destinations, but the journey
-        itself. Every trip is filled with small, unforgettable moments that turn
-        into valuable experiences and lasting memories. Along the way, I enjoy
+        I love traveling — not only the destinations, but the journey itself.
+        Every trip is filled with small, unforgettable moments that turn into
+        valuable experiences and lasting memories. Along the way, I enjoy
         capturing photos of places, vibes, and little things that often go
         unnoticed, as a way to preserve memories and appreciate life’s details.
       </p>
@@ -73,6 +71,7 @@
 
     <!-- Uses & Tools -->
     <div
+      id="uses"
       ref="usesSection"
       class="my-10 py-6 text-secondary dark:text-secondary-dark border-t border-gray-200 dark:border-gray-700"
     >
@@ -155,12 +154,7 @@ onMounted(async () => {
   watch(scrollY, () => {
     if (!usesSection.value) return;
     const rect = usesSection.value.getBoundingClientRect();
-
-    if (rect.top <= 300) {
-      isActive.value = true;
-    } else {
-      isActive.value = false;
-    }
+    isActive.value = rect.top <= 300;
   });
 });
 </script>

@@ -44,7 +44,7 @@ const navItems = [
     name: "About",
     label: "About",
     path: "/about",
-    icon: ["fas", "user"],
+    icon: ["fas", "user-astronaut"],
   },
   {
     name: "Portfolios",
@@ -62,7 +62,7 @@ const navItems = [
     name: "Contact",
     label: "Contact",
     path: "/contact",
-    icon: ["fas", "envelope"],
+    icon: ["fas", "circle-nodes"],
   },
 ];
 </script>

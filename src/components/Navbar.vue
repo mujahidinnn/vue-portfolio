@@ -29,10 +29,7 @@
       class="block md:hidden mt-2 md:mt-0 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
       @click="toggleTheme"
     >
-      <FontAwesomeIcon
-        :icon="isDark ? ['fas', 'sun'] : ['fas', 'moon']"
-        class="text-xl"
-      />
+      {{ isDark ? "🌙" : "☀️" }}
     </button>
   </nav>
 </template>
