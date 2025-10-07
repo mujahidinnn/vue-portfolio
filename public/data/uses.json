@@ -10,6 +10,7 @@
   { "icon": "/uses/vuejs.png", "name": "Vue Js" },
   { "icon": "/uses/nuxtjs.png", "name": "Nuxt Js" },
   { "icon": "/uses/redux.png", "name": "Redux" },
+  { "icon": "/uses/pinia.png", "name": "Pinia" },
 
   { "icon": "/uses/bootstrap.png", "name": "Bootstrap" },
   { "icon": "/uses/tailwind.png", "name": "Tailwind" },
