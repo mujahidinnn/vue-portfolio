@@ -9,7 +9,7 @@
         <img
           v-if="scrollYVal > 150 || isMobile"
           key="photo"
-          src="https://media.licdn.com/dms/image/v2/D5603AQEQ4OqcXOiWkQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1672473765433?e=1760572800&v=beta&t=z02PNmwpdEmcIdLQHT6tznf9xxmgHZv4uzyJKsGbFCY"
+          src="/global/mujahidin.jpeg"
           alt="Mujahidin"
           class="w-8 h-8 rounded-full transition-all duration-200"
         />

@@ -5,7 +5,7 @@
   >
     <div class="flex gap-5">
       <img
-        src="https://media.licdn.com/dms/image/v2/D5603AQEQ4OqcXOiWkQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1672473765433?e=1760572800&v=beta&t=z02PNmwpdEmcIdLQHT6tznf9xxmgHZv4uzyJKsGbFCY"
+        src="/global/mujahidin.jpeg"
         alt="Mujahidin"
         class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         :style="{
