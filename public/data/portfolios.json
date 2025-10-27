@@ -50,5 +50,18 @@
         "desc": ""
       }
     ]
+  },
+  {
+    "is_featured": true,
+    "title": "Vistee",
+    "description": "A modern visual CV builder that helps users design elegant, professional resumes effortlessly. Featuring live editing, smart templates, and an intuitive interface for faster personal branding.",
+    "image": "/portfolios/vistee.svg",
+    "tech": "CSS, JavaScript, Ant Design, React.js",
+    "links": [
+      {
+        "link": "https://vistee.vercel.app",
+        "desc": ""
+      }
+    ]
   }
 ]
