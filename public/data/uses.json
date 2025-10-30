@@ -25,9 +25,10 @@
   { "icon": "/uses/git.png", "name": "Git" },
   { "icon": "/uses/postman.png", "name": "Postman" },
   { "icon": "/uses/swagger.png", "name": "Swagger" },
-  { "icon": "/uses/figma.png", "name": "Figma" },
   { "icon": "/uses/leaflet.png", "name": "Leaflet" },
   { "icon": "/uses/nginx.png", "name": "Nginx" },
+  { "icon": "/uses/figma.png", "name": "Figma" },
+  { "icon": "/uses/canva.png", "name": "Canva" },
 
   { "icon": "/uses/vercel.png", "name": "Vercel" },
   { "icon": "/uses/netlify.png", "name": "Netlify" }
