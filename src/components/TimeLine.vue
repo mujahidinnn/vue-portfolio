@@ -5,9 +5,9 @@
       <li v-for="n in 2" :key="'skeleton-' + n" class="mb-10 ms-6 last:mb-0">
         <!-- Dot -->
         <span
-          class="absolute flex items-center justify-center w-6 h-6 bg-accent/10 rounded-full -start-3"
+          class="absolute flex items-center justify-center w-6 h-6 bg-accent/10 -start-3 mt-4 rotate-45 rounded-md"
         >
-          <span class="w-3 h-3 bg-accent rounded-full"></span>
+          <span class="w-3 h-3 bg-accent rounded-sm"></span>
         </span>
 
         <!-- Block -->
@@ -32,9 +32,9 @@
       <li v-for="(item, idx) in items" :key="idx" class="mb-10 ms-6 last:mb-0">
         <!-- Dot -->
         <span
-          class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 rounded-full -start-3 mt-4"
+          class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 -start-3 mt-4 rotate-45 rounded-md"
         >
-          <span class="w-3 h-3 bg-accent rounded-full"></span>
+          <span class="w-3 h-3 bg-accent rounded-sm"></span>
         </span>
 
         <!-- Block -->

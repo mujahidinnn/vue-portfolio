@@ -11,24 +11,14 @@
     "description": "An informative profile website for Darussalam Turgo Islamic Boarding School, designed to highlight its educational programs, orphan empowerment initiatives, and community development activities in Boyolali. Focused on simplicity and spiritual warmth.",
     "image": "/projects/Darussalam-Turgo.svg",
     "tech": ["HTML", "CSS", "JavaScript"],
-    "links": [
-      {
-        "link": "https://darussalamturgo.vercel.app",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "Team Up",
     "description": "A digital matchmaking platform built to connect startup founders with compatible team members and co-founders. Developed in collaboration with the 1000 Digital Startups Yogyakarta 2023 program, it streamlines the talent-matching process for early-stage startups.",
     "image": "/projects/Team-Up.svg",
     "tech": ["Tailwind CSS", "JavaScript", "React.js", "Laravel"],
-    "links": [
-      {
-        "link": "https://team-up.id",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "Sandbox Official Website",
@@ -64,11 +54,7 @@
     "links": [
       {
         "link": "https://simpatiku.kutaitimurkab.go.id",
-        "desc": "Landing page"
-      },
-      {
-        "link": "https://dash-simpatiku.kutaitimurkab.go.id",
-        "desc": "Admin"
+        "desc": ""
       }
     ]
   },
@@ -77,24 +63,14 @@
     "description": "A web-based land administration information system equipped with geospatial visualization for land parcels and ownership data. Designed to improve transparency and accessibility in land management through interactive map integration.",
     "image": "/projects/Siap.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Leaflet", "Django"],
-    "links": [
-      {
-        "link": "https://siap.kutaitimurkab.go.id",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "Siperjadin",
     "description": "A government business trip management platform that automates the process of travel authorization, expense reporting, and approval workflows. It streamlines administrative tasks and ensures compliance with internal regulations.",
     "image": "/projects/Siperjadin.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
-    "links": [
-      {
-        "link": "https://siperjadin.id",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "Profitku — Admin & Landing Page",
@@ -104,11 +80,7 @@
     "links": [
       {
         "link": "https://profitku.id",
-        "desc": "Landing page"
-      },
-      {
-        "link": "https://app.profitku.id",
-        "desc": "Admin"
+        "desc": ""
       }
     ]
   },
@@ -127,8 +99,8 @@
     ],
     "links": [
       {
-        "link": "https://sifortuna-bbpopt.org",
-        "desc": "Landing Page & Admin"
+        "link": "https://sifortuna.tanamanpangan.pertanian.go.id",
+        "desc": ""
       }
     ]
   },
@@ -144,16 +116,7 @@
     "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
     "image": "/projects/Disambi.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
-    "links": [
-      {
-        "link": "https://disambi.id",
-        "desc": "Admin"
-      },
-      {
-        "link": "https://disambi.id/anjungan",
-        "desc": "Self-Service Kiosk"
-      }
-    ]
+    "links": []
   },
   {
     "title": "Simpan Ternate",
@@ -197,12 +160,7 @@
     "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
     "image": "/projects/Adis.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
-    "links": [
-      {
-        "link": "https://adis.sandboxindonesia.id",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "React Admin Template Sandbox",
@@ -216,11 +174,6 @@
     "description": "A management platform for booking and scheduling padel courts, providing an efficient interface for venue owners and players alike. Built with attention to detail and user experience for the growing padel community.",
     "image": "/projects/Broom.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Python"],
-    "links": [
-      {
-        "link": "https://broombroom.co.id",
-        "desc": "Admin"
-      }
-    ]
+    "links": []
   }
 ]

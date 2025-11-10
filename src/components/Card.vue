@@ -33,7 +33,7 @@
 
       <div class="flex-1 flex flex-col">
         <h3
-          class="text-base md:text-xl font-semibold text-gray-900 dark:text-gray-100 leading-snug"
+          class="text-base md:text-xl font-semibold text-gray-900 dark:text-gray-100 leading-snug pr-3"
         >
           {{ title }}
         </h3>
@@ -50,17 +50,14 @@
       v-if="showModal"
       class="fixed inset-0 z-[999] flex items-center justify-center"
     >
-      <!-- Backdrop -->
       <div
         class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"
         @click="closeModal"
       ></div>
 
-      <!-- Modal Card -->
       <div
         class="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-gray-200 dark:border-gray-700 z-[1000] flex flex-col max-h-[90vh]"
       >
-        <!-- Tombol Tutup -->
         <button
           @click="closeModal"
           class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg transition"
@@ -68,7 +65,6 @@
           <FontAwesomeIcon :icon="['fas', 'xmark']" />
         </button>
 
-        <!-- Hero Image -->
         <div class="w-full h-52 bg-white relative border-b border-gray-300">
           <img
             :src="image"
@@ -77,23 +73,20 @@
           />
         </div>
 
-        <!-- Content -->
         <div
-          class="p-6 overflow-y-auto space-y-6 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-500"
+          class="p-6 overflow-y-auto space-y-6 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-700"
         >
-          <!-- Title -->
           <div>
             <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {{ title }}
             </h2>
             <p
-              class="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
+              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
             >
               {{ description }}
             </p>
           </div>
 
-          <!-- Tech Stack -->
           <div v-if="tech">
             <h3
               class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
@@ -111,7 +104,6 @@
             </div>
           </div>
 
-          <!-- Links -->
           <div v-if="links?.length">
             <h3
               class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
@@ -146,7 +138,6 @@
             </ul>
           </div>
 
-          <!-- Story -->
           <div v-if="story">
             <h3
               class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
@@ -154,14 +145,13 @@
               Story
             </h3>
             <p
-              class="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
+              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
             >
               {{ story }}
             </p>
           </div>
         </div>
 
-        <!-- Footer -->
         <div
           class="p-5 border-t border-gray-200 dark:border-gray-700 flex justify-end"
         >
