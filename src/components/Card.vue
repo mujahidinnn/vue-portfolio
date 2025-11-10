@@ -116,7 +116,7 @@
             <h3
               class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
             >
-              Links
+              Link{{ links.length > 1 ? "s" : "" }}
             </h3>
             <ul class="space-y-2">
               <li
