@@ -35,10 +35,6 @@ import { inject, ref, onMounted, computed } from "vue";
 import Card from "../components/Card.vue";
 import CardLoading from "../components/CardLoading.vue";
 
-defineProps({
-  isFeatured: Boolean,
-});
-
 const isMobile = inject("isMobile");
 
 const projects = ref([]);

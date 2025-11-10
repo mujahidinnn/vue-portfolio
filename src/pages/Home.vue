@@ -119,7 +119,7 @@ function handleScroll() {
 onMounted(async () => {
   window.addEventListener("scroll", handleScroll);
 
-  // Ambil posisi navbar-avatar-slot
+  // posisi navbar-avatar-slot
   const slot = document.querySelector(".navbar-avatar-slot");
   if (slot) {
     const rect = slot.getBoundingClientRect();

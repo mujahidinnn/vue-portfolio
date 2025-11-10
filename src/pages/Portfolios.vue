@@ -24,6 +24,7 @@
           :description="portfolio.description"
           :tech="portfolio.tech"
           :links="portfolio.links"
+          :story="portfolio.story"
         />
       </template>
     </div>
@@ -34,10 +35,6 @@
 import Card from "../components/Card.vue";
 import CardLoading from "../components/CardLoading.vue";
 import { inject, ref, onMounted, computed } from "vue";
-
-defineProps({
-  isFeatured: Boolean,
-});
 
 const isMobile = inject("isMobile");
 
