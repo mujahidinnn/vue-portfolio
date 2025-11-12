@@ -18,9 +18,9 @@
   --color-primary-dark: #f4f4f5;
   --color-secondary-dark: #a1a1aa;
   --color-accent-dark: #38bdf8;
-  --color-background-body-dark: #000000;
-  --color-background-dark: #18171b;
-  --color-background-2-dark: #27272a;
+  --color-background-body-dark: #030617;
+  --color-background-dark: #0b1220;
+  --color-background-2-dark: #182031;
 }
 
 @custom-variant dark (&:where(.dark *));
