@@ -70,5 +70,18 @@
         "desc": ""
       }
     ]
+  },
+  {
+    "title": "Mojest",
+    "description": "Mojest is a streamlined, web-based API testing client designed for developers who need speed and efficiency without the overhead. It allows users to execute HTTP requests, inspect responses, and debug endpoints directly from the browser. With a clean interface and zero-configuration approach, Mojest serves as a lightweight alternative to bulky desktop applications, focusing on the essentials of API interaction.",
+    "story": "The idea for Mojest came from my frustration when I needed to test an API endpoint quickly but didn't want to open heavy software or deal with account logins and saved workspaces. I wanted a 'temporary' yet powerful tool—something web-based that doesn't hoard resources or require a setup process. I built Mojest to be that instant solution: just open the site, test your API, and get results immediately without any friction.",
+    "image": "/portfolios/mojest.svg",
+    "tech": ["CSS", "JavaScript", "Tailwind CSS", "React.js"],
+    "links": [
+      {
+        "link": "https://mojest.vercel.app",
+        "desc": ""
+      }
+    ]
   }
 ]
