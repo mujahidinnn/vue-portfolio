@@ -18,7 +18,7 @@
       <p
         class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
       >
-        I’m a front-end developer with over 2 years of experience building
+        I’m a front-end developer with over 3 years of experience building
         clean, responsive, and user-focused web applications. I combine
         minimalist design with performance, making every project both functional
         and visually engaging.
