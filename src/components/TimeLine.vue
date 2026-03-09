@@ -45,7 +45,10 @@
             <img
               :src="item.image"
               :alt="item.alt"
+              width="32"
+              height="32"
               class="h-8 w-8 object-contain"
+              loading="lazy"
             />
           </div>
 

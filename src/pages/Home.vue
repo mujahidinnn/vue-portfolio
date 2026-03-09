@@ -7,7 +7,10 @@
       <img
         src="/global/me.jpeg"
         alt="Mujahidin"
+        fetchpriority="high"
         class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+        width="128"
+        height="128"
         :style="{
           transform: `scale(${Math.max(0.3, 1 - scrollY / 180)})`,
           transformOrigin: 'top left',
