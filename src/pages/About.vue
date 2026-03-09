@@ -3,7 +3,7 @@
     <div>
       <!-- Profile Image -->
       <img
-        src="/global/mujahidin.jpeg"
+        src="/global/me.jpeg"
         alt="Mujahidin"
         class="float-left mr-4 mb-2 rounded-md shadow-md object-cover w-32 h-32"
       />

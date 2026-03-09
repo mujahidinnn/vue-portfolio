@@ -5,7 +5,7 @@
   >
     <div class="flex gap-5">
       <img
-        src="/global/mujahidin.jpeg"
+        src="/global/me.jpeg"
         alt="Mujahidin"
         class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         :style="{
