@@ -34,6 +34,7 @@
               href="#work-experience"
               @click.prevent="scrollToSection('/#work-experience')"
               class="hover:text-accent dark:hover:text-accent-dark whitespace-nowrap"
+              aria-label="Go to Work Experience"
               >Work Experience</a
             >
           </li>
@@ -42,6 +43,7 @@
               href="#education"
               @click.prevent="scrollToSection('/#education')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to Education"
               >Education</a
             >
           </li>
@@ -50,6 +52,7 @@
               href="#about"
               @click.prevent="scrollToSection('/about#about')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to About"
               >About</a
             >
           </li>
@@ -58,6 +61,7 @@
               href="#uses"
               @click.prevent="scrollToSection('/about#uses')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to Uses and Tools"
               >Uses & Tools</a
             >
           </li>
@@ -66,6 +70,7 @@
               href="#portfolios"
               @click.prevent="scrollToSection('/portfolios#portfolios')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to Portfolio"
               >Portfolio</a
             >
           </li>
@@ -74,6 +79,7 @@
               href="#projects"
               @click.prevent="scrollToSection('/projects#projects')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to Projects"
               >Projects</a
             >
           </li>
@@ -82,6 +88,7 @@
               href="#contact"
               @click.prevent="scrollToSection('/contact#contact')"
               class="hover:text-accent dark:hover:text-accent-dark"
+              aria-label="Go to Contact"
               >Contact</a
             >
           </li>
@@ -97,6 +104,7 @@
             target="_blank"
             rel="noreferrer noopener"
             class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
+            aria-label="Visit my LinkedIn profile"
           >
             <FontAwesomeIcon :icon="['fab', 'linkedin']" />
             <p class="text-sm">LinkedIn</p>
@@ -106,6 +114,7 @@
             target="_blank"
             rel="noreferrer noopener"
             class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
+            aria-label="Visit my GitHub profile"
           >
             <FontAwesomeIcon :icon="['fab', 'github']" />
             <p class="text-sm">Github</p>
@@ -113,6 +122,7 @@
           <a
             href="mailto:mujahidin28394@gmail.com"
             class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
+            aria-label="Send me an email"
           >
             <FontAwesomeIcon :icon="['fas', 'envelope']" />
             <p class="text-sm">Gmail</p>

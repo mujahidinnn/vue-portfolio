@@ -41,6 +41,7 @@
         href="https://www.linkedin.com/in/mujahidin18"
         target="_blank"
         rel="noreferrer noopener"
+        aria-label="Visit my LinkedIn profile"
       >
         <FontAwesomeIcon
           :icon="['fab', 'linkedin']"
@@ -51,13 +52,14 @@
         href="https://github.com/mujahidinnn"
         target="_blank"
         rel="noreferrer noopener"
+        aria-label="Visit my GitHub profile"
       >
         <FontAwesomeIcon
           :icon="['fab', 'github']"
           class="cursor-pointer hover:opacity-80 transition"
         />
       </a>
-      <a href="mailto:mujahidin28394@gmail.com">
+      <a href="mailto:mujahidin28394@gmail.com" aria-label="Send me an email">
         <FontAwesomeIcon
           :icon="['fas', 'envelope']"
           class="cursor-pointer hover:opacity-80 transition"

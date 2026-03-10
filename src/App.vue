@@ -5,9 +5,9 @@
   >
     <Navbar />
 
-    <div class="flex-1 px-8">
+    <main class="flex-1 px-8">
       <RouterView />
-    </div>
+    </main>
 
     <Footer />
     <NavbarBottom />

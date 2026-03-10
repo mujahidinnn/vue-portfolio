@@ -20,26 +20,11 @@
       class="flex justify-center gap-6 flex-wrap text-primary dark:text-primary-dark text-lg mb-8"
     >
       <a
-        href="https://github.com/mujahidinnn"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="group flex items-center gap-2 text-sm sm:text-base transition"
-      >
-        <FontAwesomeIcon
-          :icon="['fab', 'github']"
-          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
-        />
-        <span
-          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
-          >GitHub</span
-        >
-      </a>
-
-      <a
         href="https://www.linkedin.com/in/mujahidin18"
         target="_blank"
         rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
+        aria-label="Visit my LinkedIn profile"
       >
         <FontAwesomeIcon
           :icon="['fab', 'linkedin']"
@@ -52,10 +37,28 @@
       </a>
 
       <a
+        href="https://github.com/mujahidinnn"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="group flex items-center gap-2 text-sm sm:text-base transition"
+        aria-label="Visit my GitHub profile"
+      >
+        <FontAwesomeIcon
+          :icon="['fab', 'github']"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+        />
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >GitHub</span
+        >
+      </a>
+
+      <a
         href="https://www.instagram.com/mujahidin1802"
         target="_blank"
         rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
+        aria-label="Visit my Instagram profile"
       >
         <FontAwesomeIcon
           :icon="['fab', 'instagram']"
@@ -72,6 +75,7 @@
         target="_blank"
         rel="noreferrer noopener"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
+        aria-label="Visit my Discord profile"
       >
         <FontAwesomeIcon
           :icon="['fab', 'discord']"
@@ -86,6 +90,7 @@
       <a
         href="mailto:mujahidin23894@gmail.com"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
+        aria-label="Send me an email"
       >
         <FontAwesomeIcon
           :icon="['fas', 'envelope']"
@@ -104,6 +109,7 @@
       <a
         href="mailto:mujahidin23894@gmail.com"
         class="text-primary dark:text-primary-dark underline hover:text-accent dark:hover:text-accent-dark transition-colors"
+        aria-label="Send me an email"
       >
         mujahidin23894@gmail.com
       </a>

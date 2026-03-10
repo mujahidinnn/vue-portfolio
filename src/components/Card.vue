@@ -174,7 +174,10 @@ const props = defineProps({
   image: String,
   title: String,
   description: String,
-  tech: String,
+  tech: {
+    type: Array,
+    default: () => [],
+  },
   story: String,
   links: {
     type: Array,

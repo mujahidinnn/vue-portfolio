@@ -1,29 +1,11 @@
 <template>
-  <template v-for="link in links" :key="link.to">
-    <!-- Mobile: Scroll to id -->
-    <a
-      v-if="isMobile"
-      :href="`#${link.to === '/' ? 'home' : link.to.slice(1)}`"
-      class="block w-full"
-      @click.prevent="scrollToSection(link.to)"
-    >
-      <li
-        class="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
-      >
-        <span class="hover:text-primary">{{ link.label }}</span>
-      </li>
-    </a>
-
-    <!-- Desktop: Router Link -->
-    <RouterLink
-      v-else
-      :to="link.to"
-      v-slot="{ isActive }"
-      class="block w-full"
-      @click="$emit('link-clicked')"
-    >
-      <li
-        class="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
+  <li v-for="link in links" :key="link.to" class="list-none">
+    <RouterLink :to="link.to" v-slot="{ isActive, navigate }" custom>
+      <a
+        :href="link.to"
+        @click="navigate"
+        :aria-label="'Go to ' + link.label"
+        class="block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
       >
         <span
           :class="[
@@ -34,14 +16,15 @@
         >
           {{ link.label }}
         </span>
-      </li>
+      </a>
     </RouterLink>
-  </template>
+  </li>
 
-  <!-- Toggle Theme -->
   <li
-    class="mt-2 md:mt-0 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
+    class="list-none mt-2 md:mt-0 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
     @click="$emit('toggle-theme')"
+    role="button"
+    aria-label="Toggle dark mode"
   >
     {{ isDark ? "🌙" : "☀️" }}
   </li>

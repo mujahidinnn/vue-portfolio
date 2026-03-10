@@ -7,6 +7,7 @@
       v-for="item in navItems"
       :key="item.name"
       :to="item.path"
+      :aria-label="'Go to ' + item.label"
       class="flex flex-col items-center transition-all duration-200"
       :class="
         route.name === item.name

@@ -4,6 +4,7 @@
       v-if="visible"
       @click="scrollToTop"
       class="fixed right-5 bottom-30 flex items-center justify-center w-10 h-10 rounded-full bg-background-2 hover:bg-background-dark/10 dark:bg-background-2-dark dark:hover:bg-background-2/30 text-primary dark:text-primary-dark shadow-lg transition-colors duration-200 cursor-pointer opacity-75"
+      aria-label="Scroll to top"
     >
       <FontAwesomeIcon :icon="['fas', 'chevron-up']" class="text-sm" />
     </div>
