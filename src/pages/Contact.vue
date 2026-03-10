@@ -27,9 +27,12 @@
       >
         <FontAwesomeIcon
           :icon="['fab', 'github']"
-          class="group-hover:text-accent transition-colors"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">GitHub</span>
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >GitHub</span
+        >
       </a>
 
       <a
@@ -40,9 +43,12 @@
       >
         <FontAwesomeIcon
           :icon="['fab', 'linkedin']"
-          class="group-hover:text-accent transition-colors"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">LinkedIn</span>
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >LinkedIn</span
+        >
       </a>
 
       <a
@@ -53,9 +59,12 @@
       >
         <FontAwesomeIcon
           :icon="['fab', 'instagram']"
-          class="group-hover:text-accent transition-colors"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">Instagram</span>
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >Instagram</span
+        >
       </a>
 
       <a
@@ -66,9 +75,12 @@
       >
         <FontAwesomeIcon
           :icon="['fab', 'discord']"
-          class="group-hover:text-accent transition-colors"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">Discord</span>
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >Discord</span
+        >
       </a>
 
       <a
@@ -77,9 +89,12 @@
       >
         <FontAwesomeIcon
           :icon="['fas', 'envelope']"
-          class="group-hover:text-accent transition-colors"
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         />
-        <span class="group-hover:text-accent transition-colors">Gmail</span>
+        <span
+          class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+          >Gmail</span
+        >
       </a>
     </div>
 
@@ -88,7 +103,7 @@
       Or drop me a direct email 👉
       <a
         href="mailto:mujahidin23894@gmail.com"
-        class="text-primary dark:text-primary-dark underline hover:text-accent transition-colors"
+        class="text-primary dark:text-primary-dark underline hover:text-accent dark:hover:text-accent-dark transition-colors"
       >
         mujahidin23894@gmail.com
       </a>

@@ -9,7 +9,7 @@
         <img
           v-if="scrollYVal > 150 || isMobile"
           key="photo"
-          src="/global/me.jpeg"
+          src="/me.webp"
           alt="Mujahidin"
           class="w-8 h-8 rounded-full transition-all duration-200"
         />

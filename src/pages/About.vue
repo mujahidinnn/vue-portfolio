@@ -3,7 +3,7 @@
     <div>
       <!-- Profile Image -->
       <img
-        src="/global/me.jpeg"
+        src="/me.webp"
         alt="Mujahidin"
         class="float-left mr-4 mb-2 rounded-md shadow-md object-cover w-32 h-32"
       />
@@ -79,7 +79,7 @@
         <FontAwesomeIcon
           :icon="['fas', 'laptop-code']"
           size="xs"
-          class="text-secondary"
+          class="text-secondary-2"
         />
         Uses & Tools
       </p>
@@ -89,23 +89,6 @@
         keep the creative flow alive.
       </p>
       <p class="mb-6">Here are the main stacks I often use in development:</p>
-
-      <!-- Skeleton loading -->
-      <div
-        v-if="loadingUses"
-        class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6"
-      >
-        <div
-          v-for="n in 8"
-          :key="n"
-          class="flex flex-col items-center text-center p-2 rounded-md border border-gray-200 dark:border-gray-800 animate-pulse"
-        >
-          <div
-            class="rounded-full bg-gray-200 dark:bg-gray-700 w-12 h-12 mb-2"
-          />
-          <div class="h-3 bg-gray-200 dark:bg-gray-600 w-1/3 rounded" />
-        </div>
-      </div>
 
       <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <div
@@ -137,20 +120,13 @@
 
 <script setup>
 import { inject, ref, watch, onMounted } from "vue";
+import uses from "../data/uses.json";
 
 const scrollY = inject("scrollY");
 const isActive = ref(false);
 const usesSection = ref(null);
 
-const uses = ref([]);
-const loadingUses = ref(false);
-
 onMounted(async () => {
-  loadingUses.value = true;
-  const res = await fetch("/data/uses.json");
-  uses.value = await res.json();
-  loadingUses.value = false;
-
   watch(scrollY, () => {
     if (!usesSection.value) return;
     const rect = usesSection.value.getBoundingClientRect();

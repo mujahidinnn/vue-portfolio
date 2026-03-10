@@ -50,7 +50,7 @@
     "title": "Simpatiku — Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "image": "/projects/Simpatiku.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Next.js", "Django"],
     "links": [
       {
         "link": "https://simpatiku.kutaitimurkab.go.id",
@@ -76,7 +76,7 @@
     "title": "Profitku — Admin & Landing Page",
     "description": "An integrated enterprise management solution offering modules for performance evaluation, SWOT analysis, KPI tracking, and organizational analytics. Designed to support companies and institutions in strategic decision-making through data visualization.",
     "image": "/projects/Profitku.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Next.js", "Golang"],
     "links": [
       {
         "link": "https://profitku.id",

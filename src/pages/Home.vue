@@ -5,7 +5,7 @@
   >
     <div class="flex gap-5">
       <img
-        src="/global/me.jpeg"
+        src="/me.webp"
         alt="Mujahidin"
         fetchpriority="high"
         class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
@@ -34,7 +34,9 @@
       connect with users.
     </p>
 
-    <div class="flex items-center gap-3 text-2xl text-accent">
+    <div
+      class="flex items-center gap-3 text-2xl text-accent dark:text-accent-dark"
+    >
       <a
         href="https://www.linkedin.com/in/mujahidin18"
         target="_blank"
@@ -64,9 +66,9 @@
     </div>
 
     <a
-      href="/pdf/Mujahidin-Resume.pdf"
+      href="/me.pdf"
       download
-      class="inline-flex items-center gap-2 mt-4 mb-6 h-max w-max bg-accent text-white dark:text-black font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
+      class="inline-flex items-center gap-2 mt-4 mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white dark:text-black font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
       <FontAwesomeIcon :icon="['fas', 'download']" />
       <span>Download Resume</span>
@@ -80,11 +82,11 @@
       <FontAwesomeIcon
         :icon="['fas', 'briefcase']"
         size="xs"
-        class="text-secondary"
+        class="text-secondary-2"
       />
       Work Experience
     </h3>
-    <TimeLine :items="workExperiences" :loading="loadingWork" />
+    <TimeLine :items="workExperiences" />
 
     <!-- Education -->
     <h3
@@ -94,26 +96,23 @@
       <FontAwesomeIcon
         :icon="['fas', 'graduation-cap']"
         size="xs"
-        class="text-secondary"
+        class="text-secondary-2"
       />
       Education
     </h3>
-    <TimeLine :items="educations" :loading="loadingEdu" />
+    <TimeLine :items="educations" />
   </section>
 </template>
 
 <script setup>
-import TimeLine from "../components/TimeLine.vue";
 import { ref, onMounted, onUnmounted } from "vue";
+import TimeLine from "../components/TimeLine.vue";
+import workExperiences from "../data/work-experiences.json";
+import educations from "../data/educations.json";
 
 const scrollY = ref(0);
 const targetX = ref(0);
 const targetY = ref(0);
-
-const workExperiences = ref([]);
-const educations = ref([]);
-const loadingWork = ref(false);
-const loadingEdu = ref(false);
 
 function handleScroll() {
   scrollY.value = window.scrollY;
@@ -128,24 +127,6 @@ onMounted(async () => {
     const rect = slot.getBoundingClientRect();
     targetX.value = rect.left;
     targetY.value = rect.top;
-  }
-
-  loadingWork.value = true;
-  loadingEdu.value = true;
-
-  try {
-    const [workRes, eduRes] = await Promise.all([
-      fetch("/data/work-experiences.json"),
-      fetch("/data/educations.json"),
-    ]);
-
-    workExperiences.value = await workRes.json();
-    educations.value = await eduRes.json();
-  } catch (err) {
-    console.error("Error fetching data:", err);
-  } finally {
-    loadingWork.value = false;
-    loadingEdu.value = false;
   }
 });
 

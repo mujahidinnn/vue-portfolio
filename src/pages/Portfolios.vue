@@ -9,42 +9,24 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <!-- Skeleton -->
-      <template v-if="loading">
-        <CardLoading v-for="n in 6" :key="n" />
-      </template>
-
-      <!-- Real data -->
-      <template v-else>
-        <Card
-          v-for="portfolio in portfolios"
-          :key="portfolio.id"
-          :image="portfolio.image"
-          :title="portfolio.title"
-          :description="portfolio.description"
-          :tech="portfolio.tech"
-          :links="portfolio.links"
-          :story="portfolio.story"
-        />
-      </template>
+      <Card
+        v-for="portfolio in portfolios"
+        :key="portfolio.id"
+        :image="portfolio.image"
+        :title="portfolio.title"
+        :description="portfolio.description"
+        :tech="portfolio.tech"
+        :links="portfolio.links"
+        :story="portfolio.story"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
+import { inject } from "vue";
 import Card from "../components/Card.vue";
-import CardLoading from "../components/CardLoading.vue";
-import { inject, ref, onMounted, computed } from "vue";
+import portfolios from "../data/portfolios.json";
 
 const isMobile = inject("isMobile");
-
-const portfolios = ref([]);
-const loading = ref(false);
-
-onMounted(async () => {
-  loading.value = true;
-  const res = await fetch("/data/portfolios.json");
-  portfolios.value = await res.json();
-  loading.value = false;
-});
 </script>

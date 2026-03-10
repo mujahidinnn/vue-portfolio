@@ -25,7 +25,7 @@
             <a
               href="#home"
               @click.prevent="scrollToSection('/#home')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Home</a
             >
           </li>
@@ -33,7 +33,7 @@
             <a
               href="#work-experience"
               @click.prevent="scrollToSection('/#work-experience')"
-              class="hover:text-accent whitespace-nowrap"
+              class="hover:text-accent dark:hover:text-accent-dark whitespace-nowrap"
               >Work Experience</a
             >
           </li>
@@ -41,7 +41,7 @@
             <a
               href="#education"
               @click.prevent="scrollToSection('/#education')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Education</a
             >
           </li>
@@ -49,7 +49,7 @@
             <a
               href="#about"
               @click.prevent="scrollToSection('/about#about')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >About</a
             >
           </li>
@@ -57,7 +57,7 @@
             <a
               href="#uses"
               @click.prevent="scrollToSection('/about#uses')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Uses & Tools</a
             >
           </li>
@@ -65,7 +65,7 @@
             <a
               href="#portfolios"
               @click.prevent="scrollToSection('/portfolios#portfolios')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Portfolio</a
             >
           </li>
@@ -73,7 +73,7 @@
             <a
               href="#projects"
               @click.prevent="scrollToSection('/projects#projects')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Projects</a
             >
           </li>
@@ -81,7 +81,7 @@
             <a
               href="#contact"
               @click.prevent="scrollToSection('/contact#contact')"
-              class="hover:text-accent"
+              class="hover:text-accent dark:hover:text-accent-dark"
               >Contact</a
             >
           </li>
@@ -96,7 +96,7 @@
             href="https://www.linkedin.com/in/mujahidin18"
             target="_blank"
             rel="noreferrer noopener"
-            class="flex gap-1 items-center hover:text-accent"
+            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
           >
             <FontAwesomeIcon :icon="['fab', 'linkedin']" />
             <p class="text-sm">LinkedIn</p>
@@ -105,14 +105,14 @@
             href="https://github.com/mujahidinnn"
             target="_blank"
             rel="noreferrer noopener"
-            class="flex gap-1 items-center hover:text-accent"
+            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
           >
             <FontAwesomeIcon :icon="['fab', 'github']" />
             <p class="text-sm">Github</p>
           </a>
           <a
             href="mailto:mujahidin28394@gmail.com"
-            class="flex gap-1 items-center hover:text-accent"
+            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
           >
             <FontAwesomeIcon :icon="['fas', 'envelope']" />
             <p class="text-sm">Gmail</p>
