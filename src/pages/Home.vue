@@ -8,6 +8,7 @@
         src="/me.webp"
         alt="Mujahidin"
         fetchpriority="high"
+        style="will-change: transform"
         class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         width="128"
         height="128"
@@ -116,14 +117,20 @@ const scrollY = ref(0);
 const targetX = ref(0);
 const targetY = ref(0);
 
+let ticking = false;
 function handleScroll() {
-  scrollY.value = window.scrollY;
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      scrollY.value = window.scrollY;
+      ticking = false;
+    });
+    ticking = true;
+  }
 }
 
-onMounted(async () => {
-  window.addEventListener("scroll", handleScroll);
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
-  // posisi navbar-avatar-slot
   const slot = document.querySelector(".navbar-avatar-slot");
   if (slot) {
     const rect = slot.getBoundingClientRect();

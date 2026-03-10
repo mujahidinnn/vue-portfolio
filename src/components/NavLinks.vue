@@ -26,7 +26,10 @@
     role="button"
     aria-label="Toggle dark mode"
   >
-    {{ isDark ? "🌙" : "☀️" }}
+    <FontAwesomeIcon
+      :icon="isDark ? ['fas', 'sun'] : ['fas', 'moon']"
+      class="text-sm transition-transform duration-300 text-yellow-500"
+    />
   </li>
 </template>
 

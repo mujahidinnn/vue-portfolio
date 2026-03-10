@@ -26,10 +26,13 @@
 
     <!-- Theme Toggle -->
     <button
-      class="block md:hidden mt-2 md:mt-0 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
+      class="block md:hidden mt-2 md:mt-0 transition cursor-pointer"
       @click="toggleTheme"
     >
-      {{ isDark ? "🌙" : "☀️" }}
+      <FontAwesomeIcon
+        :icon="isDark ? ['fas', 'sun'] : ['fas', 'moon']"
+        class="text-sm transition-transform duration-300 text-yellow-500"
+      />
     </button>
   </nav>
 </template>
