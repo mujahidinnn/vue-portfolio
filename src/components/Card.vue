@@ -21,12 +21,11 @@
           class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-md"
         ></div>
         <img
-          :src="image"
+          :src="thumbnail"
           :alt="title"
           loading="lazy"
           @load="loaded = true"
-          @error="loaded = true"
-          class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-md transition-opacity duration-300"
+          class="w-full h-full object-contain rounded-md transition-opacity duration-300"
           :class="loaded ? 'opacity-100' : 'opacity-0'"
         />
       </div>
@@ -51,116 +50,130 @@
       class="fixed inset-0 z-[999] flex items-center justify-center"
     >
       <div
-        class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
         @click="closeModal"
       ></div>
 
       <div
-        class="relative bg-white dark:bg-gray-900 rounded-3xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-gray-200 dark:border-gray-700 z-[1000] flex flex-col max-h-[90vh]"
+        class="relative bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-gray-200 dark:border-gray-700 z-[1000] flex flex-col max-h-[90vh]"
       >
         <button
           @click="closeModal"
-          class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-lg transition"
+          class="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/50 w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:scale-110 transition"
         >
           <FontAwesomeIcon :icon="['fas', 'xmark']" />
         </button>
 
-        <div class="w-full h-52 bg-white relative border-b border-gray-300">
-          <img
-            :src="image"
-            :alt="title"
-            class="w-full h-full object-contain p-4"
-          />
+        <div
+          class="w-full h-64 sm:h-80 bg-gray-50 dark:bg-gray-800 relative group/slider border-b border-gray-200 dark:border-gray-700"
+        >
+          <div class="w-full h-full flex items-center justify-center">
+            <img
+              :src="currentGalleryImage.src"
+              :alt="currentGalleryImage.alt"
+              class="max-w-full max-h-full object-contain transition-all duration-500"
+            />
+          </div>
+
+          <template v-if="images && images.length > 1">
+            <button
+              @click="prevSlide"
+              class="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full transition"
+            >
+              <FontAwesomeIcon :icon="['fas', 'chevron-left']" />
+            </button>
+            <button
+              @click="nextSlide"
+              class="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full transition"
+            >
+              <FontAwesomeIcon :icon="['fas', 'chevron-right']" />
+            </button>
+
+            <!-- Pagination Dots -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5"
+            >
+              <span
+                v-for="(_, index) in images"
+                :key="index"
+                @click="activeIndex = index"
+                class="w-2 h-2 rounded-full cursor-pointer transition-all"
+                :class="
+                  activeIndex === index ? 'bg-primary w-4' : 'bg-gray-400/50'
+                "
+              ></span>
+            </div>
+          </template>
         </div>
 
-        <div
-          class="p-6 overflow-y-auto space-y-6 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-700"
-        >
+        <!-- Content Section -->
+        <div class="p-6 overflow-y-auto space-y-6 custom-scrollbar">
           <div>
             <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {{ title }}
             </h2>
             <p
-              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
+              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mt-2"
             >
               {{ description }}
             </p>
           </div>
 
-          <div v-if="tech">
+          <!-- Tech Stack -->
+          <div v-if="tech.length">
             <h3
-              class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
+              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
               Tech Stack
             </h3>
             <div class="flex flex-wrap gap-2">
               <span
-                v-for="(item, i) in tech"
-                :key="i"
-                class="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium"
+                v-for="item in tech"
+                :key="item"
+                class="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium border border-primary/10"
               >
                 {{ item }}
               </span>
             </div>
           </div>
 
+          <!-- Links -->
           <div v-if="links?.length">
             <h3
-              class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
+              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
-              Link{{ links.length > 1 ? "s" : "" }}
+              Project Links
             </h3>
-            <ul class="space-y-2">
-              <li
-                v-for="(item, index) in links"
-                :key="index"
-                class="flex items-center gap-2 text-sm"
+            <div class="flex flex-col gap-2">
+              <a
+                v-for="(item, i) in links"
+                :key="i"
+                :href="item.link"
+                target="_blank"
+                class="flex items-center gap-2 text-sm text-primary dark:text-primary-dark hover:underline group"
               >
-                <FontAwesomeIcon
-                  :icon="['fas', 'link']"
-                  class="text-primary dark:text-primary-dark"
-                />
-                <a
-                  :href="item.link"
-                  target="_blank"
-                  rel="noopener"
-                  class="hover:underline text-primary dark:text-primary-dark"
+                <FontAwesomeIcon :icon="['fas', 'link']" class="text-xs" />
+                <span>{{ cleanLink(item.link) }}</span>
+                <span v-if="item.desc" class="text-gray-400 text-xs italic"
+                  >- {{ item.desc }}</span
                 >
-                  {{ cleanLink(item.link) }}
-                </a>
-                <span
-                  v-if="item.desc"
-                  class="text-gray-500 dark:text-gray-400 text-xs"
-                >
-                  ({{ item.desc }})
-                </span>
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
 
+          <!-- Story -->
           <div v-if="story">
             <h3
-              class="text-sm font-semibold text-primary dark:text-primary-dark uppercase tracking-wide mb-2"
+              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
-              Story
+              The Story
             </h3>
             <p
-              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap"
+              class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic border-l-4 border-primary-dark/20 pl-4"
             >
               {{ story }}
             </p>
           </div>
-        </div>
-
-        <div
-          class="p-5 border-t border-gray-200 dark:border-gray-700 flex justify-end"
-        >
-          <button
-            @click="closeModal"
-            class="px-5 py-2 rounded-md bg-gray-900 dark:bg-white hover:bg-primary/80 dark:hover:bg-gray-200 text-white dark:text-primary text-sm transition-all font-semibold cursor-pointer"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -171,39 +184,50 @@
 import { ref, watch, computed, onUnmounted } from "vue";
 
 const props = defineProps({
-  image: String,
+  thumbnail: String,
+  images: Array,
   title: String,
   description: String,
-  tech: {
-    type: Array,
-    default: () => [],
-  },
+  tech: { type: Array, default: () => [] },
   story: String,
-  links: {
-    type: Array,
-    default: () => [],
-  },
+  links: { type: Array, default: () => [] },
 });
 
 const loaded = ref(false);
 const showModal = ref(false);
+const activeIndex = ref(0);
+
+const currentGalleryImage = computed(() => {
+  if (props.images && props.images.length > 0) {
+    return props.images[activeIndex.value];
+  }
+  return { src: props.image, alt: props.title };
+});
+
+function nextSlide() {
+  activeIndex.value = (activeIndex.value + 1) % props.images.length;
+}
+
+function prevSlide() {
+  activeIndex.value =
+    activeIndex.value === 0 ? props.images.length - 1 : activeIndex.value - 1;
+}
 
 function openModal() {
   showModal.value = true;
+  activeIndex.value = 0;
 }
+
 function closeModal() {
   showModal.value = false;
 }
+
 function cleanLink(url) {
   return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 }
 
 watch(showModal, (value) => {
-  if (value) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+  document.body.style.overflow = value ? "hidden" : "";
 });
 
 onUnmounted(() => {
@@ -212,8 +236,26 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #374151;
 }
 </style>

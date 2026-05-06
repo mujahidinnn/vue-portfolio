@@ -13,6 +13,7 @@
         v-for="portfolio in portfolios"
         :key="portfolio.id"
         :image="portfolio.image"
+        :images="portfolio.images"
         :title="portfolio.title"
         :description="portfolio.description"
         :tech="portfolio.tech"
