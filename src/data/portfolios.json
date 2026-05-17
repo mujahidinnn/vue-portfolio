@@ -17,8 +17,17 @@
     "title": "Mojepict",
     "description": "Mojepict is a collection of versatile and user-friendly online tools designed to simplify daily digital workflows. From quick image editing to file conversion, color palette generation, and text utilities — Mojepict combines multiple handy mini-tools in one accessible place. It’s crafted with modern UI/UX principles for seamless and fast performance, making everyday creative tasks effortless and enjoyable.",
     "story": "The idea for Mojepict came from my daily experience — both at work and during personal projects — where I often needed simple tools like image editors, converters, or color extractors. Most of the available sites were heavy, cluttered with ads, or required multiple separate tools for small tasks. I decided to build Mojepict as a lightweight, all-in-one toolbox that’s ad-free, fast, and pleasant to use.",
-    "thumbnail": "/portfolios/mojepict.svg",
-    "images": [],
+    "thumbnail": "/portfolios/mojepict/thumbnail.svg",
+    "images": [
+      { "src": "/portfolios/mojepict/1.png", "alt": "mojepict-1" },
+      { "src": "/portfolios/mojepict/2.png", "alt": "mojepict-2" },
+      { "src": "/portfolios/mojepict/3.png", "alt": "mojepict-3" },
+      { "src": "/portfolios/mojepict/4.png", "alt": "mojepict-4" },
+      { "src": "/portfolios/mojepict/5.png", "alt": "mojepict-5" },
+      { "src": "/portfolios/mojepict/6.png", "alt": "mojepict-6" },
+      { "src": "/portfolios/mojepict/7.png", "alt": "mojepict-7" },
+      { "src": "/portfolios/mojepict/8.png", "alt": "mojepict-8" }
+    ],
     "tech": ["CSS", "JavaScript", "Tailwind CSS", "Next.js"],
     "links": [
       {

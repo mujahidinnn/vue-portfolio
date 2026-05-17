@@ -12,7 +12,7 @@
       <Card
         v-for="portfolio in portfolios"
         :key="portfolio.id"
-        :image="portfolio.image"
+        :thumbnail="portfolio.thumbnail"
         :images="portfolio.images"
         :title="portfolio.title"
         :description="portfolio.description"

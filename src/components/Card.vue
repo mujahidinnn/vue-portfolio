@@ -1,5 +1,4 @@
 <template>
-  <!-- Card -->
   <div
     class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.01] transition-all duration-300 ease-out flex flex-col justify-between gap-2 @container"
   >
@@ -25,6 +24,10 @@
           :alt="title"
           loading="lazy"
           @load="loaded = true"
+          @error="
+            loaded = true;
+            $event.target.src = 'https://placehold.co/150x150?text=No+Image';
+          "
           class="w-full h-full object-contain rounded-md transition-opacity duration-300"
           :class="loaded ? 'opacity-100' : 'opacity-0'"
         />
@@ -43,7 +46,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <transition name="fade">
     <div
       v-if="showModal"
@@ -67,11 +69,23 @@
         <div
           class="w-full h-64 sm:h-80 bg-gray-50 dark:bg-gray-800 relative group/slider border-b border-gray-200 dark:border-gray-700"
         >
-          <div class="w-full h-full flex items-center justify-center">
+          <div class="w-full h-full flex items-center justify-center relative">
+            <div
+              v-if="!modalImageLoaded"
+              class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-md"
+            ></div>
+
             <img
               :src="currentGalleryImage.src"
               :alt="currentGalleryImage.alt"
-              class="max-w-full max-h-full object-contain transition-all duration-500"
+              @load="modalImageLoaded = true"
+              @error="
+                modalImageLoaded = true;
+                $event.target.src =
+                  'https://placehold.co/600x400?text=No+Preview';
+              "
+              class="max-w-full max-h-full object-contain transition-all duration-300"
+              :class="modalImageLoaded ? 'opacity-100' : 'opacity-0'"
             />
           </div>
 
@@ -89,14 +103,13 @@
               <FontAwesomeIcon :icon="['fas', 'chevron-right']" />
             </button>
 
-            <!-- Pagination Dots -->
             <div
               class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5"
             >
               <span
                 v-for="(_, index) in images"
                 :key="index"
-                @click="activeIndex = index"
+                @click="changeSlide(index)"
                 class="w-2 h-2 rounded-full cursor-pointer transition-all"
                 :class="
                   activeIndex === index ? 'bg-primary w-4' : 'bg-gray-400/50'
@@ -106,7 +119,6 @@
           </template>
         </div>
 
-        <!-- Content Section -->
         <div class="p-6 overflow-y-auto space-y-6 custom-scrollbar">
           <div>
             <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -119,8 +131,7 @@
             </p>
           </div>
 
-          <!-- Tech Stack -->
-          <div v-if="tech.length">
+          <div v-if="tech && tech.length">
             <h3
               class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
@@ -137,8 +148,7 @@
             </div>
           </div>
 
-          <!-- Links -->
-          <div v-if="links?.length">
+          <div v-if="links && links.length">
             <h3
               class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
@@ -161,7 +171,6 @@
             </div>
           </div>
 
-          <!-- Story -->
           <div v-if="story">
             <h3
               class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
@@ -194,28 +203,55 @@ const props = defineProps({
 });
 
 const loaded = ref(false);
+const modalImageLoaded = ref(false);
 const showModal = ref(false);
 const activeIndex = ref(0);
 
-const currentGalleryImage = computed(() => {
+const combinedGallery = computed(() => {
+  const thumbnailObj = { src: props.thumbnail, alt: props.title };
+
   if (props.images && props.images.length > 0) {
-    return props.images[activeIndex.value];
+    return [thumbnailObj, ...props.images];
   }
-  return { src: props.image, alt: props.title };
+
+  return [thumbnailObj];
+});
+
+const currentGalleryImage = computed(() => {
+  return combinedGallery.value[activeIndex.value];
 });
 
 function nextSlide() {
-  activeIndex.value = (activeIndex.value + 1) % props.images.length;
+  if (props.images && props.images.length > 0) {
+    modalImageLoaded.value = false;
+    activeIndex.value = (activeIndex.value + 1) % props.images.length;
+  }
 }
 
 function prevSlide() {
-  activeIndex.value =
-    activeIndex.value === 0 ? props.images.length - 1 : activeIndex.value - 1;
+  if (props.images && props.images.length > 0) {
+    modalImageLoaded.value = false;
+    activeIndex.value =
+      activeIndex.value === 0 ? props.images.length - 1 : activeIndex.value - 1;
+  }
+}
+
+function changeSlide(index) {
+  if (activeIndex.value !== index) {
+    modalImageLoaded.value = false;
+    activeIndex.value = index;
+  }
 }
 
 function openModal() {
   showModal.value = true;
   activeIndex.value = 0;
+
+  if (!props.images || props.images.length === 0) {
+    modalImageLoaded.value = true;
+  } else {
+    modalImageLoaded.value = false;
+  }
 }
 
 function closeModal() {

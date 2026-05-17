@@ -12,7 +12,7 @@
       <Card
         v-for="project in projects"
         :key="project.id"
-        :image="project.image"
+        :thumbnail="project.thumbnail"
         :title="project.title"
         :description="project.description"
         :tech="project.tech"

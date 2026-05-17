@@ -3,9 +3,9 @@
     <li v-for="(item, idx) in items" :key="idx" class="mb-10 ms-6 last:mb-0">
       <!-- Dot -->
       <span
-        class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 -start-3 mt-4 rotate-45 rounded-md"
+        class="absolute flex items-center justify-center w-6 h-6 bg-accent/20 dark:bg-accent-dark/20 -start-3 mt-4 rotate-45 rounded-md"
       >
-        <span class="w-3 h-3 bg-accent rounded-sm"></span>
+        <span class="w-3 h-3 bg-accent dark:bg-accent-dark rounded-sm"></span>
       </span>
 
       <!-- Block -->
