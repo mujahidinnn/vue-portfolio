@@ -24,16 +24,19 @@
         </div>
 
         <div>
-          <h4 class="text-primary dark:text-primary-dark font-medium">
-            {{ item.name }}
-            <span class="text-secondary-2 dark:text-secondary-dark-2"> | </span>
-            <span class="text-secondary-2 dark:text-secondary-dark-2">{{
-              item.subname
-            }}</span>
-          </h4>
-          <p
-            class="text-secondary dark:text-secondary-dark text-sm sm:text-base mt-2"
-          >
+          <div class="flex justify-between">
+            <h4 class="text-primary dark:text-primary-dark font-medium">
+              {{ item.name }}
+            </h4>
+            <span
+              class="text-secondary-2 dark:text-secondary-dark-2 text-[13px] bg-secondary-dark/30 dark:bg-secondary/40 rounded-xl px-2"
+              >{{ item.period }}</span
+            >
+          </div>
+          <p class="text-secondary-2 dark:text-secondary-dark-2">
+            {{ item.subname }}
+          </p>
+          <p class="text-secondary dark:text-secondary-dark text-sm mt-2">
             {{ item.description }}
           </p>
         </div>

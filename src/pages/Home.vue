@@ -29,10 +29,12 @@
     <p
       class="text-secondary dark:text-secondary-dark max-w-2xl text-base sm:text-lg mb-8"
     >
-      Hello, I am Mujahidin — a front-end developer passionate about creating
-      clean, responsive, and visually engaging digital products. I focus on
-      usability and aesthetics to deliver seamless experiences that truly
-      connect with users.
+      Hello, I am Mujahidin — a Frontend Web Developer specializing in complex,
+      data-driven applications, with a dedicated focus on Frontend WebGIS
+      integration and spatial data visualization. Experienced in architecting
+      high-performance management dashboards, interactive charting, and scalable
+      enterprise portals that bridge rigorous technical requirements with
+      intuitive user interfaces.
     </p>
 
     <div
@@ -45,7 +47,7 @@
         aria-label="Visit my LinkedIn profile"
       >
         <FontAwesomeIcon
-          :icon="['fab', 'linkedin']"
+          :icon="['fab', 'square-linkedin']"
           class="cursor-pointer hover:opacity-80 transition"
         />
       </a>
@@ -71,7 +73,7 @@
     <a
       href="/me.pdf"
       download
-      class="inline-flex items-center gap-2 mt-4 mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white dark:text-black font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
+      class="inline-flex items-center gap-2 mt-4 mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
       <FontAwesomeIcon :icon="['fas', 'download']" />
       <span>Download Resume</span>
