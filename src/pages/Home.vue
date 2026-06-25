@@ -84,11 +84,7 @@
       id="work-experience"
       class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-4 sm:my-8"
     >
-      <FontAwesomeIcon
-        :icon="['fas', 'briefcase']"
-        size="xs"
-        class="text-secondary-2"
-      />
+      <FontAwesomeIcon :icon="['fas', 'briefcase']" class="text-secondary-2" />
       Work Experience
     </h3>
     <TimeLine :items="workExperiences" />
@@ -100,7 +96,6 @@
     >
       <FontAwesomeIcon
         :icon="['fas', 'graduation-cap']"
-        size="xs"
         class="text-secondary-2"
       />
       Education

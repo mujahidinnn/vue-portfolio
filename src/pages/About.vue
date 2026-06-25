@@ -80,7 +80,6 @@
       >
         <FontAwesomeIcon
           :icon="['fas', 'laptop-code']"
-          size="xs"
           class="text-secondary-2"
         />
         Uses & Tools
