@@ -2,7 +2,7 @@
   <section id="contact" class="py-20 max-w-2xl mx-auto text-center px-4">
     <!-- Title -->
     <h2
-      class="text-2xl sm:text-4xl font-bold text-primary dark:text-primary-dark mb-4"
+      class="text-xl sm:text-3xl font-bold text-primary dark:text-primary-dark mb-4"
     >
       Let’s Connect 🤝
     </h2>
@@ -17,7 +17,7 @@
 
     <!-- Social Links -->
     <div
-      class="flex justify-center gap-6 flex-wrap text-primary dark:text-primary-dark text-lg mb-8"
+      class="flex justify-center gap-4 sm:gap-6 flex-wrap text-primary dark:text-primary-dark mb-8"
     >
       <a
         href="https://www.linkedin.com/in/mujahidin18"

@@ -35,11 +35,13 @@
 
       <div class="flex-1 flex flex-col">
         <h3
-          class="text-base md:text-xl font-semibold text-gray-900 dark:text-gray-100 leading-snug pr-3"
+          class="text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100 leading-snug pr-3"
         >
           {{ title }}
         </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">
+        <p
+          class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2"
+        >
           {{ description }}
         </p>
       </div>
@@ -61,13 +63,13 @@
       >
         <button
           @click="closeModal"
-          class="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/50 w-8 h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:scale-110 transition"
+          class="absolute top-4 right-4 z-10 bg-white/80 dark:bg-black/50 w-5 sm:w-8 h-5 sm:h-8 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 cursor-pointer"
         >
           <FontAwesomeIcon :icon="['fas', 'xmark']" />
         </button>
 
         <div
-          class="w-full h-64 sm:h-80 bg-gray-50 dark:bg-gray-800 relative group/slider border-b border-gray-200 dark:border-gray-700"
+          class="w-full h-39 sm:h-80 bg-gray-50 dark:bg-gray-800 relative group/slider border-b border-gray-200 dark:border-gray-700"
         >
           <div class="w-full h-full flex items-center justify-center relative">
             <div
@@ -119,13 +121,17 @@
           </template>
         </div>
 
-        <div class="p-6 overflow-y-auto space-y-6 custom-scrollbar">
+        <div
+          class="p-4 sm:p-6 overflow-y-auto space-y-4 sm:space-y-6 custom-scrollbar"
+        >
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            <h2
+              class="text-base sm:text-xl font-bold text-gray-900 dark:text-gray-100"
+            >
               {{ title }}
             </h2>
             <p
-              class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mt-2"
+              class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-2"
             >
               {{ description }}
             </p>
@@ -133,7 +139,7 @@
 
           <div v-if="tech && tech.length">
             <h3
-              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
+              class="text-[10px] sm:text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
               Tech Stack
             </h3>
@@ -141,7 +147,7 @@
               <span
                 v-for="item in tech"
                 :key="item"
-                class="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium border border-primary/10"
+                class="px-1.5 sm:px-3 py-[2px] sm:py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium border border-primary/10"
               >
                 {{ item }}
               </span>
@@ -150,7 +156,7 @@
 
           <div v-if="links && links.length">
             <h3
-              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
+              class="text-[10px] sm:text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
               Project Links
             </h3>
@@ -160,11 +166,13 @@
                 :key="i"
                 :href="item.link"
                 target="_blank"
-                class="flex items-center gap-2 text-sm text-primary dark:text-primary-dark hover:underline group"
+                class="flex items-center gap-2 text-xs sm:text-sm text-primary dark:text-primary-dark hover:underline group"
               >
-                <FontAwesomeIcon :icon="['fas', 'link']" class="text-xs" />
+                <FontAwesomeIcon :icon="['fas', 'link']" />
                 <span>{{ cleanLink(item.link) }}</span>
-                <span v-if="item.desc" class="text-gray-400 text-xs italic"
+                <span
+                  v-if="item.desc"
+                  class="text-gray-400 text-[10px] sm:text-xs italic"
                   >- {{ item.desc }}</span
                 >
               </a>
@@ -173,12 +181,12 @@
 
           <div v-if="story">
             <h3
-              class="text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
+              class="text-[10px] sm:text-xs font-bold text-primary dark:text-primary-dark uppercase tracking-widest mb-3"
             >
               The Story
             </h3>
             <p
-              class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic border-l-4 border-primary-dark/20 pl-4"
+              class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-l-4 border-primary-dark/20 pl-4"
             >
               {{ story }}
             </p>

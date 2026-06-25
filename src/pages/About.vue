@@ -16,7 +16,7 @@
       </h2>
 
       <p
-        class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
+        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
         I’m a front-end developer with over 3 years of experience building
         clean, responsive, and user-focused web applications. I combine
@@ -25,7 +25,7 @@
       </p>
 
       <p
-        class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
+        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
         Beyond coding, I enjoy coffee — especially when it’s mixed with palm
         sugar, my absolute favorite. I’m also a fan of mie ayam, and I really
@@ -36,7 +36,7 @@
       </p>
 
       <p
-        class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
+        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
         I love traveling — not only the destinations, but the journey itself.
         Every trip is filled with small, unforgettable moments that turn into
@@ -46,7 +46,7 @@
       </p>
 
       <p
-        class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed mb-3"
+        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
         Fashion is another part of my life I deeply enjoy. I love exploring
         different outfits, mix and match styles, and experimenting with themes.
@@ -55,7 +55,7 @@
       </p>
 
       <p
-        class="text-secondary dark:text-secondary-dark text-sm sm:text-base leading-relaxed"
+        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed"
       >
         At the core, I’m someone who finds beauty in simplicity. Whether it’s a
         cup of coffee, a walk at sunset, or a moment of laughter with friends, I
@@ -75,7 +75,9 @@
       ref="usesSection"
       class="my-10 py-6 text-secondary dark:text-secondary-dark border-t border-gray-200 dark:border-gray-700"
     >
-      <p class="text-lg font-semibold mb-2 text-primary dark:text-primary-dark">
+      <p
+        class="text-base sm:text-lg font-semibold mb-2 text-primary dark:text-primary-dark"
+      >
         <FontAwesomeIcon
           :icon="['fas', 'laptop-code']"
           size="xs"
@@ -83,12 +85,14 @@
         />
         Uses & Tools
       </p>
-      <p class="text-sm sm:text-base mb-2">
+      <p class="text-xs sm:text-base mb-2">
         From client projects to personal experiments, I rely on a set of
         technologies and tools that help me work faster, stay organized, and
         keep the creative flow alive.
       </p>
-      <p class="mb-6">Here are the main stacks I often use in development:</p>
+      <p class="mb-6 text-xs sm:text-base">
+        Here are the main stacks I often use in development:
+      </p>
 
       <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <div

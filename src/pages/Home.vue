@@ -19,7 +19,7 @@
         }"
       />
       <h2
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary dark:text-primary-dark mb-6 leading-snug"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-primary-dark mb-6 leading-snug"
       >
         Designing Elegant and <br />
         Intuitive Web Experiences
@@ -27,7 +27,7 @@
     </div>
 
     <p
-      class="text-secondary dark:text-secondary-dark max-w-2xl text-base sm:text-lg mb-8"
+      class="text-secondary dark:text-secondary-dark max-w-2xl text-sm sm:text-base mb-8"
     >
       Hello, I am Mujahidin — a Frontend Web Developer specializing in complex,
       data-driven applications, with a dedicated focus on Frontend WebGIS
@@ -73,7 +73,7 @@
     <a
       href="/me.pdf"
       download
-      class="inline-flex items-center gap-2 mt-4 mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
+      class="inline-flex items-center gap-2 mt-2 sm:mt-4 mb-3 sm:mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
       <FontAwesomeIcon :icon="['fas', 'download']" />
       <span>Download Resume</span>
@@ -82,7 +82,7 @@
     <!-- Work Experience -->
     <h3
       id="work-experience"
-      class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-8"
+      class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-4 sm:my-8"
     >
       <FontAwesomeIcon
         :icon="['fas', 'briefcase']"
@@ -96,7 +96,7 @@
     <!-- Education -->
     <h3
       id="education"
-      class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-8"
+      class="text-xl sm:text-2xl font-semibold text-primary dark:text-primary-dark my-4 sm:my-8"
     >
       <FontAwesomeIcon
         :icon="['fas', 'graduation-cap']"

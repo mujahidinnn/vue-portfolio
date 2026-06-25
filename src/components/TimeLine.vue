@@ -25,18 +25,29 @@
 
         <div>
           <div class="flex justify-between">
-            <h4 class="text-primary dark:text-primary-dark font-medium">
+            <h4
+              class="text-primary dark:text-primary-dark font-medium text-sm sm:text-base"
+            >
               {{ item.name }}
             </h4>
             <span
-              class="text-secondary-2 dark:text-secondary-dark-2 text-[13px] bg-secondary-dark/30 dark:bg-secondary/40 rounded-xl px-2"
+              class="hidden sm:block text-secondary-2 dark:text-secondary-dark-2 text-[11px] sm:text-[13px] bg-secondary-dark/30 dark:bg-secondary/40 rounded-xl px-2 pt-[2px]"
               >{{ item.period }}</span
             >
           </div>
-          <p class="text-secondary-2 dark:text-secondary-dark-2">
+          <p
+            class="text-secondary-2 dark:text-secondary-dark-2 text-sm sm:text-base"
+          >
             {{ item.subname }}
           </p>
-          <p class="text-secondary dark:text-secondary-dark text-sm mt-2">
+          <span
+            class="block sm:hidden text-secondary-2 dark:text-secondary-dark-2 text-xs"
+            >{{ item.period }}</span
+          >
+
+          <p
+            class="text-secondary dark:text-secondary-dark text-xs sm:text-sm mt-2"
+          >
             {{ item.description }}
           </p>
         </div>

@@ -16,11 +16,11 @@
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-sm font-bold uppercase tracking-wide mb-3">
+        <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wide mb-3">
           Quick Links
         </h3>
 
-        <ul class="space-y-2 text-sm">
+        <ul class="space-y-2 text-xs sm:text-sm">
           <li>
             <a
               href="#home"
@@ -97,8 +97,10 @@
 
       <!-- Social -->
       <div>
-        <h3 class="text-sm font-bold uppercase tracking-wide mb-3">Connect</h3>
-        <div class="flex flex-col gap-3">
+        <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wide mb-3">
+          Connect
+        </h3>
+        <div class="text-xs sm:text-sm flex flex-col gap-3">
           <a
             href="https://www.linkedin.com/in/mujahidin18"
             target="_blank"
@@ -107,7 +109,7 @@
             aria-label="Visit my LinkedIn profile"
           >
             <FontAwesomeIcon :icon="['fab', 'linkedin']" />
-            <p class="text-sm">LinkedIn</p>
+            <p>LinkedIn</p>
           </a>
           <a
             href="https://github.com/mujahidinnn"
@@ -117,7 +119,7 @@
             aria-label="Visit my GitHub profile"
           >
             <FontAwesomeIcon :icon="['fab', 'github']" />
-            <p class="text-sm">Github</p>
+            <p>Github</p>
           </a>
           <a
             href="mailto:mujahidin28394@gmail.com"
@@ -125,7 +127,7 @@
             aria-label="Send me an email"
           >
             <FontAwesomeIcon :icon="['fas', 'envelope']" />
-            <p class="text-sm">Gmail</p>
+            <p>Gmail</p>
           </a>
         </div>
       </div>
