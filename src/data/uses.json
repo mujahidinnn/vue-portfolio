@@ -5,12 +5,16 @@
   { "icon": "/uses/typescript.png", "name": "Typescript" },
   { "icon": "/uses/sass.png", "name": "Sass" },
 
+  { "icon": "/uses/mysql.png", "name": "My SQL" },
+
   { "icon": "/uses/reactjs.png", "name": "React Js" },
   { "icon": "/uses/nextjs.png", "name": "Next Js" },
   { "icon": "/uses/vuejs.png", "name": "Vue Js" },
   { "icon": "/uses/nuxtjs.png", "name": "Nuxt Js" },
+
   { "icon": "/uses/redux.png", "name": "Redux" },
   { "icon": "/uses/pinia.png", "name": "Pinia" },
+  { "icon": "/uses/zustand.png", "name": "Zustand" },
 
   { "icon": "/uses/bootstrap.png", "name": "Bootstrap" },
   { "icon": "/uses/tailwind.png", "name": "Tailwind" },

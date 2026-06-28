@@ -1,8 +1,8 @@
 [
   {
-    "title": "SakiFi",
-    "description": "SakiFi is a practical and reliable platform that serves as a reference hub for Sharia-compliant financial transactions. It provides curated articles, verified documents, and academic references sourced from Islamic jurisprudence (fiqh muamalah) to help users understand the halal standards of modern contracts. Built with a focus on accessibility, clarity, and trustworthiness, SakiFi aims to bridge the gap between technology and Sharia finance literacy.",
-    "story": "SakiFi was born out of my own confusion and difficulty in finding clear, reliable information about Islamic financial rulings — such as how to calculate zakat, determine nisab and haul, or understand contract standards according to Sharia principles. I wanted a single place that consolidates all these essentials, backed by credible references. That desire eventually evolved into a comprehensive digital reference platform for Sharia-compliant transactions.",
+    "title": "Sakifi",
+    "description": "Sakifi is a practical and reliable platform that serves as a reference hub for Sharia-compliant financial transactions. It provides curated articles, verified documents, and academic references sourced from Islamic jurisprudence (fiqh muamalah) to help users understand the halal standards of modern contracts. Built with a focus on accessibility, clarity, and trustworthiness, SakiFi aims to bridge the gap between technology and Sharia finance literacy.",
+    "story": "Sakifi was born out of my own confusion and difficulty in finding clear, reliable information about Islamic financial rulings — such as how to calculate zakat, determine nisab and haul, or understand contract standards according to Sharia principles. I wanted a single place that consolidates all these essentials, backed by credible references. That desire eventually evolved into a comprehensive digital reference platform for Sharia-compliant transactions.",
     "thumbnail": "/portfolios/sakifi.svg",
     "images": [],
     "tech": ["CSS", "JavaScript", "Next.js"],

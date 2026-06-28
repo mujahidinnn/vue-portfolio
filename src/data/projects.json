@@ -1,7 +1,7 @@
 [
   {
-    "title": "Muhammadiyah Expo 2023",
-    "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2023, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
+    "title": "Muhammadiyah Expo 2022",
+    "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2022, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
     "thumbnail": "/projects/Muhammadiyah-Expo.svg",
     "tech": ["CSS", "JavaScript", "React.js", "Laravel"],
     "links": []
@@ -47,6 +47,14 @@
     "links": []
   },
   {
+    "title": "Adis",
+    "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
+    "thumbnail": "/projects/Adis.svg",
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
+    "links": []
+  },
+
+  {
     "title": "Simpatiku — Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "thumbnail": "/projects/Simpatiku.svg",
@@ -69,6 +77,27 @@
     "title": "Siperjadin",
     "description": "A government business trip management platform that automates the process of travel authorization, expense reporting, and approval workflows. It streamlines administrative tasks and ensures compliance with internal regulations.",
     "thumbnail": "/projects/Siperjadin.svg",
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "links": []
+  },
+  {
+    "title": "Kanal Tapem",
+    "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
+    "thumbnail": "/projects/Kanal-Tapem.svg",
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "links": []
+  },
+  {
+    "title": "Disambi — Admin & Self-Service Kiosk",
+    "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
+    "thumbnail": "/projects/Disambi.svg",
+    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "links": []
+  },
+  {
+    "title": "Simpan Ternate",
+    "description": "A web-based document management and archiving platform for the City of Ternate, designed to support digital transformation and improve accessibility to official records and correspondence.",
+    "thumbnail": "/projects/Simpan.svg",
     "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
     "links": []
   },
@@ -105,27 +134,6 @@
     ]
   },
   {
-    "title": "Kanal Tapem",
-    "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
-    "thumbnail": "/projects/Kanal-Tapem.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
-    "links": []
-  },
-  {
-    "title": "Disambi — Admin & Self-Service Kiosk",
-    "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
-    "thumbnail": "/projects/Disambi.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
-    "links": []
-  },
-  {
-    "title": "Simpan Ternate",
-    "description": "A web-based document management and archiving platform for the City of Ternate, designed to support digital transformation and improve accessibility to official records and correspondence.",
-    "thumbnail": "/projects/Simpan.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
-    "links": []
-  },
-  {
     "title": "Desa Pintar — Admin & Landing Page",
     "description": "A smart village platform that brings digital transformation to local governance through integrated admin tools, citizen services, and geospatial visualization. Developed using modern stacks to ensure scalability and smooth UX.",
     "thumbnail": "/projects/Despin.svg",
@@ -153,20 +161,6 @@
       "Leaflet",
       "Django"
     ],
-    "links": []
-  },
-  {
-    "title": "Adis",
-    "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
-    "thumbnail": "/projects/Adis.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
-    "links": []
-  },
-  {
-    "title": "React Admin Template Sandbox",
-    "description": "A modular and scalable admin template built with React, designed for reusability and rapid development. Refined through real project experience, featuring a clean UI, dynamic routing, and integrated state management.",
-    "thumbnail": "/projects/Template-Sandbox.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Leaflet", "Django"],
     "links": []
   },
   {

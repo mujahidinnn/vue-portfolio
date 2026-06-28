@@ -10,7 +10,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <Card
-        v-for="project in projects"
+        v-for="project in [...projects].reverse()"
         :key="project.id"
         :thumbnail="project.thumbnail"
         :title="project.title"
