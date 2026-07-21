@@ -71,7 +71,7 @@
     </div>
 
     <a
-      href="/me.pdf"
+      href="/Mujahidin-Frontend.pdf"
       download
       class="inline-flex items-center gap-2 mt-2 sm:mt-4 mb-3 sm:mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
