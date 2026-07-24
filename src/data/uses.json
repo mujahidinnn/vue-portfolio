@@ -22,6 +22,8 @@
   { "icon": "/uses/nodejs.png", "name": "Node Js" },
   { "icon": "/uses/python.png", "name": "Python" },
 
+  { "icon": "/uses/docker.png", "name": "Docker" },
+
   { "icon": "/uses/npm.png", "name": "NPM" },
   { "icon": "/uses/yarn.png", "name": "Yarn" },
   { "icon": "/uses/pnpm.png", "name": "pnpm" },
