@@ -10,7 +10,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <Card
-        v-for="portfolio in portfolios"
+        v-for="portfolio in visiblePortfolios"
         :key="portfolio.id"
         :thumbnail="portfolio.thumbnail"
         :images="portfolio.images"
@@ -25,9 +25,12 @@
 </template>
 
 <script setup>
-import { inject } from "vue";
+import { inject, computed } from "vue";
 import Card from "../components/Card.vue";
 import portfolios from "../data/portfolios.json";
 
 const isMobile = inject("isMobile");
+const visiblePortfolios = computed(() =>
+  portfolios.filter((portfolio) => !portfolio.hidden)
+);
 </script>

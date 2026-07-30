@@ -40,16 +40,14 @@
     "title": "Randomix",
     "description": "Randomix is a smart and engaging platform that automatically generates balanced and fair teams for games or group activities. Users can input player names with corresponding skill levels — beginner, intermediate, or pro — and the system uses an algorithm to create evenly matched teams. Designed for both casual gamers and sports enthusiasts, Randomix delivers fairness, simplicity, and fun in every draw.",
     "story": "Randomix emerged from my own struggles when organizing sports games or friendly matches with friends. Dividing teams fairly based on player skill levels was often messy — teams ended up unbalanced, and the process took too long. I wanted something smarter, that could also generate tournament brackets (who plays who, and who advances next) while being easy to share. That’s how Randomix came to life: as a balance-focused and social-friendly team generator.",
-    "thumbnail": "/portfolios/randomix/thumbnail.svg",
+    "thumbnail": "/portfolios/randomix/thumbnail.png",
     "images": [
       { "src": "/portfolios/randomix/1.png", "alt": "randomix-1" },
       { "src": "/portfolios/randomix/2.png", "alt": "randomix-2" },
       { "src": "/portfolios/randomix/3.png", "alt": "randomix-3" },
       { "src": "/portfolios/randomix/4.png", "alt": "randomix-4" },
       { "src": "/portfolios/randomix/5.png", "alt": "randomix-5" },
-      { "src": "/portfolios/randomix/6.png", "alt": "randomix-6" },
-      { "src": "/portfolios/randomix/7.png", "alt": "randomix-7" },
-      { "src": "/portfolios/randomix/8.png", "alt": "randomix-8" }
+      { "src": "/portfolios/randomix/6.png", "alt": "randomix-6" }
     ],
     "tech": ["CSS", "JavaScript", "Tailwind CSS", "Nuxt.js"],
     "links": [
@@ -78,14 +76,23 @@
         "link": "https://voyagepulse.netlify.app",
         "desc": ""
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "title": "Vistee",
     "description": "Vistee is a modern web-based visual CV builder that empowers users to create stunning, professional resumes in minutes. With live editing, customizable templates, and an intuitive drag-and-drop interface, users can design resumes that reflect their personality and professional identity. Built for freelancers, students, and professionals alike, Vistee focuses on accessibility, speed, and visual appeal — making personal branding effortless.",
     "story": "Vistee was inspired by my own and my friends’ struggles in crafting CVs. We often spent hours finding design inspiration, choosing the right words, and aligning elements manually. I wanted to simplify the process — to make it fast yet flexible, with templates that could adapt to anyone’s style. Vistee was born as a smart CV builder that merges speed, beauty, and personalization in one smooth experience.",
-    "thumbnail": "/portfolios/vistee.svg",
-    "images": [],
+    "thumbnail": "/portfolios/vistee/thumbnail.png",
+    "images": [
+      { "src": "/portfolios/vistee/1.png", "alt": "vistee-1" },
+      { "src": "/portfolios/vistee/2.png", "alt": "vistee-2" },
+      { "src": "/portfolios/vistee/3.png", "alt": "vistee-3" },
+      { "src": "/portfolios/vistee/4.png", "alt": "vistee-4" },
+      { "src": "/portfolios/vistee/5.png", "alt": "vistee-5" },
+      { "src": "/portfolios/vistee/6.png", "alt": "vistee-6" },
+      { "src": "/portfolios/vistee/7.png", "alt": "vistee-7" }
+    ],
     "tech": ["CSS", "JavaScript", "Ant Design", "React.js"],
     "links": [
       {
@@ -104,6 +111,29 @@
     "links": [
       {
         "link": "https://mojest.vercel.app",
+        "desc": ""
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "title": "Mekar Ayu",
+    "description": "Mekar Ayu is a private menstrual cycle tracker that keeps every entry on the user's own device — no account, no backend, no data ever leaving the browser. It predicts period, fertile window, and ovulation phases on a simple calendar, while letting users log flow intensity, symptoms, and mood each day. Built-in tools let users back up their data as JSON, generate PDF or Excel reports, or share a quick summary straight to WhatsApp.",
+    "story": "Mekar Ayu came from wanting a cycle-tracking tool that treats personal health data as actually personal — most apps push everything to the cloud and bury insights behind accounts and ads. I built Mekar Ayu to keep everything local to the device by default, with clear phase predictions and simple daily logging, plus easy export for anyone who wants to share a summary with a doctor or partner.",
+    "thumbnail": "/portfolios/mekar-ayu/thumbnail.png",
+    "images": [
+      { "src": "/portfolios/mekar-ayu/1.png", "alt": "mekar-ayu-1" },
+      { "src": "/portfolios/mekar-ayu/2.png", "alt": "mekar-ayu-2" },
+      { "src": "/portfolios/mekar-ayu/3.png", "alt": "mekar-ayu-3" },
+      { "src": "/portfolios/mekar-ayu/4.png", "alt": "mekar-ayu-4" },
+      { "src": "/portfolios/mekar-ayu/5.png", "alt": "mekar-ayu-5" },
+      { "src": "/portfolios/mekar-ayu/6.png", "alt": "mekar-ayu-6" },
+      { "src": "/portfolios/mekar-ayu/7.png", "alt": "mekar-ayu-7" }
+    ],
+    "tech": ["CSS", "JavaScript", "React.js", "IndexedDB"],
+    "links": [
+      {
+        "link": "https://mekar-ayu.vercel.app",
         "desc": ""
       }
     ]

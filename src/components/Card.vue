@@ -1,16 +1,8 @@
 <template>
   <div
-    class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.01] transition-all duration-300 ease-out flex flex-col justify-between gap-2 @container"
+    @click="openModal"
+    class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.01] transition-all duration-300 ease-out flex flex-col justify-between gap-2 @container cursor-pointer"
   >
-    <div v-if="tech" class="absolute top-3 right-3">
-      <button
-        @click.stop="openModal"
-        class="text-gray-400 hover:text-gray-600 cursor-pointer text-sm transition-all"
-      >
-        <FontAwesomeIcon :icon="['fas', 'circle-info']" />
-      </button>
-    </div>
-
     <div class="flex flex-col @[325px]:flex-row items-start gap-4">
       <div
         class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-white rounded-lg"
@@ -114,7 +106,7 @@
                 @click="changeSlide(index)"
                 class="w-2 h-2 rounded-full cursor-pointer transition-all"
                 :class="
-                  activeIndex === index ? 'bg-primary w-4' : 'bg-gray-400/50'
+                  activeIndex === index + 1 ? 'bg-primary w-4' : 'bg-gray-400/50'
                 "
               ></span>
             </div>
@@ -232,7 +224,7 @@ const currentGalleryImage = computed(() => {
 function nextSlide() {
   if (props.images && props.images.length > 0) {
     modalImageLoaded.value = false;
-    activeIndex.value = (activeIndex.value + 1) % props.images.length;
+    activeIndex.value = (activeIndex.value + 1) % combinedGallery.value.length;
   }
 }
 
@@ -240,14 +232,17 @@ function prevSlide() {
   if (props.images && props.images.length > 0) {
     modalImageLoaded.value = false;
     activeIndex.value =
-      activeIndex.value === 0 ? props.images.length - 1 : activeIndex.value - 1;
+      activeIndex.value === 0
+        ? combinedGallery.value.length - 1
+        : activeIndex.value - 1;
   }
 }
 
 function changeSlide(index) {
-  if (activeIndex.value !== index) {
+  const target = index + 1;
+  if (activeIndex.value !== target) {
     modalImageLoaded.value = false;
-    activeIndex.value = index;
+    activeIndex.value = target;
   }
 }
 

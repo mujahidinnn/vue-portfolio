@@ -23,6 +23,7 @@
   { "icon": "/uses/python.png", "name": "Python" },
 
   { "icon": "/uses/docker.png", "name": "Docker" },
+  { "icon": "/uses/claude.png", "name": "Claude" },
 
   { "icon": "/uses/npm.png", "name": "NPM" },
   { "icon": "/uses/yarn.png", "name": "Yarn" },
