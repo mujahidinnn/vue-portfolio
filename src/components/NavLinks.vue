@@ -5,13 +5,19 @@
         :href="link.to"
         @click="navigate"
         :aria-label="'Go to ' + link.label"
-        class="block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition"
+        class="block w-full px-4 py-1.5 rounded-full transition-all duration-200"
+        :class="
+          isActive
+            ? 'bg-accent/10 dark:bg-accent-dark/15'
+            : 'hover:bg-gray-100 dark:hover:bg-neutral-800'
+        "
       >
         <span
           :class="[
-            'text-secondary dark:text-secondary-dark transition-colors duration-200',
-            'hover:text-primary dark:hover:text-primary-dark',
-            isActive && 'font-bold text-primary dark:text-primary-dark',
+            'transition-colors duration-200',
+            isActive
+              ? 'font-semibold text-accent dark:text-accent-dark'
+              : 'text-secondary dark:text-secondary-dark hover:text-primary dark:hover:text-primary-dark',
           ]"
         >
           {{ link.label }}
@@ -21,7 +27,7 @@
   </li>
 
   <li
-    class="list-none mt-2 md:mt-0 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded transition cursor-pointer"
+    class="list-none mt-2 md:mt-0 px-4 py-1.5 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-full transition cursor-pointer"
     @click="$emit('toggle-theme')"
     role="button"
     aria-label="Toggle dark mode"

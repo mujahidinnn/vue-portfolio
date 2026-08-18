@@ -24,6 +24,7 @@ import {
   faMoon,
   faSun,
   faXmark,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
@@ -52,6 +53,7 @@ library.add(
   faMoon,
   faSun,
   faXmark,
+  faArrowRight,
   faDiscord,
   faGithub,
   faInstagram,

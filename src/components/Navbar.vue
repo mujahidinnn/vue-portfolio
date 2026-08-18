@@ -1,7 +1,11 @@
 <template>
   <nav
-    class="sticky top-0 z-50 w-full mx-auto px-8 py-4 flex justify-between items-center bg-background dark:bg-background-dark sm:bg-white sm:dark:bg-background-dark"
-    :class="{ 'shadow-bottom': scrollYVal > 0 }"
+    class="sticky top-0 z-50 w-full mx-auto px-8 py-4 flex justify-between items-center transition-all duration-300"
+    :class="
+      scrollYVal > 0
+        ? 'shadow-bottom bg-background/80 dark:bg-background-dark/80 backdrop-blur-md'
+        : 'bg-transparent'
+    "
   >
     <!-- Left -->
     <div class="flex items-start w-8 h-8">

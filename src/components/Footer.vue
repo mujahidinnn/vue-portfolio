@@ -1,14 +1,18 @@
 <template>
   <footer
-    class="mt-16 border-t border-gray-200 dark:border-gray-700 bg-background dark:bg-background-dark text-secondary dark:text-secondary-dark"
+    class="relative mt-24 border-t border-gray-200 dark:border-gray-700 bg-background dark:bg-background-dark text-secondary dark:text-secondary-dark overflow-hidden"
   >
-    <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 gap-8">
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 dark:via-accent-dark/60 to-transparent"
+    ></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 sm:grid-cols-3 gap-8">
       <!-- Brand / About -->
-      <div class="hidden sm:block">
+      <div class="col-span-2 sm:col-span-1">
         <h2 class="text-lg font-bold text-primary dark:text-primary-dark">
           Mujahidin
         </h2>
-        <p class="text-sm mt-2">
+        <p class="text-sm mt-2 max-w-xs">
           Frontend Developer passionate about crafting clean & elegant digital
           experiences.
         </p>
@@ -20,12 +24,12 @@
           Quick Links
         </h3>
 
-        <ul class="space-y-2 text-xs sm:text-sm">
+        <ul class="grid grid-cols-1 gap-x-4 gap-y-2 text-xs sm:text-sm">
           <li>
             <a
               href="#home"
               @click.prevent="scrollToSection('/#home')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               >Home</a
             >
           </li>
@@ -33,7 +37,7 @@
             <a
               href="#work-experience"
               @click.prevent="scrollToSection('/#work-experience')"
-              class="hover:text-accent dark:hover:text-accent-dark whitespace-nowrap"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform whitespace-nowrap"
               aria-label="Go to Work Experience"
               >Work Experience</a
             >
@@ -42,7 +46,7 @@
             <a
               href="#education"
               @click.prevent="scrollToSection('/#education')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to Education"
               >Education</a
             >
@@ -51,7 +55,7 @@
             <a
               href="#about"
               @click.prevent="scrollToSection('/about#about')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to About"
               >About</a
             >
@@ -60,7 +64,7 @@
             <a
               href="#uses"
               @click.prevent="scrollToSection('/about#uses')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to Uses and Tools"
               >Uses & Tools</a
             >
@@ -69,7 +73,7 @@
             <a
               href="#portfolios"
               @click.prevent="scrollToSection('/portfolios#portfolios')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to Portfolio"
               >Portfolio</a
             >
@@ -78,7 +82,7 @@
             <a
               href="#projects"
               @click.prevent="scrollToSection('/projects#projects')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to Projects"
               >Projects</a
             >
@@ -87,7 +91,7 @@
             <a
               href="#contact"
               @click.prevent="scrollToSection('/contact#contact')"
-              class="hover:text-accent dark:hover:text-accent-dark"
+              class="inline-block hover:text-accent dark:hover:text-accent-dark hover:translate-x-0.5 transition-transform"
               aria-label="Go to Contact"
               >Contact</a
             >
@@ -100,34 +104,25 @@
         <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wide mb-3">
           Connect
         </h3>
-        <div class="text-xs sm:text-sm flex flex-col gap-3">
+        <div class="grid gap-2 text-xs sm:text-sm justify-items-stretch">
           <a
-            href="https://www.linkedin.com/in/mujahidin18"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
-            aria-label="Visit my LinkedIn profile"
+            v-for="social in socials"
+            :key="social.label"
+            :href="social.href"
+            :target="social.external ? '_blank' : undefined"
+            :rel="social.external ? 'noreferrer noopener' : undefined"
+            class="group flex gap-2 items-center px-2.5 py-1.5 -mx-2.5 rounded-full hover:bg-accent/10 dark:hover:bg-accent-dark/15 transition-colors"
+            :aria-label="social.aria"
           >
-            <FontAwesomeIcon :icon="['fab', 'linkedin']" />
-            <p>LinkedIn</p>
-          </a>
-          <a
-            href="https://github.com/mujahidinnn"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
-            aria-label="Visit my GitHub profile"
-          >
-            <FontAwesomeIcon :icon="['fab', 'github']" />
-            <p>Github</p>
-          </a>
-          <a
-            href="mailto:mujahidin28394@gmail.com"
-            class="flex gap-1 items-center hover:text-accent dark:hover:text-accent-dark"
-            aria-label="Send me an email"
-          >
-            <FontAwesomeIcon :icon="['fas', 'envelope']" />
-            <p>Gmail</p>
+            <span
+              class="w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-accent-dark/15 dark:text-accent-dark group-hover:bg-accent group-hover:text-white dark:group-hover:bg-accent-dark transition-colors"
+            >
+              <FontAwesomeIcon :icon="social.icon" class="text-[10px]" />
+            </span>
+            <span
+              class="group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
+              >{{ social.label }}</span
+            >
           </a>
         </div>
       </div>
@@ -148,6 +143,44 @@ import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
+
+const socials = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/mujahidin18",
+    icon: ["fab", "linkedin"],
+    external: true,
+    aria: "Visit my LinkedIn profile",
+  },
+  {
+    label: "Github",
+    href: "https://github.com/mujahidinnn",
+    icon: ["fab", "github"],
+    external: true,
+    aria: "Visit my GitHub profile",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/mujahidin1802",
+    icon: ["fab", "instagram"],
+    external: true,
+    aria: "Visit my Instagram profile",
+  },
+  {
+    label: "Discord",
+    href: "https://discord.com/users/1077911957719502938",
+    icon: ["fab", "discord"],
+    external: true,
+    aria: "Visit my Discord profile",
+  },
+  {
+    label: "Gmail",
+    href: "mailto:mujahidin28394@gmail.com",
+    icon: ["fas", "envelope"],
+    external: false,
+    aria: "Send me an email",
+  },
+];
 
 function smoothScrollTo(id) {
   const el = document.getElementById(id);

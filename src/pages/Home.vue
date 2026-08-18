@@ -3,27 +3,34 @@
     id="home"
     class="pt-12 sm:pt-20 mx-auto text-left min-h-[calc(100vh_-_68px)] flex flex-col justify-center"
   >
-    <div class="flex gap-5">
-      <img
-        src="/me.webp"
-        alt="Mujahidin"
-        fetchpriority="high"
+    <div class="flex flex-col sm:flex-row gap-5 sm:items-center mb-6">
+      <div
+        class="shrink-0 rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-dark/70 dark:from-accent-dark dark:to-accent shadow-lg shadow-accent/20 dark:shadow-accent-dark/20 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         style="will-change: transform"
-        class="hidden sm:block rounded-full transition-transform duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
-        width="128"
-        height="128"
         :style="{
           transform: `scale(${Math.max(0.3, 1 - scrollY / 180)})`,
           transformOrigin: 'top left',
           transition: 'transform 0.1s linear',
         }"
-      />
-      <h1
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-primary-dark mb-6 leading-snug"
       >
-        Mujahidin — Designing Elegant and <br />
-        Intuitive Web Experiences
-      </h1>
+        <img
+          src="/me.webp"
+          alt="Mujahidin"
+          fetchpriority="high"
+          class="w-full h-full rounded-full object-cover bg-background dark:bg-background-dark"
+          width="128"
+          height="128"
+        />
+      </div>
+
+      <div>
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-primary-dark leading-snug"
+        >
+          Mujahidin — Designing Elegant and <br />
+          Intuitive Web Experiences
+        </h1>
+      </div>
     </div>
 
     <p

@@ -1,11 +1,11 @@
 <template>
   <div
     @click="openModal"
-    class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:scale-[1.01] transition-all duration-300 ease-out flex flex-col justify-between gap-2 @container cursor-pointer"
+    class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:shadow-accent/10 dark:hover:shadow-accent-dark/10 hover:border-accent/40 dark:hover:border-accent-dark/40 hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col gap-4 @container cursor-pointer"
   >
     <div class="flex flex-col @[325px]:flex-row items-start gap-4">
       <div
-        class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-white rounded-lg"
+        class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-white dark:from-white dark:to-white rounded-xl overflow-hidden"
       >
         <div
           v-if="!loaded"
@@ -20,14 +20,14 @@
             loaded = true;
             $event.target.src = 'https://placehold.co/150x150?text=No+Image';
           "
-          class="w-full h-full object-contain rounded-md transition-opacity duration-300"
+          class="w-full h-full object-contain rounded-md transition-transform duration-300 group-hover:scale-105"
           :class="loaded ? 'opacity-100' : 'opacity-0'"
         />
       </div>
 
-      <div class="flex-1 flex flex-col">
+      <div class="flex-1 flex flex-col min-w-0">
         <h3
-          class="text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100 leading-snug pr-3"
+          class="text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100 leading-snug pr-3 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors"
         >
           {{ title }}
         </h3>
@@ -38,8 +38,32 @@
         </p>
       </div>
     </div>
+
+    <div v-if="tech && tech.length" class="flex flex-wrap gap-1.5">
+      <span
+        v-for="item in tech.slice(0, 4)"
+        :key="item"
+        class="px-2 py-0.5 text-[10px] sm:text-xs rounded-full bg-accent/8 text-accent dark:bg-accent-dark/15 dark:text-accent-dark border border-accent/15 dark:border-accent-dark/20 font-medium"
+      >
+        {{ item }}
+      </span>
+      <span
+        v-if="tech.length > 4"
+        class="px-2 py-0.5 text-[10px] sm:text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium"
+      >
+        +{{ tech.length - 4 }}
+      </span>
+    </div>
+
+    <div
+      class="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-accent dark:text-accent-dark group-hover:translate-x-1 transition-transform duration-300"
+    >
+      <span>View details</span>
+      <FontAwesomeIcon :icon="['fas', 'arrow-right']" class="text-[10px]" />
+    </div>
   </div>
 
+  <Teleport to="body">
   <transition name="fade">
     <div
       v-if="showModal"
@@ -187,6 +211,7 @@
       </div>
     </div>
   </transition>
+  </Teleport>
 </template>
 
 <script setup>

@@ -1,14 +1,17 @@
 <template>
-  <section id="portfolios" class="py-8 container mx-auto max-w-7xl">
-    <div class="relative flex items-center justify-center mb-6">
+  <section id="portfolios" class="py-12 sm:py-16 container mx-auto max-w-7xl">
+    <div class="mb-8 sm:mb-10 max-w-2xl">
       <h1
-        class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark text-center"
+        class="text-2xl sm:text-4xl font-bold text-primary dark:text-primary-dark mb-2"
       >
-        Mujahidin's Portfolio
+        Portfolio
       </h1>
+      <p class="text-secondary dark:text-secondary-dark text-sm sm:text-base">
+        Products and platforms I've designed and built end-to-end.
+      </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
       <Card
         v-for="portfolio in visiblePortfolios"
         :key="portfolio.id"

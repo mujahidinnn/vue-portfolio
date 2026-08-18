@@ -5,7 +5,10 @@
   >
     <Navbar />
 
-    <main class="flex-1 px-8">
+    <main class="relative isolate overflow-hidden flex-1 px-8">
+      <div
+        class="pointer-events-none absolute -z-10 -top-32 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-accent/20 dark:bg-accent-dark/15 blur-3xl"
+      ></div>
       <RouterView />
     </main>
 
