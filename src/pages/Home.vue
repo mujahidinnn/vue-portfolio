@@ -5,7 +5,7 @@
   >
     <div class="flex flex-col sm:flex-row gap-5 sm:items-center mb-6">
       <div
-        class="shrink-0 rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-dark/70 dark:from-accent-dark dark:to-accent shadow-lg shadow-accent/20 dark:shadow-accent-dark/20 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+        class="hidden md:block shrink-0 rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-dark/70 dark:from-accent-dark dark:to-accent shadow-lg shadow-accent/20 dark:shadow-accent-dark/20 md:w-28 md:h-28 lg:w-32 lg:h-32"
         style="will-change: transform"
         :style="{
           transform: `scale(${Math.max(0.3, 1 - scrollY / 180)})`,

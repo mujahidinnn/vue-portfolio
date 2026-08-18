@@ -12,24 +12,40 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 
-const visible = ref(false);
+const scrolledPast = ref(false);
+const footerVisible = ref(false);
+const visible = computed(() => scrolledPast.value && !footerVisible.value);
 
 const handleScroll = () => {
-  visible.value = window.scrollY > 200; // muncul kalau sudah scroll 200px
+  scrolledPast.value = window.scrollY > 200; // muncul kalau sudah scroll 200px
 };
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+let observer;
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+
+  const footer = document.querySelector("footer");
+  if (footer) {
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        footerVisible.value = entry.isIntersecting;
+      },
+      { rootMargin: "0px 0px -80px 0px" }
+    );
+    observer.observe(footer);
+  }
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
+  observer?.disconnect();
 });
 </script>
 

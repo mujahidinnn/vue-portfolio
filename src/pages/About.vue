@@ -8,14 +8,14 @@
         width="128"
         height="128"
         loading="lazy"
-        class="float-left mr-4 mb-2 rounded-md shadow-md object-cover w-32 h-32"
+        class="block mx-auto mb-4 sm:float-left sm:mx-0 sm:mr-4 sm:mb-2 shadow-md object-cover w-32 h-32 blob-photo"
       />
 
       <!-- About Text -->
       <h1
         class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark mb-4"
       >
-        About Mujahidin
+        About Me
       </h1>
 
       <p
@@ -140,3 +140,23 @@ onMounted(async () => {
   });
 });
 </script>
+
+<style scoped>
+.blob-photo {
+  border-radius: 63% 37% 54% 46% / 43% 39% 61% 57%;
+  animation: blob-morph 10s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 43% 39% 61% 57%;
+  }
+  34% {
+    border-radius: 41% 59% 60% 40% / 49% 45% 55% 51%;
+  }
+  67% {
+    border-radius: 57% 43% 37% 63% / 55% 62% 38% 45%;
+  }
+}
+</style>

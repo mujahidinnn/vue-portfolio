@@ -11,7 +11,7 @@
       class="flex flex-col items-center transition-all duration-200"
       :class="
         route.name === item.name
-          ? 'text-primary dark:text-primary-dark font-semibold'
+          ? 'text-accent dark:text-accent-dark font-semibold'
           : 'text-secondary dark:text-secondary-dark'
       "
     >

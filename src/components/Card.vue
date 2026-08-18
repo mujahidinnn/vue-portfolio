@@ -4,25 +4,34 @@
     class="group relative p-4 sm:p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:shadow-accent/10 dark:hover:shadow-accent-dark/10 hover:border-accent/40 dark:hover:border-accent-dark/40 hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col gap-4 @container cursor-pointer"
   >
     <div class="flex flex-col @[325px]:flex-row items-start gap-4">
-      <div
-        class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-white dark:from-white dark:to-white rounded-xl overflow-hidden"
-      >
+      <div class="flex items-start justify-between w-full @[325px]:contents">
         <div
-          v-if="!loaded"
-          class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-md"
-        ></div>
-        <img
-          :src="thumbnail"
-          :alt="title"
-          loading="lazy"
-          @load="loaded = true"
-          @error="
-            loaded = true;
-            $event.target.src = 'https://placehold.co/150x150?text=No+Image';
-          "
-          class="w-full h-full object-contain rounded-md transition-transform duration-300 group-hover:scale-105"
-          :class="loaded ? 'opacity-100' : 'opacity-0'"
-        />
+          class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 p-2 flex items-center justify-center border border-gray-100 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-white dark:from-white dark:to-white rounded-xl overflow-hidden"
+        >
+          <div
+            v-if="!loaded"
+            class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-md"
+          ></div>
+          <img
+            :src="thumbnail"
+            :alt="title"
+            loading="lazy"
+            @load="loaded = true"
+            @error="
+              loaded = true;
+              $event.target.src = 'https://placehold.co/150x150?text=No+Image';
+            "
+            class="w-full h-full object-contain rounded-md transition-transform duration-300 group-hover:scale-105"
+            :class="loaded ? 'opacity-100' : 'opacity-0'"
+          />
+        </div>
+
+        <div
+          class="flex @[325px]:hidden items-center gap-1.5 text-xs font-medium text-accent dark:text-accent-dark group-hover:translate-x-1 transition-transform duration-300"
+        >
+          <span>View details</span>
+          <FontAwesomeIcon :icon="['fas', 'arrow-right']" class="text-[10px]" />
+        </div>
       </div>
 
       <div class="flex-1 flex flex-col min-w-0">
@@ -56,7 +65,7 @@
     </div>
 
     <div
-      class="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-accent dark:text-accent-dark group-hover:translate-x-1 transition-transform duration-300"
+      class="hidden @[325px]:flex items-center gap-1.5 text-xs sm:text-sm font-medium text-accent dark:text-accent-dark group-hover:translate-x-1 transition-transform duration-300"
     >
       <span>View details</span>
       <FontAwesomeIcon :icon="['fas', 'arrow-right']" class="text-[10px]" />
