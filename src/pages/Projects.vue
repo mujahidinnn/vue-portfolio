@@ -1,11 +1,11 @@
 <template>
   <section id="projects" class="py-8 container mx-auto max-w-7xl">
     <div class="relative flex items-center justify-center mb-6">
-      <h2
+      <h1
         class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark text-center"
       >
-        Projects
-      </h2>
+        Projects by Mujahidin
+      </h1>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">

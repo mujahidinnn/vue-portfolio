@@ -5,15 +5,18 @@
       <img
         src="/me2.webp"
         alt="Mujahidin"
+        width="128"
+        height="128"
+        loading="lazy"
         class="float-left mr-4 mb-2 rounded-md shadow-md object-cover w-32 h-32"
       />
 
       <!-- About Text -->
-      <h2
+      <h1
         class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark mb-4"
       >
-        About Me
-      </h2>
+        About Mujahidin
+      </h1>
 
       <p
         class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"

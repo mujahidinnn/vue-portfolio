@@ -1,11 +1,11 @@
 <template>
   <section id="contact" class="py-20 max-w-2xl mx-auto text-center px-4">
     <!-- Title -->
-    <h2
+    <h1
       class="text-xl sm:text-3xl font-bold text-primary dark:text-primary-dark mb-4"
     >
-      Let’s Connect 🤝
-    </h2>
+      Contact Mujahidin 🤝
+    </h1>
 
     <!-- Subtitle -->
     <p
@@ -88,7 +88,7 @@
       </a>
 
       <a
-        href="mailto:mujahidin23894@gmail.com"
+        href="mailto:mujahidin28394@gmail.com"
         class="group flex items-center gap-2 text-sm sm:text-base transition"
         aria-label="Send me an email"
       >
@@ -107,11 +107,11 @@
     <p class="text-secondary dark:text-secondary-dark text-sm sm:text-base">
       Or drop me a direct email 👉
       <a
-        href="mailto:mujahidin23894@gmail.com"
+        href="mailto:mujahidin28394@gmail.com"
         class="text-primary dark:text-primary-dark underline hover:text-accent dark:hover:text-accent-dark transition-colors"
         aria-label="Send me an email"
       >
-        mujahidin23894@gmail.com
+        mujahidin28394@gmail.com
       </a>
     </p>
   </section>

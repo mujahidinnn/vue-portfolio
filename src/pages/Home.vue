@@ -18,12 +18,12 @@
           transition: 'transform 0.1s linear',
         }"
       />
-      <h2
+      <h1
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-primary-dark mb-6 leading-snug"
       >
-        Designing Elegant and <br />
+        Mujahidin — Designing Elegant and <br />
         Intuitive Web Experiences
-      </h2>
+      </h1>
     </div>
 
     <p

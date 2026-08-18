@@ -1,11 +1,11 @@
 <template>
   <section id="portfolios" class="py-8 container mx-auto max-w-7xl">
     <div class="relative flex items-center justify-center mb-6">
-      <h2
+      <h1
         class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark text-center"
       >
-        Portfolio
-      </h2>
+        Mujahidin's Portfolio
+      </h1>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
