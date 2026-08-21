@@ -2,7 +2,7 @@
   {
     "title": "Muhammadiyah Expo 2022",
     "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2022, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
-    "thumbnail": "/projects/Muhammadiyah-Expo.svg",
+    "thumbnail": "/projects/Muhammadiyah-Expo.png",
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Laravel", "JavaScript", "CSS"],
     "links": []
@@ -10,7 +10,7 @@
   {
     "title": "Darussalam Turgo",
     "description": "An informative profile website for Darussalam Turgo Islamic Boarding School, designed to highlight its educational programs, orphan empowerment initiatives, and community development activities in Boyolali. Focused on simplicity and spiritual warmth.",
-    "thumbnail": "/projects/Darussalam-Turgo.svg",
+    "thumbnail": "/projects/Darussalam-Turgo.png",
     "role": "as a Fullstack Developer",
     "tech": ["JavaScript", "CSS", "HTML"],
     "links": []
@@ -26,7 +26,7 @@
   {
     "title": "Sandbox Official Website",
     "description": "A modern corporate website for PT Sandbox Indonesia Juara, designed to showcase the company’s innovation-driven approach and digital solutions portfolio. Features a clean layout, responsive design, and dynamic content structure.",
-    "thumbnail": "/projects/Sandbox.svg",
+    "thumbnail": "/projects/Sandbox.png",
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
@@ -63,7 +63,7 @@
   {
     "title": "Simpatiku — Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
-    "thumbnail": "/projects/Simpatiku.svg",
+    "thumbnail": "/projects/Simpatiku.png",
     "role": "as a Frontend Developer",
     "tech": ["Next.js", "React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
@@ -76,7 +76,7 @@
   {
     "title": "Siap",
     "description": "A web-based land administration information system equipped with geospatial visualization for land parcels and ownership data. Designed to improve transparency and accessibility in land management through interactive map integration.",
-    "thumbnail": "/projects/Siap.svg",
+    "thumbnail": "/projects/Siap.png",
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap", "Leaflet"],
     "links": []
@@ -92,7 +92,7 @@
   {
     "title": "Kanal Tapem",
     "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
-    "thumbnail": "/projects/Kanal-Tapem.svg",
+    "thumbnail": "/projects/Kanal-Tapem.png",
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -116,7 +116,7 @@
   {
     "title": "Profitku — Admin & Landing Page",
     "description": "An integrated enterprise management solution offering modules for performance evaluation, SWOT analysis, KPI tracking, and organizational analytics. Designed to support companies and institutions in strategic decision-making through data visualization.",
-    "thumbnail": "/projects/Profitku.svg",
+    "thumbnail": "/projects/Profitku.png",
     "role": "as a Frontend Developer",
     "tech": ["Next.js", "React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": [
@@ -167,7 +167,7 @@
   {
     "title": "Dilan — Admin & Landing Page",
     "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services — tailored for scalability and local needs.",
-    "thumbnail": "/projects/Dilan.svg",
+    "thumbnail": "/projects/Dilan.png",
     "role": "as a Frontend Developer",
     "tech": [
       "Next.js",

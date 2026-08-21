@@ -3,7 +3,7 @@
     "title": "Sakifi",
     "description": "Sakifi is a practical and reliable platform that serves as a reference hub for Sharia-compliant financial transactions. It provides curated articles, verified documents, and academic references sourced from Islamic jurisprudence (fiqh muamalah) to help users understand the halal standards of modern contracts. Built with a focus on accessibility, clarity, and trustworthiness, SakiFi aims to bridge the gap between technology and Sharia finance literacy.",
     "story": "Sakifi was born out of my own confusion and difficulty in finding clear, reliable information about Islamic financial rulings — such as how to calculate zakat, determine nisab and haul, or understand contract standards according to Sharia principles. I wanted a single place that consolidates all these essentials, backed by credible references. That desire eventually evolved into a comprehensive digital reference platform for Sharia-compliant transactions.",
-    "thumbnail": "/portfolios/sakifi.svg",
+    "thumbnail": "/portfolios/sakifi.png",
     "images": [],
     "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
@@ -17,16 +17,16 @@
     "title": "Mojepict",
     "description": "Mojepict is a collection of versatile and user-friendly online tools designed to simplify daily digital workflows. From quick image editing to file conversion, color palette generation, and text utilities — Mojepict combines multiple handy mini-tools in one accessible place. It’s crafted with modern UI/UX principles for seamless and fast performance, making everyday creative tasks effortless and enjoyable.",
     "story": "The idea for Mojepict came from my daily experience — both at work and during personal projects — where I often needed simple tools like image editors, converters, or color extractors. Most of the available sites were heavy, cluttered with ads, or required multiple separate tools for small tasks. I decided to build Mojepict as a lightweight, all-in-one toolbox that’s ad-free, fast, and pleasant to use.",
-    "thumbnail": "/portfolios/mojepict/thumbnail.svg",
+    "thumbnail": "/portfolios/mojepict/thumbnail.png",
     "images": [
-      { "src": "/portfolios/mojepict/1.png", "alt": "mojepict-1" },
-      { "src": "/portfolios/mojepict/2.png", "alt": "mojepict-2" },
-      { "src": "/portfolios/mojepict/3.png", "alt": "mojepict-3" },
-      { "src": "/portfolios/mojepict/4.png", "alt": "mojepict-4" },
-      { "src": "/portfolios/mojepict/5.png", "alt": "mojepict-5" },
-      { "src": "/portfolios/mojepict/6.png", "alt": "mojepict-6" },
-      { "src": "/portfolios/mojepict/7.png", "alt": "mojepict-7" },
-      { "src": "/portfolios/mojepict/8.png", "alt": "mojepict-8" }
+      { "src": "/portfolios/mojepict/1.webp", "alt": "mojepict-1" },
+      { "src": "/portfolios/mojepict/2.webp", "alt": "mojepict-2" },
+      { "src": "/portfolios/mojepict/3.webp", "alt": "mojepict-3" },
+      { "src": "/portfolios/mojepict/4.webp", "alt": "mojepict-4" },
+      { "src": "/portfolios/mojepict/5.webp", "alt": "mojepict-5" },
+      { "src": "/portfolios/mojepict/6.webp", "alt": "mojepict-6" },
+      { "src": "/portfolios/mojepict/7.webp", "alt": "mojepict-7" },
+      { "src": "/portfolios/mojepict/8.webp", "alt": "mojepict-8" }
     ],
     "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
@@ -105,7 +105,7 @@
     "title": "Mojest",
     "description": "Mojest is a streamlined, web-based API testing client designed for developers who need speed and efficiency without the overhead. It allows users to execute HTTP requests, inspect responses, and debug endpoints directly from the browser. With a clean interface and zero-configuration approach, Mojest serves as a lightweight alternative to bulky desktop applications, focusing on the essentials of API interaction.",
     "story": "The idea for Mojest came from my frustration when I needed to test an API endpoint quickly but didn't want to open heavy software or deal with account logins and saved workspaces. I wanted a 'temporary' yet powerful tool—something web-based that doesn't hoard resources or require a setup process. I built Mojest to be that instant solution: just open the site, test your API, and get results immediately without any friction.",
-    "thumbnail": "/portfolios/mojest.svg",
+    "thumbnail": "/portfolios/mojest.png",
     "images": [],
     "tech": ["React.js", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [

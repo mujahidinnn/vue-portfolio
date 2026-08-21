@@ -4,23 +4,23 @@
     class="pt-12 sm:pt-20 mx-auto text-left min-h-[calc(100vh_-_68px)] flex flex-col justify-center"
   >
     <div class="flex flex-col sm:flex-row gap-5 sm:items-center mb-6">
-      <div
-        class="hidden md:block shrink-0 rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-dark/70 dark:from-accent-dark dark:to-accent shadow-lg shadow-accent/20 dark:shadow-accent-dark/20 md:w-28 md:h-28 lg:w-32 lg:h-32"
-        style="will-change: transform"
-        :style="{
-          transform: `scale(${Math.max(0.3, 1 - scrollY / 180)})`,
-          transformOrigin: 'top left',
-          transition: 'transform 0.1s linear',
-        }"
-      >
-        <img
-          src="/me.webp"
-          alt="Mujahidin"
-          fetchpriority="high"
-          class="w-full h-full rounded-full object-cover bg-background dark:bg-background-dark"
-          width="128"
-          height="128"
-        />
+      <div class="hidden md:block relative shrink-0 md:w-28 md:h-28 lg:w-32 lg:h-32 group">
+        <div
+          class="absolute -inset-3 rounded-full bg-gradient-to-br from-accent to-accent-dark/60 dark:from-accent-dark dark:to-accent opacity-25 dark:opacity-30 blur-xl transition-opacity duration-300 group-hover:opacity-40"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="relative w-full h-full rounded-full p-[3px] bg-gradient-to-br from-accent to-accent-dark/70 dark:from-accent-dark dark:to-accent shadow-lg shadow-accent/20 dark:shadow-accent-dark/20 transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+        >
+          <img
+            src="/me.webp"
+            alt="Mujahidin"
+            fetchpriority="high"
+            class="w-full h-full rounded-full object-cover bg-background dark:bg-background-dark"
+            width="128"
+            height="128"
+          />
+        </div>
       </div>
 
       <div>
@@ -112,38 +112,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
 import TimeLine from "../components/TimeLine.vue";
 import workExperiences from "../data/work-experiences.json";
 import educations from "../data/educations.json";
-
-const scrollY = ref(0);
-const targetX = ref(0);
-const targetY = ref(0);
-
-let ticking = false;
-function handleScroll() {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      scrollY.value = window.scrollY;
-      ticking = false;
-    });
-    ticking = true;
-  }
-}
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll, { passive: true });
-
-  const slot = document.querySelector(".navbar-avatar-slot");
-  if (slot) {
-    const rect = slot.getBoundingClientRect();
-    targetX.value = rect.left;
-    targetY.value = rect.top;
-  }
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
