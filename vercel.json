@@ -2,6 +2,12 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mujahidin.vercel.app"
+        }
+      ],
       "destination": "https://mujahidin.my.id/$1",
       "permanent": true
     }
