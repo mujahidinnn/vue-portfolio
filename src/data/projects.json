@@ -3,28 +3,32 @@
     "title": "Muhammadiyah Expo 2022",
     "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2022, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
     "thumbnail": "/projects/Muhammadiyah-Expo.svg",
-    "tech": ["CSS", "JavaScript", "React.js", "Laravel"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Laravel", "JavaScript", "CSS"],
     "links": []
   },
   {
     "title": "Darussalam Turgo",
     "description": "An informative profile website for Darussalam Turgo Islamic Boarding School, designed to highlight its educational programs, orphan empowerment initiatives, and community development activities in Boyolali. Focused on simplicity and spiritual warmth.",
     "thumbnail": "/projects/Darussalam-Turgo.svg",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "role": "as a Fullstack Developer",
+    "tech": ["JavaScript", "CSS", "HTML"],
     "links": []
   },
   {
     "title": "Team Up",
     "description": "A digital matchmaking platform built to connect startup founders with compatible team members and co-founders. Developed in collaboration with the 1000 Digital Startups Yogyakarta 2023 program, it streamlines the talent-matching process for early-stage startups.",
     "thumbnail": "/projects/Team-Up.svg",
-    "tech": ["Tailwind CSS", "JavaScript", "React.js", "Laravel"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Laravel", "JavaScript", "Tailwind CSS"],
     "links": []
   },
   {
     "title": "Sandbox Official Website",
     "description": "A modern corporate website for PT Sandbox Indonesia Juara, designed to showcase the company’s innovation-driven approach and digital solutions portfolio. Features a clean layout, responsive design, and dynamic content structure.",
     "thumbnail": "/projects/Sandbox.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
       {
         "link": "https://sandboxindonesia.id",
@@ -36,13 +40,14 @@
     "title": "Simpus",
     "description": "A digital information system for managing administrative and service operations within community health centers (Puskesmas). It helps healthcare staff efficiently record, track, and analyze patient and operational data through an intuitive web interface.",
     "thumbnail": "/projects/Simpus.svg",
+    "role": "as a Frontend Developer",
     "tech": [
-      "Tailwind CSS",
-      "Bootstrap",
-      "JavaScript",
       "React.js",
       "Laravel",
-      "Golang"
+      "Golang",
+      "JavaScript",
+      "Tailwind CSS",
+      "Bootstrap"
     ],
     "links": []
   },
@@ -50,7 +55,8 @@
     "title": "Adis",
     "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
     "thumbnail": "/projects/Adis.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Django"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": []
   },
 
@@ -58,7 +64,8 @@
     "title": "Simpatiku — Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "thumbnail": "/projects/Simpatiku.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Next.js", "Django"],
+    "role": "as a Frontend Developer",
+    "tech": ["Next.js", "React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
       {
         "link": "https://simpatiku.kutaitimurkab.go.id",
@@ -70,42 +77,48 @@
     "title": "Siap",
     "description": "A web-based land administration information system equipped with geospatial visualization for land parcels and ownership data. Designed to improve transparency and accessibility in land management through interactive map integration.",
     "thumbnail": "/projects/Siap.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Leaflet", "Django"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Django", "JavaScript", "Bootstrap", "Leaflet"],
     "links": []
   },
   {
     "title": "Siperjadin",
     "description": "A government business trip management platform that automates the process of travel authorization, expense reporting, and approval workflows. It streamlines administrative tasks and ensures compliance with internal regulations.",
     "thumbnail": "/projects/Siperjadin.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
   },
   {
     "title": "Kanal Tapem",
     "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
     "thumbnail": "/projects/Kanal-Tapem.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
   },
   {
     "title": "Disambi — Admin & Self-Service Kiosk",
     "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
     "thumbnail": "/projects/Disambi.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
   },
   {
     "title": "Simpan Ternate",
     "description": "A web-based document management and archiving platform for the City of Ternate, designed to support digital transformation and improve accessibility to official records and correspondence.",
     "thumbnail": "/projects/Simpan.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Golang"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
   },
   {
     "title": "Profitku — Admin & Landing Page",
     "description": "An integrated enterprise management solution offering modules for performance evaluation, SWOT analysis, KPI tracking, and organizational analytics. Designed to support companies and institutions in strategic decision-making through data visualization.",
     "thumbnail": "/projects/Profitku.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Next.js", "Golang"],
+    "role": "as a Frontend Developer",
+    "tech": ["Next.js", "React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": [
       {
         "link": "https://profitku.id",
@@ -117,12 +130,13 @@
     "title": "Sifortuna — Admin & Landing Page",
     "description": "A national-scale agricultural data and forecasting platform designed for monitoring plant pest and disease (OPT) distribution using geospatial data visualization. Integrates Leaflet, Django, and Google Earth Engine for precision agriculture insights.",
     "thumbnail": "/projects/Sifortuna.svg",
+    "role": "as a Frontend Developer",
     "tech": [
-      "Bootstrap",
-      "JavaScript",
       "React.js",
-      "Leaflet",
       "Django",
+      "JavaScript",
+      "Bootstrap",
+      "Leaflet",
       "GEE",
       "Google Colab"
     ],
@@ -137,14 +151,16 @@
     "title": "Desa Pintar — Admin & Landing Page",
     "description": "A smart village platform that brings digital transformation to local governance through integrated admin tools, citizen services, and geospatial visualization. Developed using modern stacks to ensure scalability and smooth UX.",
     "thumbnail": "/projects/Despin.svg",
+    "role": "as a Frontend Developer",
     "tech": [
-      "Bootstrap",
-      "JavaScript",
-      "React.js",
-      "Tailwind CSS",
       "Next.js",
-      "Leaflet",
-      "Django"
+      "React.js",
+      "Django",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Leaflet"
     ],
     "links": []
   },
@@ -152,14 +168,15 @@
     "title": "Dilan — Admin & Landing Page",
     "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services — tailored for scalability and local needs.",
     "thumbnail": "/projects/Dilan.svg",
+    "role": "as a Frontend Developer",
     "tech": [
-      "Bootstrap",
-      "JavaScript",
-      "React.js",
-      "Tailwind CSS",
       "Next.js",
-      "Leaflet",
-      "Django"
+      "React.js",
+      "Django",
+      "JavaScript",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Leaflet"
     ],
     "links": []
   },
@@ -167,7 +184,8 @@
     "title": "Broom",
     "description": "A management platform for booking and scheduling padel courts, providing an efficient interface for venue owners and players alike. Built with attention to detail and user experience for the growing padel community.",
     "thumbnail": "/projects/Broom.svg",
-    "tech": ["Bootstrap", "JavaScript", "React.js", "Python"],
+    "role": "as a Frontend Developer",
+    "tech": ["React.js", "Python", "JavaScript", "Bootstrap"],
     "links": []
   }
 ]

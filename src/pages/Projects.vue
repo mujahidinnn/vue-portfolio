@@ -19,6 +19,7 @@
         :thumbnail="project.thumbnail"
         :title="project.title"
         :description="project.description"
+        :role="project.role"
         :tech="project.tech"
         :links="project.links"
       />

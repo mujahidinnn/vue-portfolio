@@ -70,6 +70,17 @@
         to grow, both in coding and in life, and I value collaboration as a way
         to create meaningful experiences together.
       </p>
+
+      <a
+        href="https://medium.com/@mujahidindev"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="inline-flex items-center gap-2 mt-4 text-xs sm:text-base font-medium text-accent dark:text-accent-dark hover:underline"
+      >
+        <FontAwesomeIcon :icon="['fab', 'medium']" />
+        Read my writing on Medium
+        <FontAwesomeIcon :icon="['fas', 'arrow-right']" class="text-[10px]" />
+      </a>
     </div>
 
     <!-- Uses & Tools -->

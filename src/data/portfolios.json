@@ -5,7 +5,7 @@
     "story": "Sakifi was born out of my own confusion and difficulty in finding clear, reliable information about Islamic financial rulings — such as how to calculate zakat, determine nisab and haul, or understand contract standards according to Sharia principles. I wanted a single place that consolidates all these essentials, backed by credible references. That desire eventually evolved into a comprehensive digital reference platform for Sharia-compliant transactions.",
     "thumbnail": "/portfolios/sakifi.svg",
     "images": [],
-    "tech": ["CSS", "JavaScript", "Next.js"],
+    "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
         "link": "https://sakifi.vercel.app",
@@ -28,7 +28,7 @@
       { "src": "/portfolios/mojepict/7.png", "alt": "mojepict-7" },
       { "src": "/portfolios/mojepict/8.png", "alt": "mojepict-8" }
     ],
-    "tech": ["CSS", "JavaScript", "Tailwind CSS", "Next.js"],
+    "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
         "link": "https://mojepict.vercel.app",
@@ -49,7 +49,7 @@
       { "src": "/portfolios/randomix/5.png", "alt": "randomix-5" },
       { "src": "/portfolios/randomix/6.png", "alt": "randomix-6" }
     ],
-    "tech": ["CSS", "JavaScript", "Tailwind CSS", "Nuxt.js"],
+    "tech": ["Nuxt.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
         "link": "https://randomix.vercel.app",
@@ -64,12 +64,12 @@
     "thumbnail": "/portfolios/voyagepulse.svg",
     "images": [],
     "tech": [
-      "CSS",
+      "React.js",
+      "Node.js",
       "JavaScript",
       "Ant Design",
-      "React.js",
       "Supabase",
-      "Node.js"
+      "CSS"
     ],
     "links": [
       {
@@ -93,7 +93,7 @@
       { "src": "/portfolios/vistee/6.png", "alt": "vistee-6" },
       { "src": "/portfolios/vistee/7.png", "alt": "vistee-7" }
     ],
-    "tech": ["CSS", "JavaScript", "Ant Design", "React.js"],
+    "tech": ["React.js", "TypeScript", "JavaScript", "CSS"],
     "links": [
       {
         "link": "https://vistee.vercel.app",
@@ -107,7 +107,7 @@
     "story": "The idea for Mojest came from my frustration when I needed to test an API endpoint quickly but didn't want to open heavy software or deal with account logins and saved workspaces. I wanted a 'temporary' yet powerful tool—something web-based that doesn't hoard resources or require a setup process. I built Mojest to be that instant solution: just open the site, test your API, and get results immediately without any friction.",
     "thumbnail": "/portfolios/mojest.svg",
     "images": [],
-    "tech": ["CSS", "JavaScript", "Tailwind CSS", "React.js"],
+    "tech": ["React.js", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
         "link": "https://mojest.vercel.app",
@@ -130,7 +130,7 @@
       { "src": "/portfolios/mekar-ayu/6.png", "alt": "mekar-ayu-6" },
       { "src": "/portfolios/mekar-ayu/7.png", "alt": "mekar-ayu-7" }
     ],
-    "tech": ["CSS", "JavaScript", "React.js", "IndexedDB"],
+    "tech": ["React.js", "TypeScript", "JavaScript", "IndexedDB", "CSS"],
     "links": [
       {
         "link": "https://mekar-ayu.vercel.app",

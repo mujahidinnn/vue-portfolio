@@ -50,17 +50,17 @@
 
     <div v-if="tech && tech.length" class="flex flex-wrap gap-1.5">
       <span
-        v-for="item in tech.slice(0, 4)"
+        v-for="item in tech.slice(0, 8)"
         :key="item"
         class="px-2 py-0.5 text-[10px] sm:text-xs rounded-full bg-accent/8 text-accent dark:bg-accent-dark/15 dark:text-accent-dark border border-accent/15 dark:border-accent-dark/20 font-medium"
       >
         {{ item }}
       </span>
       <span
-        v-if="tech.length > 4"
+        v-if="tech.length > 8"
         class="px-2 py-0.5 text-[10px] sm:text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium"
       >
-        +{{ tech.length - 4 }}
+        +{{ tech.length - 8 }}
       </span>
     </div>
 
@@ -155,6 +155,12 @@
             >
               {{ title }}
             </h2>
+            <span
+              v-if="role"
+              class="inline-block w-fit mt-2 px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium"
+            >
+              {{ role }}
+            </span>
             <p
               class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-2"
             >
@@ -231,6 +237,7 @@ const props = defineProps({
   images: Array,
   title: String,
   description: String,
+  role: String,
   tech: { type: Array, default: () => [] },
   story: String,
   links: { type: Array, default: () => [] },

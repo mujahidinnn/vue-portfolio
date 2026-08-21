@@ -46,18 +46,6 @@
         </span>
       </a>
     </div>
-
-    <!-- Direct Email -->
-    <p class="text-secondary dark:text-secondary-dark text-sm sm:text-base">
-      Or drop me a direct email 👉
-      <a
-        href="mailto:mujahidin28394@gmail.com"
-        class="text-primary dark:text-primary-dark underline decoration-accent/40 hover:text-accent dark:hover:text-accent-dark transition-colors"
-        aria-label="Send me an email"
-      >
-        mujahidin28394@gmail.com
-      </a>
-    </p>
   </section>
 </template>
 

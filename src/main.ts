@@ -31,6 +31,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faMedium,
   faSquareLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import createPlausible from "./plugins/plausible";
@@ -58,6 +59,7 @@ library.add(
   faGithub,
   faInstagram,
   faLinkedin,
+  faMedium,
   faSquareLinkedin
 );
 
