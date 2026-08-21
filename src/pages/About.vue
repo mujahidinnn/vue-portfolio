@@ -111,7 +111,7 @@
         <div
           v-for="tool in uses"
           :key="tool.name"
-          class="flex flex-col items-center text-center p-2 rounded-md border border-gray-200 hover:border-accent/30 dark:border-gray-800 filter grayscale hover:grayscale-0 transition duration-300"
+          class="flex flex-col items-center text-center p-2 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-transparent backdrop-blur-md dark:backdrop-blur-none shadow-md shadow-accent/10 dark:shadow-none hover:border-accent/40 hover:bg-white/80 dark:hover:bg-transparent filter grayscale hover:grayscale-0 transition duration-300"
           :class="{
             'filter grayscale': !isActive,
             'filter-none': isActive,
