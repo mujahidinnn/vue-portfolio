@@ -187,5 +187,23 @@
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Python", "JavaScript", "Bootstrap"],
     "links": []
+  },
+  {
+    "title": "Digdaya Masjid NU",
+    "description": "A comprehensive landing portal and nationwide directory for Nahdlatul Ulama (NU) mosques across Indonesia. It features a dedicated finder for 'Muktamirin-friendly' mosques tailored for NU congress participants, advanced filtering options for precise location searches, comprehensive mosque profiles containing facility details, management contacts, and routine agendas, as well as an interactive and user-friendly map integration.",
+    "thumbnail": "/projects/Digdaya-Masjid-NU.svg",
+    "role": "as a Frontend Developer",
+    "tech": [
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Google Maps Javascript API"
+    ],
+    "links": [
+      {
+        "link": "https://masjid.nu.id",
+        "desc": ""
+      }
+    ]
   }
 ]
