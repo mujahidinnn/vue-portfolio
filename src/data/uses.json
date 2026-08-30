@@ -12,6 +12,7 @@
   { "icon": "/uses/vuejs.png", "name": "Vue Js" },
   { "icon": "/uses/nuxtjs.png", "name": "Nuxt Js" },
 
+  { "icon": "/uses/reactjs.png", "name": "React Native" },
   { "icon": "/uses/redux.png", "name": "Redux" },
   { "icon": "/uses/pinia.png", "name": "Pinia" },
   { "icon": "/uses/zustand.png", "name": "Zustand" },
