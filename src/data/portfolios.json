@@ -55,7 +55,8 @@
         "link": "https://randomix.vercel.app",
         "desc": ""
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "title": "Voyage Pulse",
