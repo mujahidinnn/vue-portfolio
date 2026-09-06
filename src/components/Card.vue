@@ -45,6 +45,16 @@
         >
           {{ description }}
         </p>
+        <div v-if="systemTags && systemTags.length" class="flex flex-wrap gap-1 mt-2">
+          <span
+            v-for="tag in systemTags"
+            :key="tag"
+            class="inline-flex items-center gap-1 w-fit px-2 py-0.5 text-[9px] sm:text-[10px] rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-semibold uppercase tracking-wide"
+          >
+            <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[8px] sm:text-[9px]" />
+            {{ tag }}
+          </span>
+        </div>
       </div>
     </div>
 
@@ -161,7 +171,7 @@
               </h2>
               <span
                 v-if="role"
-                class="inline-block w-fit mt-2 px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium"
+                class="inline-block w-fit mt-2 px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-accent/10 text-accent dark:bg-accent-dark/15 dark:text-accent-dark font-medium"
               >
                 {{ role }}
               </span>
@@ -170,6 +180,16 @@
               >
                 {{ description }}
               </p>
+              <div v-if="systemTags && systemTags.length" class="flex flex-wrap gap-2 mt-3">
+                <span
+                  v-for="tag in systemTags"
+                  :key="tag"
+                  class="inline-flex items-center gap-1.5 w-fit px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-semibold uppercase tracking-wide"
+                >
+                  <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[9px] sm:text-[10px]" />
+                  {{ tag }}
+                </span>
+              </div>
             </div>
 
             <div v-if="tech && tech.length">
@@ -242,6 +262,7 @@ const props = defineProps({
   title: String,
   description: String,
   role: String,
+  systemTags: { type: Array, default: () => [] },
   tech: { type: Array, default: () => [] },
   story: String,
   links: { type: Array, default: () => [] },

@@ -19,6 +19,7 @@
         :images="portfolio.images"
         :title="portfolio.title"
         :description="portfolio.description"
+        :systemTags="portfolio.systemTags"
         :tech="portfolio.tech"
         :links="portfolio.links"
         :story="portfolio.story"

@@ -155,7 +155,7 @@ onMounted(async () => {
 <style scoped>
 .blob-photo {
   border-radius: 63% 37% 54% 46% / 43% 39% 61% 57%;
-  animation: blob-morph 10s ease-in-out infinite;
+  animation: blob-morph 8s ease-in-out infinite;
 }
 
 @keyframes blob-morph {

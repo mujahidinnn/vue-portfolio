@@ -20,6 +20,7 @@
         :title="project.title"
         :description="project.description"
         :role="project.role"
+        :systemTags="project.systemTags"
         :tech="project.tech"
         :links="project.links"
       />
