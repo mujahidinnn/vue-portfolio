@@ -49,7 +49,7 @@
           <span
             v-for="tag in systemTags"
             :key="tag"
-            class="inline-flex items-center gap-1 w-fit px-2 py-0.5 text-[9px] sm:text-[10px] rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-semibold uppercase tracking-wide"
+            class="inline-flex items-center gap-1 w-fit px-2 py-0.5 text-[9px] sm:text-[10px] rounded-full bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400 font-semibold uppercase tracking-wide"
           >
             <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[8px] sm:text-[9px]" />
             {{ tag }}
@@ -94,7 +94,7 @@
         ></div>
 
         <div
-          class="relative bg-white/80 dark:bg-gray-900 backdrop-blur-xl dark:backdrop-blur-none rounded-xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-white/70 dark:border-gray-700 z-[1000] flex flex-col max-h-[90vh]"
+          class="relative bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-gray-200 dark:border-gray-700 z-[1000] flex flex-col max-h-[90vh]"
         >
           <button
             @click="closeModal"
@@ -184,7 +184,7 @@
                 <span
                   v-for="tag in systemTags"
                   :key="tag"
-                  class="inline-flex items-center gap-1.5 w-fit px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-semibold uppercase tracking-wide"
+                  class="inline-flex items-center gap-1.5 w-fit px-2.5 py-1 text-[10px] sm:text-xs rounded-full bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400 font-semibold uppercase tracking-wide"
                 >
                   <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[9px] sm:text-[10px]" />
                   {{ tag }}

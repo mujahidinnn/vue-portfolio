@@ -12,7 +12,7 @@
     </p>
     <RouterLink
       to="/"
-      class="inline-flex items-center gap-2 mx-auto w-max bg-accent dark:bg-accent-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
+      class="inline-flex items-center gap-2 mx-auto w-max bg-accent dark:bg-icon-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
       Kembali ke Beranda
     </RouterLink>

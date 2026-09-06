@@ -115,7 +115,7 @@
             :aria-label="social.aria"
           >
             <span
-              class="w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-accent-dark/15 dark:text-accent-dark group-hover:bg-accent group-hover:text-white dark:group-hover:bg-accent-dark transition-colors"
+              class="w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-icon-dark/15 dark:text-icon-dark group-hover:bg-accent group-hover:text-white dark:group-hover:bg-icon-dark transition-colors"
             >
               <FontAwesomeIcon :icon="social.icon" class="text-[10px]" />
             </span>

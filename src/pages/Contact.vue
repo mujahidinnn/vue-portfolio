@@ -30,7 +30,7 @@
         class="group flex items-center gap-3 p-4 rounded-2xl border border-white/70 dark:border-gray-800 bg-white/40 dark:bg-background-dark backdrop-blur-md dark:backdrop-blur-none shadow-md shadow-accent/10 dark:shadow-none hover:border-accent/40 dark:hover:border-accent-dark/40 hover:bg-white/60 dark:hover:bg-background-dark hover:shadow-lg hover:shadow-accent/20 dark:hover:shadow-accent-dark/10 hover:-translate-y-0.5 transition-all duration-300"
       >
         <span
-          class="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-accent-dark/15 dark:text-accent-dark group-hover:bg-accent group-hover:text-white dark:group-hover:bg-accent-dark transition-colors"
+          class="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-icon-dark/15 dark:text-icon-dark group-hover:bg-accent group-hover:text-white dark:group-hover:bg-icon-dark transition-colors"
         >
           <FontAwesomeIcon :icon="channel.icon" class="text-sm" />
         </span>

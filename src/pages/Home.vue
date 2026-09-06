@@ -45,7 +45,7 @@
     </p>
 
     <div
-      class="flex items-center gap-3 text-2xl text-accent dark:text-accent-dark"
+      class="flex items-center gap-3 text-2xl text-accent dark:text-icon-dark"
     >
       <a
         href="https://www.linkedin.com/in/mujahidin18"
@@ -80,7 +80,7 @@
     <a
       href="/Mujahidin-Frontend.pdf"
       download
-      class="inline-flex items-center gap-2 mt-2 sm:mt-4 mb-3 sm:mb-6 h-max w-max bg-accent dark:bg-accent-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
+      class="inline-flex items-center gap-2 mt-2 sm:mt-4 mb-3 sm:mb-6 h-max w-max bg-accent dark:bg-icon-dark text-white text-sm sm:text-base font-medium px-5 py-2 rounded-lg shadow-sm transition-all hover:opacity-80 hover:shadow-md"
     >
       <FontAwesomeIcon :icon="['fas', 'download']" />
       <span>Download Resume</span>
