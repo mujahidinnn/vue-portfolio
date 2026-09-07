@@ -45,17 +45,18 @@
         >
           {{ description }}
         </p>
-        <div v-if="systemTags && systemTags.length" class="flex flex-wrap gap-1 mt-2">
-          <span
-            v-for="tag in systemTags"
-            :key="tag"
-            class="inline-flex items-center gap-1 w-fit px-2 py-0.5 text-[9px] sm:text-[10px] rounded-full bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400 font-semibold uppercase tracking-wide"
-          >
-            <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[8px] sm:text-[9px]" />
-            {{ tag }}
-          </span>
-        </div>
       </div>
+    </div>
+
+    <div v-if="systemTags && systemTags.length" class="flex flex-wrap gap-1">
+      <span
+        v-for="tag in systemTags"
+        :key="tag"
+        class="inline-flex items-center gap-1 w-fit px-2 py-0.5 text-[9px] sm:text-[10px] rounded-full bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400 font-semibold uppercase tracking-wide"
+      >
+        <FontAwesomeIcon :icon="['fas', 'hashtag']" class="text-[8px] sm:text-[9px]" />
+        {{ tag }}
+      </span>
     </div>
 
     <div v-if="tech && tech.length" class="flex flex-wrap gap-1.5">
@@ -202,7 +203,7 @@
                 <span
                   v-for="item in tech"
                   :key="item"
-                  class="px-1.5 sm:px-3 py-[2px] sm:py-1 text-[10px] sm:text-xs rounded-full bg-primary/10 text-primary dark:bg-primary-dark/20 dark:text-primary-dark font-medium border border-primary/10"
+                  class="px-1.5 sm:px-3 py-[2px] sm:py-1 text-[10px] sm:text-xs rounded-full bg-accent/8 text-accent dark:bg-accent-dark/15 dark:text-accent-dark font-medium border border-accent/15 dark:border-accent-dark/20"
                 >
                   {{ item }}
                 </span>

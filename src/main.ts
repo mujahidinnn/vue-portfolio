@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import "./app.css";
 
-// FontAwesome — only the icons actually used in the app, not the full icon sets
+// FontAwesome: only the icons actually used in the app, not the full icon sets
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -13,6 +13,7 @@ import {
   faRocket,
   faUserAstronaut,
   faBriefcase,
+  faBuilding,
   faChevronLeft,
   faChevronRight,
   faChevronUp,
@@ -22,6 +23,7 @@ import {
   faLaptopCode,
   faHashtag,
   faLink,
+  faLocationDot,
   faMoon,
   faSun,
   faXmark,
@@ -44,6 +46,7 @@ library.add(
   faRocket,
   faUserAstronaut,
   faBriefcase,
+  faBuilding,
   faChevronLeft,
   faChevronRight,
   faChevronUp,
@@ -53,6 +56,7 @@ library.add(
   faLaptopCode,
   faHashtag,
   faLink,
+  faLocationDot,
   faMoon,
   faSun,
   faXmark,

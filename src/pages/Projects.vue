@@ -7,7 +7,7 @@
         Projects
       </h1>
       <p class="text-secondary dark:text-secondary-dark text-sm sm:text-base">
-        A selection of things I've built — from client work to personal
+        A selection of things I've built, from client work to personal
         experiments.
       </p>
     </div>

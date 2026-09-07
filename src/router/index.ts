@@ -13,7 +13,7 @@ const routes = [
     component: Home,
     meta: {
       title:
-        "Mujahidin | Frontend Web Developer — React, Next.js, Vue.js, Nuxt.js & WebGIS",
+        "Mujahidin | Frontend Web Developer | React, Next.js, Vue.js, Nuxt.js & WebGIS",
       description:
         "Mujahidin is a Frontend Web Developer from Indonesia with 3+ years building React & Vue.js admin dashboards and WebGIS / geospatial applications.",
     },
@@ -33,7 +33,7 @@ const routes = [
     name: "Portfolios",
     component: Portfolios,
     meta: {
-      title: "Portfolio | Mujahidin — Frontend Web Developer",
+      title: "Portfolio | Mujahidin | Frontend Web Developer",
       description:
         "Explore Mujahidin's portfolio of admin dashboards, management systems, and geospatial web applications built with React, Vue.js, Next.js, and WebGIS tools.",
     },
@@ -43,7 +43,7 @@ const routes = [
     name: "Projects",
     component: Projects,
     meta: {
-      title: "Projects | Mujahidin — Frontend Web Developer",
+      title: "Projects | Mujahidin | Frontend Web Developer",
       description:
         "Browse projects built by Mujahidin, including government and enterprise platforms using React, Vue.js, Next.js, Leaflet, and Django.",
     },

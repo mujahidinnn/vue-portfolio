@@ -3,24 +3,27 @@
     "image": "/education/UT.png",
     "alt": "Universitas Terbuka",
     "name": "Bachelor of Information Systems",
-    "subname": "Universitas Terbuka — Jakarta, Indonesia",
+    "subname": "Universitas Terbuka",
+    "location": "Jakarta, Indonesia",
     "period": "Jul 2026 - Present",
-    "description": "Focusing on foundational computer science, software engineering principles, and data architecture while balancing academic theory with advanced development practices. Cultivated exceptional self-driven learning capabilities and structured time-management disciplines to effectively bridge rigorous academic methodologies with scalable, real-world software engineering solutions."
+    "description": "Studying core computer science, software engineering, and data architecture while balancing coursework with hands-on development work. Learned to manage my own study schedule and apply what I learn in class to real projects."
   },
   {
     "image": "/education/PIT.png",
     "alt": "Pondok IT",
     "name": "Web Engineering Program",
-    "subname": "Pondok IT — Yogyakarta, Indonesia",
+    "subname": "Pondok IT",
+    "location": "Yogyakarta, Indonesia",
     "period": "Jan 2021 - Dec 2024",
-    "description": "Completed an intensive web engineering program combined with professional character building and personal development tracks. Actively engaged in high-pressure modern development simulations to foster leadership, accountability, and strong communication skills within collaborative software engineering teams, ensuring absolute readiness for standard industry workflows."
+    "description": "Completed an intensive web engineering program alongside character-building and personal development training. Worked through simulated high-pressure development projects in teams, which built leadership, accountability, and communication skills for real industry workflows."
   },
   {
     "image": "/education/PIN.png",
     "alt": "PPTQ Imam An Nawawi",
     "name": "Islamic Studies",
-    "subname": "PPTQ Imam An Nawawi — Tegal, Indonesia",
+    "subname": "PPTQ Imam An Nawawi",
+    "location": "Tegal, Central Java, Indonesia",
     "period": "Jul 2017 - Jun 2021",
-    "description": "Completed high school equivalent education that balanced a rigorous national academic curriculum with intensive Islamic boarding school disciplines. Cultivated strong analytical thinking, structured time-management habits, and exceptional resilience through a highly disciplined community environment, while developing robust critical thinking and collaborative problem-solving skills."
+    "description": "Completed high school equivalent education, balancing the national curriculum with the discipline of Islamic boarding school life. The structured, communal environment shaped my analytical thinking, time management, and resilience, along with strong problem-solving skills built through daily collaboration with others."
   }
 ]

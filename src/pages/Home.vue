@@ -4,7 +4,9 @@
     class="pt-12 sm:pt-20 mx-auto text-left min-h-[calc(100vh_-_68px)] flex flex-col justify-center"
   >
     <div class="flex flex-col sm:flex-row gap-5 sm:items-center mb-6">
-      <div class="hidden md:block relative shrink-0 md:w-28 md:h-28 lg:w-32 lg:h-32 group">
+      <div
+        class="hidden md:block relative shrink-0 md:w-28 md:h-28 lg:w-32 lg:h-32 group"
+      >
         <div
           class="absolute -inset-3 rounded-full bg-gradient-to-br from-accent to-accent-dark/60 dark:from-accent-dark dark:to-accent opacity-25 dark:opacity-30 blur-xl transition-opacity duration-300 group-hover:opacity-40"
           aria-hidden="true"

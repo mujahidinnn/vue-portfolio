@@ -30,7 +30,7 @@
       <p
         class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
-        Beyond coding, I enjoy coffee — especially when it’s mixed with palm
+        Beyond coding, I enjoy coffee, especially when it’s mixed with palm
         sugar, my absolute favorite. I’m also a fan of mie ayam, and I really
         treasure quality time with people I care about. These simple joys fuel
         creativity and bring balance to my life. I also love interior design,
@@ -41,7 +41,7 @@
       <p
         class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
-        I love traveling — not only the destinations, but the journey itself.
+        I love traveling, not only the destinations, but the journey itself.
         Every trip is filled with small, unforgettable moments that turn into
         valuable experiences and lasting memories. Along the way, I enjoy
         capturing photos of places, vibes, and little things that often go
@@ -63,7 +63,7 @@
         At the core, I’m someone who finds beauty in simplicity. Whether it’s a
         cup of coffee, a walk at sunset, or a moment of laughter with friends, I
         believe life’s meaning comes from noticing and appreciating these little
-        things. Music and books are also part of my routine — they give me space
+        things. Music and books are also part of my routine, they give me space
         to recharge and spark new perspectives. Meeting people from different
         backgrounds and learning their stories has shaped me to be more
         empathetic, open-minded, and inspired. I see challenges as opportunities

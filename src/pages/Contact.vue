@@ -1,7 +1,7 @@
 <template>
   <section
     id="contact"
-    class="min-h-[calc(100vh_-_68px)] flex flex-col justify-center py-16 max-w-3xl mx-auto text-center px-4"
+    class="min-h-[calc(100vh_-_68px)] flex flex-col justify-center py-16 max-w-3xl mx-auto text-center"
   >
     <!-- Title -->
     <h1

@@ -67,7 +67,7 @@
   },
 
   {
-    "title": "Simpatiku — Admin & Landing Page",
+    "title": "Simpatiku: Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "systemTags": ["e-Government", "Public Service", "HRIS"],
     "thumbnail": "/projects/Simpatiku.png",
@@ -108,7 +108,7 @@
     "links": []
   },
   {
-    "title": "Disambi — Admin & Self-Service Kiosk",
+    "title": "Disambi: Admin & Self-Service Kiosk",
     "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
     "systemTags": ["e-Government", "Self-Service Kiosk", "HRIS", "Public Service"],
     "thumbnail": "/projects/Disambi.svg",
@@ -126,7 +126,7 @@
     "links": []
   },
   {
-    "title": "Profitku — Admin & Landing Page",
+    "title": "Profitku: Admin & Landing Page",
     "description": "An integrated enterprise management solution offering modules for performance evaluation, SWOT analysis, KPI tracking, and organizational analytics. Designed to support companies and institutions in strategic decision-making through data visualization.",
     "systemTags": ["Performance Management", "BI Dashboard", "HRIS", "ERP"],
     "thumbnail": "/projects/Profitku.png",
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "title": "Sifortuna — Admin & Landing Page",
+    "title": "Sifortuna: Admin & Landing Page",
     "description": "A national-scale agricultural data and forecasting platform designed for monitoring plant pest and disease (OPT) distribution using geospatial data visualization. Integrates Leaflet, Django, and Google Earth Engine for precision agriculture insights.",
     "systemTags": ["WebGIS", "Agricultural DSS", "CMS"],
     "thumbnail": "/projects/Sifortuna.svg",
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "title": "Desa Pintar — Admin & Landing Page",
+    "title": "Desa Pintar: Admin & Landing Page",
     "description": "A smart village platform that brings digital transformation to local governance through integrated admin tools, citizen services, and geospatial visualization. Developed using modern stacks to ensure scalability and smooth UX.",
     "systemTags": ["Smart Village", "e-Government", "WebGIS", "HRIS", "Public Service", "CMS"],
     "thumbnail": "/projects/Despin.svg",
@@ -180,8 +180,8 @@
     "links": []
   },
   {
-    "title": "Dilan — Admin & Landing Page",
-    "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services — tailored for scalability and local needs.",
+    "title": "Dilan: Admin & Landing Page",
+    "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services, tailored for scalability and local needs.",
     "systemTags": ["e-Government", "WebGIS", "Public Service", "CMS"],
     "thumbnail": "/projects/Dilan.png",
     "role": "as a Frontend Developer",
