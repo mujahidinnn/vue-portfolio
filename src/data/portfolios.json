@@ -7,12 +7,7 @@
     "thumbnail": "/portfolios/sakifi.png",
     "images": [],
     "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
-    "links": [
-      {
-        "link": "https://sakifi.vercel.app",
-        "desc": ""
-      }
-    ]
+    "links": []
   },
   {
     "title": "Mojepict",

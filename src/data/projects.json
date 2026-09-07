@@ -110,7 +110,12 @@
   {
     "title": "Disambi: Admin & Self-Service Kiosk",
     "description": "A digital public service ecosystem for Sambirejo Village, Yogyakarta. It features an admin portal and a self-service kiosk interface, empowering citizens to access village services independently and transparently.",
-    "systemTags": ["e-Government", "Self-Service Kiosk", "HRIS", "Public Service"],
+    "systemTags": [
+      "e-Government",
+      "Self-Service Kiosk",
+      "HRIS",
+      "Public Service"
+    ],
     "thumbnail": "/projects/Disambi.svg",
     "role": "as a Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
@@ -164,7 +169,14 @@
   {
     "title": "Desa Pintar: Admin & Landing Page",
     "description": "A smart village platform that brings digital transformation to local governance through integrated admin tools, citizen services, and geospatial visualization. Developed using modern stacks to ensure scalability and smooth UX.",
-    "systemTags": ["Smart Village", "e-Government", "WebGIS", "HRIS", "Public Service", "CMS"],
+    "systemTags": [
+      "Smart Village",
+      "e-Government",
+      "WebGIS",
+      "HRIS",
+      "Public Service",
+      "CMS"
+    ],
     "thumbnail": "/projects/Despin.svg",
     "role": "as a Frontend Developer",
     "tech": [
@@ -194,7 +206,12 @@
       "Bootstrap",
       "Leaflet"
     ],
-    "links": []
+    "links": [
+      {
+        "link": "https://dilan.klaten.go.id",
+        "desc": ""
+      }
+    ]
   },
   {
     "title": "Broom",
@@ -202,7 +219,14 @@
     "systemTags": ["Booking System", "Venue Management", "Payment Integration"],
     "thumbnail": "/projects/Broom.svg",
     "role": "as a Frontend Developer",
-    "tech": ["React.js", "Python", "JavaScript", "Bootstrap"],
+    "tech": [
+      "React.js",
+      "Python",
+      "JavaScript",
+      "Bootstrap",
+      "Leaflet",
+      "Google Maps Javascript API"
+    ],
     "links": []
   },
   {
