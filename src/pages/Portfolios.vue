@@ -16,7 +16,6 @@
         v-for="portfolio in visiblePortfolios"
         :key="portfolio.id"
         :thumbnail="portfolio.thumbnail"
-        :images="portfolio.images"
         :title="portfolio.title"
         :description="portfolio.description"
         :systemTags="portfolio.systemTags"

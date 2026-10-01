@@ -177,7 +177,7 @@
       "Public Service",
       "CMS"
     ],
-    "thumbnail": "/projects/Despin.svg",
+    "thumbnail": "/projects/Despin-showcase.avif",
     "role": "as a Frontend Developer",
     "tech": [
       "Next.js",
@@ -195,7 +195,7 @@
     "title": "Dilan: Admin & Landing Page",
     "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services, tailored for scalability and local needs.",
     "systemTags": ["e-Government", "WebGIS", "Public Service", "CMS"],
-    "thumbnail": "/projects/Dilan.png",
+    "thumbnail": "/projects/Dilan-showcase.avif",
     "role": "as a Frontend Developer",
     "tech": [
       "Next.js",
@@ -217,7 +217,7 @@
     "title": "Broom",
     "description": "A management platform for booking and scheduling padel courts, providing an efficient interface for venue owners and players alike. Built with attention to detail and user experience for the growing padel community.",
     "systemTags": ["Booking System", "Venue Management", "Payment Integration"],
-    "thumbnail": "/projects/Broom.svg",
+    "thumbnail": "/projects/Broom_showcase.avif",
     "role": "as a Frontend Developer",
     "tech": [
       "React.js",
@@ -233,7 +233,7 @@
     "title": "Digdaya Masjid NU",
     "description": "A comprehensive landing portal and nationwide directory for Nahdlatul Ulama (NU) mosques across Indonesia. It features a dedicated finder for 'Muktamirin-friendly' mosques tailored for NU congress participants, advanced filtering options for precise location searches, comprehensive mosque profiles containing facility details, management contacts, and routine agendas, as well as an interactive and user-friendly map integration.",
     "systemTags": ["Directory Platform", "WebGIS"],
-    "thumbnail": "/projects/Digdaya-Masjid-NU.svg",
+    "thumbnail": "/projects/Digdaya-Masjid-NU-showcase.avif",
     "role": "as a Frontend Developer",
     "tech": [
       "Next.js",

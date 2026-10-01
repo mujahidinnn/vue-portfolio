@@ -24,7 +24,7 @@
 
       <div class="flex items-center gap-3">
         <div
-          class="h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-1.5 border border-gray-100 dark:border-gray-800"
+          class="h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 flex items-center justify-center bg-white rounded-lg sm:rounded-xl p-1.5 border border-gray-100 dark:border-gray-800"
         >
           <img
             :src="item.image"

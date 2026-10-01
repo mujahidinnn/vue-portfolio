@@ -21,7 +21,7 @@
       <p
         class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
       >
-        I’m a front-end developer with over 3 years of experience building
+        I’m a front-end developer with over 4 years of experience building
         clean, responsive, and user-focused web applications. I combine
         minimalist design with performance, making every project both functional
         and visually engaging.
@@ -111,7 +111,7 @@
         <div
           v-for="tool in uses"
           :key="tool.name"
-          class="flex flex-col items-center text-center p-2 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-transparent backdrop-blur-md dark:backdrop-blur-none shadow-md shadow-accent/10 dark:shadow-none hover:border-accent/40 hover:bg-white/80 dark:hover:bg-transparent filter grayscale hover:grayscale-0 transition duration-300"
+          class="flex flex-col items-center text-center p-2 rounded-lg sm:rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-transparent backdrop-blur-md dark:backdrop-blur-none shadow-md shadow-accent/10 dark:shadow-none hover:border-accent/40 hover:bg-white/80 dark:hover:bg-transparent filter grayscale hover:grayscale-0 transition duration-300"
           :class="{
             'filter grayscale': !isActive,
             'filter-none': isActive,

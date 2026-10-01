@@ -140,5 +140,47 @@
         "desc": ""
       }
     ]
+  },
+  {
+    "title": "WorkDesk",
+    "description": "WorkDesk is an internal daily reporting and HRIS hub that brings a team's whole workday into one place. It covers daily task reports, attendance, leave, overtime and business trip requests, a shared work calendar, team chat, and master data management, with one-click exports to Excel and PDF. Built with a clean bilingual (English/Indonesian) interface and light/dark themes for fast, everyday use.",
+    "systemTags": ["HRIS", "Daily Report", "Internal Tool"],
+    "thumbnail": "/portfolios/workdesk-showcase.png",
+    "images": [],
+    "tech": [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Supabase",
+      "CSS"
+    ],
+    "links": [
+      {
+        "link": "https://workdesk.mujahidin.my.id",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "title": "StockDesk",
+    "description": "StockDesk is an inventory and warehouse management system for multi-warehouse operations. It provides bin-level WMS, FEFO picking, stock opname, and FIFO/average stock valuation, alongside a dashboard showing stock value, inbound vs outbound trends, and a map of the warehouse network. Reports can be exported to Excel, and the interface supports bilingual use with light/dark themes.",
+    "systemTags": ["Inventory Management", "WMS"],
+    "thumbnail": "/portfolios/stockdesk-showcase.png",
+    "images": [],
+    "tech": [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Supabase",
+      "CSS"
+    ],
+    "links": [
+      {
+        "link": "https://stockdesk.mujahidin.my.id",
+        "desc": ""
+      }
+    ]
   }
 ]
