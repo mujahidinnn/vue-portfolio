@@ -14,7 +14,7 @@
     "description": "Mojepict is a collection of versatile and user-friendly online tools designed to simplify daily digital workflows. From quick image editing to file conversion, color palette generation, and text utilities, Mojepict combines multiple handy mini-tools in one accessible place. It’s crafted with modern UI/UX principles for seamless and fast performance, making everyday creative tasks effortless and enjoyable.",
     "story": "The idea for Mojepict came from my daily experience, both at work and during personal projects, where I often needed simple tools like image editors, converters, or color extractors. Most of the available sites were heavy, cluttered with ads, or required multiple separate tools for small tasks. I decided to build Mojepict as a lightweight, all-in-one toolbox that’s ad-free, fast, and pleasant to use.",
     "systemTags": ["SaaS Toolkit", "Web Utility"],
-    "thumbnail": "/portfolios/mojepict/thumbnail.png",
+    "thumbnail": "/portfolios/mojepict-showcase.png",
     "images": [
       { "src": "/portfolios/mojepict/1.webp", "alt": "mojepict-1" },
       { "src": "/portfolios/mojepict/2.webp", "alt": "mojepict-2" },
@@ -84,7 +84,7 @@
     "description": "Vistee is a modern web-based visual CV builder that empowers users to create stunning, professional resumes in minutes. With live editing, customizable templates, and an intuitive drag-and-drop interface, users can design resumes that reflect their personality and professional identity. Built for freelancers, students, and professionals alike, Vistee focuses on accessibility, speed, and visual appeal, making personal branding effortless.",
     "story": "Vistee was inspired by my own and my friends’ struggles in crafting CVs. We often spent hours finding design inspiration, choosing the right words, and aligning elements manually. I wanted to simplify the process by making it fast yet flexible, with templates that could adapt to anyone’s style. Vistee was born as a smart CV builder that merges speed, beauty, and personalization in one smooth experience.",
     "systemTags": ["SaaS Builder", "Document Builder"],
-    "thumbnail": "/portfolios/vistee/thumbnail.png",
+    "thumbnail": "/portfolios/vistee-showcase.png",
     "images": [
       { "src": "/portfolios/vistee/1.png", "alt": "vistee-1" },
       { "src": "/portfolios/vistee/2.png", "alt": "vistee-2" },
@@ -123,7 +123,7 @@
     "description": "Mekar Ayu is a private menstrual cycle tracker that keeps every entry on the user's own device: no account, no backend, no data ever leaving the browser. It predicts period, fertile window, and ovulation phases on a simple calendar, while letting users log flow intensity, symptoms, and mood each day. Built-in tools let users back up their data as JSON, generate PDF or Excel reports, or share a quick summary straight to WhatsApp.",
     "story": "Mekar Ayu came from wanting a cycle-tracking tool that treats personal health data as actually personal, since most apps push everything to the cloud and bury insights behind accounts and ads. I built Mekar Ayu to keep everything local to the device by default, with clear phase predictions and simple daily logging, plus easy export for anyone who wants to share a summary with a doctor or partner.",
     "systemTags": ["Health Tracker", "PWA"],
-    "thumbnail": "/portfolios/mekar-ayu/thumbnail.png",
+    "thumbnail": "/portfolios/mekar-ayu-showcase.png",
     "images": [
       { "src": "/portfolios/mekar-ayu/1.png", "alt": "mekar-ayu-1" },
       { "src": "/portfolios/mekar-ayu/2.png", "alt": "mekar-ayu-2" },
