@@ -1,6 +1,6 @@
 [
   {
-    "image": "/work-experience/Sandbox.webp",
+    "image": "/work-experience/sandbox.avif",
     "alt": "Sandbox Indonesia Juara",
     "name": "Frontend Web Developer",
     "subname": "Sandbox Indonesia Juara",
@@ -9,8 +9,8 @@
     "description": "Building high-performance, responsive web applications with React and Next.js. Leading development on enterprise systems, including admin dashboards, management portals, geospatial mapping platforms, and company profile sites, with close attention to UI detail."
   },
   {
-    "image": "/work-experience/P-Programmer.webp",
-    "alt": "Pondok Programmer",
+    "image": "/work-experience/p-programmer.avif",
+    "alt": "Pondok IT",
     "name": "Mentor Frontend Web",
     "subname": "Pondok IT",
     "location": "Yogyakarta, Indonesia",
@@ -18,7 +18,7 @@
     "description": "Mentored aspiring developers in core frontend technologies, from HTML and CSS to JavaScript and React.js. Built structured learning tracks, reviewed student code, and guided them through building real projects that followed modern development practices."
   },
   {
-    "image": "/work-experience/1000-Startup.webp",
+    "image": "/work-experience/1000-startup.avif",
     "alt": "1000 StartUp Digital",
     "name": "Frontend Web Developer",
     "subname": "1000 StartUp Digital x Gadjah Mada University",

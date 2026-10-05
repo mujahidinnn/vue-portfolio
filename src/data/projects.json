@@ -3,7 +3,7 @@
     "title": "Muhammadiyah Expo 2022",
     "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2022, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
     "systemTags": ["Event Registration"],
-    "thumbnail": "/projects/Muhammadiyah-Expo-showcase.avif",
+    "thumbnail": "/projects/muhammadiyah-expo.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Laravel", "JavaScript", "CSS"],
     "links": []
@@ -12,7 +12,7 @@
     "title": "Darussalam Turgo",
     "description": "An informative profile website for Darussalam Turgo Islamic Boarding School, designed to highlight its educational programs, orphan empowerment initiatives, and community development activities in Boyolali. Focused on simplicity and spiritual warmth.",
     "systemTags": ["Company Profile"],
-    "thumbnail": "/projects/Darussalam-Turgo-showcase.avif",
+    "thumbnail": "/projects/darussalam-turgo.avif",
     "role": "Fullstack Developer",
     "tech": ["JavaScript", "CSS", "HTML"],
     "links": []
@@ -21,7 +21,7 @@
     "title": "Team Up",
     "description": "A digital matchmaking platform built to connect startup founders with compatible team members and co-founders. Developed in collaboration with the 1000 Digital Startups Yogyakarta 2023 program, it streamlines the talent-matching process for early-stage startups.",
     "systemTags": ["Matchmaking Platform", "Marketplace"],
-    "thumbnail": "/projects/Team-Up-showcase.avif",
+    "thumbnail": "/projects/team-up.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Laravel", "JavaScript", "Tailwind CSS"],
     "links": []
@@ -30,7 +30,7 @@
     "title": "Sandbox Official Website",
     "description": "A modern corporate website for PT Sandbox Indonesia Juara, designed to showcase the company’s innovation-driven approach and digital solutions portfolio. Features a clean layout, responsive design, and dynamic content structure.",
     "systemTags": ["Company Profile"],
-    "thumbnail": "/projects/Sandbox-showcase.avif",
+    "thumbnail": "/projects/sandbox.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
@@ -44,7 +44,7 @@
     "title": "Simpus",
     "description": "A digital information system for managing administrative and service operations within community health centers (Puskesmas). It helps healthcare staff efficiently record, track, and analyze patient and operational data through an intuitive web interface.",
     "systemTags": ["HMIS"],
-    "thumbnail": "/projects/Simpus-showcase.avif",
+    "thumbnail": "/projects/simpus.avif",
     "role": "Frontend Developer",
     "tech": [
       "React.js",
@@ -60,7 +60,7 @@
     "title": "Adis",
     "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
     "systemTags": ["Asset Management", "Server Management"],
-    "thumbnail": "/projects/Adis-showcase.avif",
+    "thumbnail": "/projects/adis.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": []
@@ -69,7 +69,7 @@
     "title": "Simpatiku: Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "systemTags": ["e-Government", "Public Service", "HRIS"],
-    "thumbnail": "/projects/Simpatiku-showcase.avif",
+    "thumbnail": "/projects/simpatiku.avif",
     "role": "Frontend Developer",
     "tech": ["Next.js", "React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
@@ -83,7 +83,7 @@
     "title": "Siap",
     "description": "A web-based land administration information system equipped with geospatial visualization for land parcels and ownership data. Designed to improve transparency and accessibility in land management through interactive map integration.",
     "systemTags": ["WebGIS", "Land Information System"],
-    "thumbnail": "/projects/Siap-showcase.avif",
+    "thumbnail": "/projects/siap.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap", "Leaflet"],
     "links": []
@@ -92,7 +92,7 @@
     "title": "Siperjadin",
     "description": "A government business trip management platform that automates the process of travel authorization, expense reporting, and approval workflows. It streamlines administrative tasks and ensures compliance with internal regulations.",
     "systemTags": ["Travel Management", "Workflow Approval", "PMS"],
-    "thumbnail": "/projects/Siperjadin-showcase.avif",
+    "thumbnail": "/projects/siperjadin.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -101,7 +101,7 @@
     "title": "Kanal Tapem",
     "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
     "systemTags": ["e-Government", "PMS"],
-    "thumbnail": "/projects/Kanal-Tapem-showcase.avif",
+    "thumbnail": "/projects/kanal-tapem.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -115,7 +115,7 @@
       "HRIS",
       "Public Service"
     ],
-    "thumbnail": "/projects/Disambi-showcase.avif",
+    "thumbnail": "/projects/disambi.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -124,7 +124,7 @@
     "title": "Simpan Ternate",
     "description": "A web-based document management and archiving platform for the City of Ternate, designed to support digital transformation and improve accessibility to official records and correspondence.",
     "systemTags": ["Document Management", "e-Archive"],
-    "thumbnail": "/projects/Simpan-showcase.avif",
+    "thumbnail": "/projects/simpan.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -134,7 +134,7 @@
     "featured": true,
     "description": "An integrated enterprise management solution offering modules for performance evaluation, SWOT analysis, KPI tracking, and organizational analytics. Designed to support companies and institutions in strategic decision-making through data visualization.",
     "systemTags": ["Performance Management", "BI Dashboard", "HRIS", "ERP"],
-    "thumbnail": "/projects/Profitku-showcase.avif",
+    "thumbnail": "/projects/profitku.avif",
     "role": "Frontend Developer",
     "tech": ["Next.js", "React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": [
@@ -149,7 +149,7 @@
     "featured": true,
     "description": "A national-scale agricultural data and forecasting platform designed for monitoring plant pest and disease (OPT) distribution using geospatial data visualization. Integrates Leaflet, Django, and Google Earth Engine for precision agriculture insights.",
     "systemTags": ["WebGIS", "Agricultural DSS", "CMS"],
-    "thumbnail": "/projects/sifortuna-showcase.avif",
+    "thumbnail": "/projects/sifortuna.avif",
     "role": "Frontend Developer",
     "tech": [
       "React.js",
@@ -179,7 +179,7 @@
       "Public Service",
       "CMS"
     ],
-    "thumbnail": "/projects/Despin-showcase.avif",
+    "thumbnail": "/projects/despin.avif",
     "role": "Frontend Developer",
     "tech": [
       "Next.js",
@@ -197,7 +197,7 @@
     "title": "Dilan: Admin & Landing Page",
     "description": "A modern digital governance system for villages in Klaten Regency, featuring a modular architecture for regional administration, geospatial visualization, and citizen services, tailored for scalability and local needs.",
     "systemTags": ["e-Government", "WebGIS", "Public Service", "CMS"],
-    "thumbnail": "/projects/Dilan-showcase.avif",
+    "thumbnail": "/projects/dilan.avif",
     "role": "Frontend Developer",
     "tech": [
       "Next.js",
@@ -220,7 +220,7 @@
     "featured": true,
     "description": "A management platform for booking and scheduling padel courts, providing an efficient interface for venue owners and players alike. Built with attention to detail and user experience for the growing padel community.",
     "systemTags": ["Booking System", "Venue Management", "Payment Integration"],
-    "thumbnail": "/projects/Broom_showcase.avif",
+    "thumbnail": "/projects/broom.avif",
     "role": "Frontend Developer",
     "tech": [
       "React.js",
@@ -236,7 +236,7 @@
     "title": "Digdaya Masjid NU",
     "description": "A comprehensive landing portal and nationwide directory for Nahdlatul Ulama (NU) mosques across Indonesia. It features a dedicated finder for 'Muktamirin-friendly' mosques tailored for NU congress participants, advanced filtering options for precise location searches, comprehensive mosque profiles containing facility details, management contacts, and routine agendas, as well as an interactive and user-friendly map integration.",
     "systemTags": ["Directory Platform", "WebGIS"],
-    "thumbnail": "/projects/Digdaya-Masjid-NU-showcase.avif",
+    "thumbnail": "/projects/digdaya-masjid-nu.avif",
     "role": "Frontend Developer",
     "tech": [
       "Next.js",
@@ -255,7 +255,7 @@
     "title": "Jono Instalasi Listrik",
     "description": "A landing page for an electrical installation service covering the Jabodetabek area. It presents a searchable, filterable service catalog, price estimates, work gallery, client testimonials, and FAQ, with WhatsApp consultation as the main call to action. Built as a fast, SEO-friendly static site.",
     "systemTags": ["Landing Page", "Company Profile"],
-    "thumbnail": "/projects/Jono-Listrik-showcase.avif",
+    "thumbnail": "/projects/jono-listrik.avif",
     "role": "Frontend Developer",
     "tech": ["Astro", "TypeScript", "Tailwind CSS"],
     "links": []

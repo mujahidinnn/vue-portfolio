@@ -29,7 +29,6 @@ import {
   faLinkedin,
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
-import createPlausible from "./plugins/plausible";
 import { syncThemeColor } from "./theme";
 
 library.add(
@@ -75,8 +74,5 @@ app.directive("inview", {
   mounted: (el: HTMLElement) => inviewObserver.observe(el),
   unmounted: (el: HTMLElement) => inviewObserver.unobserve(el),
 });
-
-// Pasang Plausible
-createPlausible({ domain: "mujahidin.vercel.app", router });
 
 app.mount("#app");

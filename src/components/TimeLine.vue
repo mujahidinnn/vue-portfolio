@@ -23,7 +23,7 @@
         <div
           class="size-12 shrink-0 rounded-card border border-border bg-paper p-2 md:row-span-2 md:size-20 md:p-3"
         >
-          <img
+          <Pic
             :src="item.image"
             :alt="item.alt"
             width="80"
@@ -51,6 +51,7 @@
 </template>
 
 <script setup>
+import Pic from "./Pic.vue";
 defineProps({
   items: {
     type: Array,

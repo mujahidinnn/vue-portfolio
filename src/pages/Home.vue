@@ -63,7 +63,6 @@
                 :href="resume"
                 download
                 class="btn btn-secondary bg-background-body"
-                @click="track('Resume Download')"
               >
                 Download resume
               </a>
@@ -76,7 +75,6 @@
                   rel="noreferrer noopener"
                   :aria-label="channel.label"
                   class="grid size-11 place-items-center text-[1.375rem] text-secondary hover:text-accent"
-                  @click="track('Contact Click', { channel: channel.label })"
                 >
                   <FontAwesomeIcon :icon="channel.icon" />
                 </a>
@@ -153,7 +151,6 @@ import educations from "../data/educations.json";
 import portfolios from "../data/portfolios.json";
 import projects from "../data/projects.json";
 import { channels, resume } from "../site";
-import { track } from "../plugins/plausible";
 
 // Harus sama dengan imagesizes pada preload di index.html
 const HERO_SIZES = "(min-width: 1024px) 420px, (min-width: 640px) 360px, 280px";
@@ -168,8 +165,8 @@ const firstYear = Math.min(
 );
 const stats = [
   { value: `${new Date().getFullYear() - firstYear}+`, label: "Years of experience" },
-  { value: projects.length, label: "Client projects" },
-  { value: portfolios.length, label: "Personal portfolios" },
+  { value: projects.filter((p) => !p.hidden).length, label: "Client projects" },
+  { value: portfolios.filter((p) => !p.hidden).length, label: "Personal portfolios" },
 ];
 
 // Satu baris, tiga kartu per kelompok (karya featured sesuai urutan data)

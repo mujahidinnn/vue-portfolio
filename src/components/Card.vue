@@ -5,7 +5,7 @@
       :class="isLogo ? 'bg-paper' : 'bg-background-2'"
       :style="{ aspectRatio }"
     >
-      <img
+      <Pic
         v-if="thumbnail && !thumbFailed"
         :src="thumbnail"
         :alt="`${title} preview`"
@@ -74,7 +74,7 @@
         :style="isLogo && { aspectRatio }"
       >
         <!-- Showcase mengikuti rasio aslinya (tanpa pita kosong); logo diberi kotak berasio sama dengan kartu -->
-        <img
+        <Pic
           :src="thumbnail"
           :alt="`${title} preview`"
           decoding="async"
@@ -133,7 +133,7 @@
 
 <script setup>
 import { computed, ref } from "vue";
-import { track } from "../plugins/plausible";
+import Pic from "./Pic.vue";
 
 const MAX_TECH = 4;
 
@@ -151,10 +151,10 @@ const props = defineProps({
   hidden: Boolean,
 });
 
-// Bukan file showcase = logo, diberi padding agar tidak memenuhi area gambar
-const isLogo = !/showcase/i.test(props.thumbnail || "");
+// File berakhiran -logo diberi padding agar tidak memenuhi area gambar
+const isLogo = /-logo\./.test(props.thumbnail || "");
 
-// Rasio bingkai = rasio file showcase, supaya gambar tidak terpotong dan tanpa CLS.
+// Rasio bingkai = rasio screenshot, supaya gambar tidak terpotong dan tanpa CLS.
 // ponytail: rasio ditebak dari folder (portfolios 1200x630, projects 1920x1080);
 // tambahkan atribut rasio di JSON bila ukuran showcase mulai beragam.
 const aspectRatio = props.thumbnail?.startsWith("/portfolios/")
@@ -175,7 +175,6 @@ const dialogEl = ref(null);
 function open() {
   isOpen.value = true;
   dialogEl.value.showModal();
-  track("Project Open", { title: props.title });
 }
 
 function close() {

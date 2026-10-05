@@ -114,7 +114,6 @@
               download
               :class="[CELL, 'bg-primary text-background-body hover:opacity-90']"
               aria-label="Download resume (PDF)"
-              @click="track('Resume Download')"
             >
               <FontAwesomeIcon
                 :icon="['fas', 'download']"
@@ -135,7 +134,6 @@
               :target="channel.href.startsWith('http') ? '_blank' : undefined"
               rel="noreferrer noopener"
               class="inline-flex min-h-11 items-center gap-3 text-base text-secondary hover:text-accent"
-              @click="track('Contact Click', { channel: channel.label })"
             >
               <FontAwesomeIcon :icon="channel.icon" class="w-4 text-sm" />
               {{ channel.label }}
@@ -159,7 +157,6 @@ import { RouterLink, useRoute } from "vue-router";
 import portfolios from "../data/portfolios.json";
 import projects from "../data/projects.json";
 import { channels, resume } from "../site";
-import { track } from "../plugins/plausible";
 
 const route = useRoute();
 const showCta = computed(() => route.name !== "Contact");

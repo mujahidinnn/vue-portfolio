@@ -15,7 +15,7 @@ const routes = [
       title:
         "Mujahidin | Frontend Web Developer | React, Next.js, Vue.js, Nuxt.js & WebGIS",
       description:
-        "Mujahidin is a Frontend Web Developer from Indonesia with 3+ years building React & Vue.js admin dashboards and WebGIS / geospatial applications.",
+        "Mujahidin is a Frontend Web Developer based in Jakarta, Indonesia with 4+ years building React & Vue.js admin dashboards and WebGIS / geospatial applications.",
     },
   },
   {

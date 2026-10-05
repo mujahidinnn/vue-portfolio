@@ -71,7 +71,7 @@
             class="flex items-center gap-3 border-b border-border py-3"
           >
             <span class="size-8 shrink-0 rounded-card bg-paper p-1.5">
-              <img
+              <Pic
                 :src="tool.icon"
                 alt=""
                 width="20"
@@ -92,6 +92,7 @@
 
 <script setup>
 import JourneyMap from "../components/JourneyMap.vue";
+import Pic from "../components/Pic.vue";
 import uses from "../data/uses.json";
 
 // Dikelompokkan per category (bila ada), urutan mengikuti kemunculan di JSON

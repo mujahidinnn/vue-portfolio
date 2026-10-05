@@ -13,7 +13,6 @@
       <a
         :href="`mailto:${email}`"
         class="display inline-flex min-h-11 items-center text-[clamp(1.375rem,0.9rem+2.2vw,2.75rem)] hover:text-accent"
-        @click="track('Contact Click', { channel: 'Email' })"
       >
         {{ email }}
       </a>
@@ -35,7 +34,6 @@
           :target="channel.href.startsWith('http') ? '_blank' : undefined"
           rel="noreferrer noopener"
           class="group flex min-h-18 items-center gap-4 py-3"
-          @click="track('Contact Click', { channel: channel.label })"
         >
           <FontAwesomeIcon
             :icon="channel.icon"
@@ -58,7 +56,6 @@
 <script setup>
 import { ref } from "vue";
 import { channels, email } from "../site";
-import { track } from "../plugins/plausible";
 
 const copied = ref(false);
 

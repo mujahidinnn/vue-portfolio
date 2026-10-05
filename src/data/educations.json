@@ -1,6 +1,6 @@
 [
   {
-    "image": "/education/UT.webp",
+    "image": "/education/ut.avif",
     "alt": "Universitas Terbuka",
     "name": "Bachelor of Information Systems",
     "subname": "Universitas Terbuka",
@@ -9,7 +9,7 @@
     "description": "Studying core computer science, software engineering, and data architecture while balancing coursework with hands-on development work. Learned to manage my own study schedule and apply what I learn in class to real projects."
   },
   {
-    "image": "/education/PIT.webp",
+    "image": "/education/pit.avif",
     "alt": "Pondok IT",
     "name": "Web Engineering Program",
     "subname": "Pondok IT",
@@ -18,7 +18,7 @@
     "description": "Completed an intensive web engineering program alongside character-building and personal development training. Worked through simulated high-pressure development projects in teams, which built leadership, accountability, and communication skills for real industry workflows."
   },
   {
-    "image": "/education/PIN.webp",
+    "image": "/education/pin.avif",
     "alt": "PPTQ Imam An Nawawi",
     "name": "Islamic Studies",
     "subname": "PPTQ Imam An Nawawi",

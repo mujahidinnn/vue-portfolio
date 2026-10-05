@@ -1,5 +1,5 @@
 export const email = "mujahidin28394@gmail.com";
-export const resume = "/Mujahidin-Frontend.pdf";
+export const resume = "/mujahidin-frontend.pdf";
 
 export const navLinks = [
   { to: "/", label: "Home", icon: ["fas", "house"] },
