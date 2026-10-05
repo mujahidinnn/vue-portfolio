@@ -21,9 +21,11 @@
   { "icon": "/uses/tailwind.webp", "name": "Tailwind", "category": "Framework" },
 
   { "icon": "/uses/nodejs.webp", "name": "Node Js", "category": "Framework" },
+  { "icon": "/uses/express.svg", "name": "Express Js", "category": "Framework" },
   { "icon": "/uses/python.webp", "name": "Python", "category": "Language" },
   { "icon": "/uses/php.webp", "name": "PHP", "category": "Language" },
 
+  { "icon": "/uses/supabase.svg", "name": "Supabase", "category": "Tooling" },
   { "icon": "/uses/docker.webp", "name": "Docker", "category": "Tooling" },
   { "icon": "/uses/claude.webp", "name": "Claude", "category": "Tooling" },
 
