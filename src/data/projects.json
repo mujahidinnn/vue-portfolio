@@ -3,7 +3,7 @@
     "title": "Muhammadiyah Expo 2022",
     "description": "A comprehensive registration and information portal for the Muhammadiyah Expo Yogyakarta 2022, featuring an intuitive interface for participant registration, exhibitor listings, and event schedule updates. Built to support seamless digital engagement throughout the event.",
     "systemTags": ["Event Registration"],
-    "thumbnail": "/projects/Muhammadiyah-Expo.webp",
+    "thumbnail": "/projects/Muhammadiyah-Expo-showcase.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Laravel", "JavaScript", "CSS"],
     "links": []
@@ -44,7 +44,7 @@
     "title": "Simpus",
     "description": "A digital information system for managing administrative and service operations within community health centers (Puskesmas). It helps healthcare staff efficiently record, track, and analyze patient and operational data through an intuitive web interface.",
     "systemTags": ["HMIS"],
-    "thumbnail": "/projects/Simpus.svg",
+    "thumbnail": "/projects/Simpus-showcase.avif",
     "role": "Frontend Developer",
     "tech": [
       "React.js",
@@ -60,17 +60,16 @@
     "title": "Adis",
     "description": "A centralized infrastructure management system that streamlines data tracking and reporting for the Adis project. Developed with a responsive design and robust backend integration for reliable data management.",
     "systemTags": ["Asset Management", "Server Management"],
-    "thumbnail": "/projects/Adis.svg",
+    "thumbnail": "/projects/Adis-showcase.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap"],
     "links": []
   },
-
   {
     "title": "Simpatiku: Admin & Landing Page",
     "description": "An integrated public service management platform for Kutai Timur Regency, combining a modern landing page with a comprehensive admin dashboard for managing regional data and services. Built for scalability and efficiency.",
     "systemTags": ["e-Government", "Public Service", "HRIS"],
-    "thumbnail": "/projects/Simpatiku.webp",
+    "thumbnail": "/projects/Simpatiku-showcase.avif",
     "role": "Frontend Developer",
     "tech": ["Next.js", "React.js", "Django", "JavaScript", "Bootstrap"],
     "links": [
@@ -84,7 +83,7 @@
     "title": "Siap",
     "description": "A web-based land administration information system equipped with geospatial visualization for land parcels and ownership data. Designed to improve transparency and accessibility in land management through interactive map integration.",
     "systemTags": ["WebGIS", "Land Information System"],
-    "thumbnail": "/projects/Siap.webp",
+    "thumbnail": "/projects/Siap-showcase.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Django", "JavaScript", "Bootstrap", "Leaflet"],
     "links": []
@@ -102,7 +101,7 @@
     "title": "Kanal Tapem",
     "description": "A digital information hub supporting regional governance and administrative transparency. Designed to centralize public information and policy updates under the regional secretariat division.",
     "systemTags": ["e-Government", "PMS"],
-    "thumbnail": "/projects/Kanal-Tapem.webp",
+    "thumbnail": "/projects/Kanal-Tapem-showcase.avif",
     "role": "Frontend Developer",
     "tech": ["React.js", "Golang", "JavaScript", "Bootstrap"],
     "links": []
@@ -237,7 +236,7 @@
     "title": "Digdaya Masjid NU",
     "description": "A comprehensive landing portal and nationwide directory for Nahdlatul Ulama (NU) mosques across Indonesia. It features a dedicated finder for 'Muktamirin-friendly' mosques tailored for NU congress participants, advanced filtering options for precise location searches, comprehensive mosque profiles containing facility details, management contacts, and routine agendas, as well as an interactive and user-friendly map integration.",
     "systemTags": ["Directory Platform", "WebGIS"],
-    "thumbnail": "/projects/Digdaya-Masjid-NU-showcase.avif",
+    "thumbnail": "/projects/Digitaya-Masjid-NU-showcase.avif",
     "role": "Frontend Developer",
     "tech": [
       "Next.js",
