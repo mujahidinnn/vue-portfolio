@@ -236,7 +236,7 @@
     "title": "Digdaya Masjid NU",
     "description": "A comprehensive landing portal and nationwide directory for Nahdlatul Ulama (NU) mosques across Indonesia. It features a dedicated finder for 'Muktamirin-friendly' mosques tailored for NU congress participants, advanced filtering options for precise location searches, comprehensive mosque profiles containing facility details, management contacts, and routine agendas, as well as an interactive and user-friendly map integration.",
     "systemTags": ["Directory Platform", "WebGIS"],
-    "thumbnail": "/projects/Digitaya-Masjid-NU-showcase.avif",
+    "thumbnail": "/projects/Digdaya-Masjid-NU-showcase.avif",
     "role": "Frontend Developer",
     "tech": [
       "Next.js",
