@@ -6,7 +6,7 @@
     "subname": "Sandbox Indonesia Juara",
     "location": "Klaten, Central Java, Indonesia",
     "period": "Mar 2023 - Present",
-    "description": "Building high-performance, responsive web applications with React and Next.js. Leading development on enterprise systems, including admin dashboards, management portals, geospatial mapping platforms, and company profile sites, with close attention to UI detail."
+    "description": "Delivered enterprise web platforms for government and business clients, including admin dashboards, management portals, and national-scale WebGIS systems such as Sifortuna. Built with React and Next.js, with advanced data tables, interactive charts, and multi-format export. Shipped SEO-friendly company profile and landing sites with close attention to performance and UI detail."
   },
   {
     "image": "/work-experience/p-programmer.avif",
@@ -15,7 +15,7 @@
     "subname": "Pondok IT",
     "location": "Yogyakarta, Indonesia",
     "period": "Jan 2023 - Jun 2023",
-    "description": "Mentored aspiring developers in core frontend technologies, from HTML and CSS to JavaScript and React.js. Built structured learning tracks, reviewed student code, and guided them through building real projects that followed modern development practices."
+    "description": "Mentored aspiring developers from HTML and CSS through JavaScript and React.js. Designed structured learning tracks, reviewed student code, and guided students to ship real projects that followed modern development practices."
   },
   {
     "image": "/work-experience/1000-startup.avif",
@@ -24,6 +24,6 @@
     "subname": "1000 StartUp Digital x Gadjah Mada University",
     "location": "Yogyakarta, Indonesia",
     "period": "Nov 2022 - Mar 2023",
-    "description": "Worked in an agile team to build and launch 'Team Up', an incubator platform for university startups. Turned design mockups into interactive, responsive interfaces and handled API integration and onboarding flows."
+    "description": "Co-built and launched Team Up, an incubator platform for university startups, in an agile team. Turned design mockups into responsive, interactive interfaces and delivered the API integration and onboarding flows."
   }
 ]
