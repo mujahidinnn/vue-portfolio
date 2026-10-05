@@ -1,91 +1,15 @@
 <template>
-  <li v-for="link in links" :key="link.to" class="list-none">
-    <RouterLink :to="link.to" v-slot="{ isActive, navigate }" custom>
-      <a
-        :href="link.to"
-        @click="navigate"
-        :aria-label="'Go to ' + link.label"
-        class="block w-full px-4 py-1.5 rounded-full transition-all duration-200"
-        :class="
-          isActive
-            ? 'bg-accent/10 dark:bg-accent-dark/15'
-            : 'hover:bg-gray-100 dark:hover:bg-neutral-800'
-        "
-      >
-        <span
-          :class="[
-            'transition-colors duration-200',
-            isActive
-              ? 'font-semibold text-accent dark:text-accent-dark'
-              : 'text-secondary dark:text-secondary-dark hover:text-primary dark:hover:text-primary-dark',
-          ]"
-        >
-          {{ link.label }}
-        </span>
-      </a>
+  <li v-for="link in navLinks" :key="link.to">
+    <RouterLink
+      :to="link.to"
+      class="relative inline-flex min-h-11 items-center px-3.5 text-[0.9375rem] text-secondary after:absolute after:inset-x-3.5 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:text-primary hover:after:scale-x-100 aria-[current=page]:font-medium aria-[current=page]:text-primary aria-[current=page]:after:scale-x-100"
+    >
+      {{ link.label }}
     </RouterLink>
-  </li>
-
-  <li
-    class="list-none mt-2 md:mt-0 px-4 py-1.5 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-full transition cursor-pointer"
-    @click="$emit('toggle-theme')"
-    role="button"
-    aria-label="Toggle dark mode"
-  >
-    <FontAwesomeIcon
-      :icon="isDark ? ['fas', 'sun'] : ['fas', 'moon']"
-      class="text-sm transition-transform duration-300 text-yellow-500"
-    />
   </li>
 </template>
 
 <script setup>
-import { RouterLink, useRoute, useRouter } from "vue-router";
-import { ref, onMounted, onUnmounted } from "vue";
-
-const props = defineProps({ isDark: Boolean });
-const emit = defineEmits(["toggle-theme", "link-clicked"]);
-
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/portfolios", label: "Portfolio" },
-  { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contact" },
-];
-
-const route = useRoute();
-const router = useRouter();
-const isMobile = ref(window.innerWidth < 768);
-
-// Scroll to section (with 80px offset)
-function scrollToSection(path) {
-  const id = path === "/" ? "home" : path.slice(1);
-  const el = document.getElementById(id);
-  if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
-  }
-
-  emit("link-clicked");
-}
-
-function handleResize() {
-  const currentlyMobile = window.innerWidth < 768;
-
-  if (currentlyMobile && !isMobile.value && route.path !== "/") {
-    router.replace("/");
-  }
-
-  isMobile.value = currentlyMobile;
-}
-
-onMounted(() => {
-  window.addEventListener("resize", handleResize);
-  handleResize();
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", handleResize);
-});
+import { RouterLink } from "vue-router";
+import { navLinks } from "../site";
 </script>

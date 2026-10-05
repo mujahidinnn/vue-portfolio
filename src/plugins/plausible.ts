@@ -16,6 +16,10 @@ interface PlausibleOptions {
   router?: Router;
 }
 
+export function track(event: string, props?: Record<string, string>) {
+  window.plausible?.(event, props ? { props } : undefined);
+}
+
 export default function createPlausible(options: PlausibleOptions) {
   if (!options.domain) {
     console.warn("[Plausible] domain is required");

@@ -1,173 +1,119 @@
 <template>
-  <section id="about" class="pt-8 sm:pt-20 mx-auto text-left">
-    <div>
-      <!-- Profile Image -->
-      <img
-        src="/me2.webp"
-        alt="Mujahidin"
-        width="128"
-        height="128"
-        loading="lazy"
-        class="block mx-auto mb-4 sm:float-left sm:mx-0 sm:mr-4 sm:mb-2 shadow-md object-cover w-32 h-32 blob-photo"
-      />
+  <div>
+    <section
+      id="about"
+      class="wrap grid items-start gap-x-20 gap-y-10 pt-8 lg:grid-cols-[1fr_22rem] lg:pt-20"
+    >
+      <header class="lg:col-span-2">
+        <h1 class="display max-w-[16ch] text-h1">
+          Finding beauty in simplicity.
+        </h1>
+      </header>
 
-      <!-- About Text -->
-      <h1
-        class="text-xl sm:text-3xl font-semibold text-primary dark:text-primary-dark mb-4"
-      >
-        About Me
-      </h1>
+      <!-- Kolom samping: foto, lalu peta kecil rute belajar & bekerja (dari data pengalaman & pendidikan) -->
+      <div class="w-full max-w-[22rem] lg:sticky lg:top-28 lg:order-2">
+        <div
+          class="plate relative aspect-[4/5] overflow-hidden bg-background-2 after:pointer-events-none after:absolute after:inset-0 dark:after:bg-black/10"
+        >
+          <img
+            src="/me2.webp"
+            alt="Portrait of Mujahidin"
+            width="600"
+            height="750"
+            decoding="async"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <JourneyMap class="mt-8" />
+      </div>
 
-      <p
-        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
-      >
-        I’m a front-end developer with over 4 years of experience building
-        clean, responsive, and user-focused web applications. I combine
-        minimalist design with performance, making every project both functional
-        and visually engaging.
-      </p>
+      <div class="max-w-[45rem] space-y-10">
+        <div v-for="block in story" :key="block.title">
+          <h2 class="text-h3 font-semibold text-primary">{{ block.title }}</h2>
+          <p class="mt-3">{{ block.body }}</p>
+        </div>
 
-      <p
-        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
-      >
-        Beyond coding, I enjoy coffee, especially when it’s mixed with palm
-        sugar, my absolute favorite. I’m also a fan of mie ayam, and I really
-        treasure quality time with people I care about. These simple joys fuel
-        creativity and bring balance to my life. I also love interior design,
-        movies, and games, as they often spark inspiration and give me fresh
-        ideas to bring into my work.
-      </p>
-
-      <p
-        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
-      >
-        I love traveling, not only the destinations, but the journey itself.
-        Every trip is filled with small, unforgettable moments that turn into
-        valuable experiences and lasting memories. Along the way, I enjoy
-        capturing photos of places, vibes, and little things that often go
-        unnoticed, as a way to preserve memories and appreciate life’s details.
-      </p>
-
-      <p
-        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed mb-3"
-      >
-        Fashion is another part of my life I deeply enjoy. I love exploring
-        different outfits, mix and match styles, and experimenting with themes.
-        It’s not just about clothing, but about expressing creativity, mood, and
-        identity in everyday life.
-      </p>
-
-      <p
-        class="text-secondary dark:text-secondary-dark text-xs sm:text-base leading-relaxed"
-      >
-        At the core, I’m someone who finds beauty in simplicity. Whether it’s a
-        cup of coffee, a walk at sunset, or a moment of laughter with friends, I
-        believe life’s meaning comes from noticing and appreciating these little
-        things. Music and books are also part of my routine, they give me space
-        to recharge and spark new perspectives. Meeting people from different
-        backgrounds and learning their stories has shaped me to be more
-        empathetic, open-minded, and inspired. I see challenges as opportunities
-        to grow, both in coding and in life, and I value collaboration as a way
-        to create meaningful experiences together.
-      </p>
-
-      <a
-        href="https://medium.com/@mujahidindev"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="inline-flex items-center gap-2 mt-4 text-xs sm:text-base font-medium text-accent dark:text-accent-dark hover:underline"
-      >
-        <FontAwesomeIcon :icon="['fab', 'medium']" />
-        Read my writing on Medium
-        <FontAwesomeIcon :icon="['fas', 'arrow-right']" class="text-[10px]" />
-      </a>
-    </div>
+        <a
+          href="https://medium.com/@mujahidindev"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="link"
+        >
+          <FontAwesomeIcon :icon="['fab', 'medium']" />
+          Read my writing on Medium
+        </a>
+      </div>
+    </section>
 
     <!-- Uses & Tools -->
-    <div
-      id="uses"
-      ref="usesSection"
-      class="my-10 py-6 text-secondary dark:text-secondary-dark border-t border-gray-200 dark:border-gray-700"
-    >
-      <p
-        class="text-base sm:text-lg font-semibold mb-2 text-primary dark:text-primary-dark"
-      >
-        <FontAwesomeIcon
-          :icon="['fas', 'laptop-code']"
-          class="text-secondary-2"
-        />
-        Uses & Tools
-      </p>
-      <p class="text-xs sm:text-base mb-2">
+    <section id="uses" class="wrap mt-section">
+      <h2 class="display text-h2">Uses and tools</h2>
+      <p class="mt-5 max-w-[45rem]">
         From client projects to personal experiments, I rely on a set of
         technologies and tools that help me work faster, stay organized, and
         keep the creative flow alive.
       </p>
-      <p class="mb-6 text-xs sm:text-base">
-        Here are the main stacks I often use in development:
-      </p>
 
-      <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <div
-          v-for="tool in uses"
-          :key="tool.name"
-          class="flex flex-col items-center text-center p-2 rounded-lg sm:rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-transparent backdrop-blur-md dark:backdrop-blur-none shadow-md shadow-accent/10 dark:shadow-none hover:border-accent/40 hover:bg-white/80 dark:hover:bg-transparent filter grayscale hover:grayscale-0 transition duration-300"
-          :class="{
-            'filter grayscale': !isActive,
-            'filter-none': isActive,
-          }"
+      <div
+        v-for="(tools, category) in groupedUses"
+        :key="category"
+        v-inview
+        class="group mt-10"
+      >
+        <h3 class="mb-3 font-semibold text-primary">{{ category }}</h3>
+        <div class="ruler" aria-hidden="true"></div>
+        <ul
+          class="grid grid-cols-2 gap-x-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
         >
-          <div
-            class="rounded-full shadow-md shadow-gray-200 dark:shadow-gray-800 flex justify-center items-center p-2 mb-2"
+          <li
+            v-for="tool in tools"
+            :key="tool.name"
+            class="flex items-center gap-3 border-b border-border py-3"
           >
-            <img
-              :src="tool.icon"
-              :alt="tool.name"
-              class="w-5 h-5 sm:w-9 sm:h-9 object-contain"
-            />
-          </div>
-          <span class="text-[10px] sm:text-sm font-medium">{{
-            tool.name
-          }}</span>
-        </div>
+            <span class="size-8 shrink-0 rounded-card bg-paper p-1.5">
+              <img
+                :src="tool.icon"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+                class="h-full w-full object-contain grayscale group-hover:grayscale-0 pointer-coarse:group-data-[active=true]:grayscale-0"
+              />
+            </span>
+            <span class="truncate text-small font-medium text-primary">
+              {{ tool.name }}
+            </span>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>
-import { inject, ref, watch, onMounted } from "vue";
+import JourneyMap from "../components/JourneyMap.vue";
 import uses from "../data/uses.json";
 
-const scrollY = inject("scrollY");
-const isActive = ref(false);
-const usesSection = ref(null);
+// Dikelompokkan per category (bila ada), urutan mengikuti kemunculan di JSON
+const groupedUses = {};
+for (const tool of uses) (groupedUses[tool.category ?? "Other"] ??= []).push(tool);
 
-onMounted(async () => {
-  watch(scrollY, () => {
-    if (!usesSection.value) return;
-    const rect = usesSection.value.getBoundingClientRect();
-    isActive.value = rect.top <= 300;
-  });
-});
+const story = [
+  {
+    title: "What I do",
+    body: "I’m a front-end developer with over 4 years of experience building clean, responsive, and user-focused web applications. I combine minimalist design with performance, making every project both functional and visually engaging. Most of my work is data-heavy: admin dashboards, management systems, and enterprise portals for government and business clients, built mainly with React, Next.js, and Vue. I specialize in WebGIS, turning spatial data into interactive maps with Leaflet, MapLibre, and Turf.js. I care about the details users never notice when they work well: clear hierarchy, fast loading, and layouts that hold up on any screen.",
+  },
+  {
+    title: "Away from the screen",
+    body: "I keep things simple: coffee with palm sugar, a bowl of mie ayam, and time with people I care about. Movies and games are where I switch off, while music and books give me space to recharge and come back with a clearer head.",
+  },
+  {
+    title: "What shapes my eye",
+    body: "I love traveling for the journey as much as the destination, and I photograph the small details that often go unnoticed. Interior design and fashion pull me in the same way: mixing styles, trying themes, and noticing how a space or an outfit comes together. That habit of looking closely is what I bring back into my interfaces.",
+  },
+  {
+    title: "Outlook",
+    body: "I find beauty in simplicity. Meeting people from different backgrounds has made me more empathetic and open-minded, I see challenges as opportunities to grow, and I value collaboration as a way to create meaningful experiences together.",
+  },
+];
 </script>
-
-<style scoped>
-.blob-photo {
-  border-radius: 63% 37% 54% 46% / 43% 39% 61% 57%;
-  animation: blob-morph 8s ease-in-out infinite;
-}
-
-@keyframes blob-morph {
-  0%,
-  100% {
-    border-radius: 63% 37% 54% 46% / 43% 39% 61% 57%;
-  }
-  34% {
-    border-radius: 41% 59% 60% 40% / 49% 45% 55% 51%;
-  }
-  67% {
-    border-radius: 57% 43% 37% 63% / 55% 62% 38% 45%;
-  }
-}
-</style>

@@ -74,7 +74,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(_, __, savedPosition) {
-    return savedPosition || { top: 0 };
+    // Tunggu fade-out halaman lama (.page-leave-active di app.css) sebelum scroll
+    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200;
+    return new Promise((resolve) =>
+      setTimeout(() => resolve(savedPosition || { top: 0 }), delay)
+    );
   },
 });
 

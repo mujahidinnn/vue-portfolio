@@ -1,69 +1,23 @@
 <template>
   <nav
-    v-if="isMobile"
-    class="fixed bottom-0 left-0 w-full bg-background dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 flex justify-around items-center py-4 z-50"
+    class="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background pb-[env(safe-area-inset-bottom)] md:hidden"
+    aria-label="Primary mobile"
   >
-    <RouterLink
-      v-for="item in navItems"
-      :key="item.name"
-      :to="item.path"
-      :aria-label="'Go to ' + item.label"
-      class="flex flex-col items-center transition-all duration-200"
-      :class="
-        route.name === item.name
-          ? 'text-accent dark:text-accent-dark font-semibold'
-          : 'text-secondary dark:text-secondary-dark'
-      "
-    >
-      <FontAwesomeIcon
-        :icon="item.icon"
-        class="transition-transform duration-200 text-2xl"
-      />
-
-      <span class="text-[10px] transition-opacity duration-200">
-        {{ item.label }}
-      </span>
-    </RouterLink>
+    <ul class="grid grid-cols-5">
+      <li v-for="item in navLinks" :key="item.to">
+        <RouterLink
+          :to="item.to"
+          class="relative flex min-h-14 flex-col items-center justify-center gap-1 text-small text-secondary-2 before:absolute before:inset-x-4 before:top-0 before:h-0.5 before:scale-x-0 before:bg-accent before:transition-transform before:duration-200 aria-[current=page]:font-semibold aria-[current=page]:text-primary aria-[current=page]:before:scale-x-100"
+        >
+          <FontAwesomeIcon :icon="item.icon" class="text-base" />
+          {{ item.label }}
+        </RouterLink>
+      </li>
+    </ul>
   </nav>
 </template>
 
 <script setup>
-import { inject } from "vue";
-import { useRoute } from "vue-router";
-
-const isMobile = inject("isMobile");
-const route = useRoute();
-
-const navItems = [
-  {
-    name: "Home",
-    label: "Home",
-    path: "/",
-    icon: ["fas", "compass"],
-  },
-  {
-    name: "About",
-    label: "About",
-    path: "/about",
-    icon: ["fas", "user-astronaut"],
-  },
-  {
-    name: "Portfolios",
-    label: "Portfolio",
-    path: "/portfolios",
-    icon: ["fas", "feather"],
-  },
-  {
-    name: "Projects",
-    label: "Projects",
-    path: "/projects",
-    icon: ["fas", "rocket"],
-  },
-  {
-    name: "Contact",
-    label: "Contact",
-    path: "/contact",
-    icon: ["fas", "circle-nodes"],
-  },
-];
+import { RouterLink } from "vue-router";
+import { navLinks } from "../site";
 </script>

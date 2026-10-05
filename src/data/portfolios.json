@@ -4,27 +4,17 @@
     "description": "Sakifi is a practical and reliable platform that serves as a reference hub for Sharia-compliant financial transactions. It provides curated articles, verified documents, and academic references sourced from Islamic jurisprudence (fiqh muamalah) to help users understand the halal standards of modern contracts. Built with a focus on accessibility, clarity, and trustworthiness, SakiFi aims to bridge the gap between technology and Sharia finance literacy.",
     "story": "Sakifi was born out of my own confusion and difficulty in finding clear, reliable information about Islamic financial rulings, such as how to calculate zakat, determine nisab and haul, or understand contract standards according to Sharia principles. I wanted a single place that consolidates all these essentials, backed by credible references. That desire eventually evolved into a comprehensive digital reference platform for Sharia-compliant transactions.",
     "systemTags": ["Knowledge Base", "Content Platform"],
-    "thumbnail": "/portfolios/sakifi.png",
-    "images": [],
+    "thumbnail": "/portfolios/sakifi.webp",
     "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": []
   },
   {
     "title": "Mojepict",
+    "featured": true,
     "description": "Mojepict is a collection of versatile and user-friendly online tools designed to simplify daily digital workflows. From quick image editing to file conversion, color palette generation, and text utilities, Mojepict combines multiple handy mini-tools in one accessible place. It’s crafted with modern UI/UX principles for seamless and fast performance, making everyday creative tasks effortless and enjoyable.",
     "story": "The idea for Mojepict came from my daily experience, both at work and during personal projects, where I often needed simple tools like image editors, converters, or color extractors. Most of the available sites were heavy, cluttered with ads, or required multiple separate tools for small tasks. I decided to build Mojepict as a lightweight, all-in-one toolbox that’s ad-free, fast, and pleasant to use.",
     "systemTags": ["SaaS Toolkit", "Web Utility"],
-    "thumbnail": "/portfolios/mojepict-showcase.png",
-    "images": [
-      { "src": "/portfolios/mojepict/1.webp", "alt": "mojepict-1" },
-      { "src": "/portfolios/mojepict/2.webp", "alt": "mojepict-2" },
-      { "src": "/portfolios/mojepict/3.webp", "alt": "mojepict-3" },
-      { "src": "/portfolios/mojepict/4.webp", "alt": "mojepict-4" },
-      { "src": "/portfolios/mojepict/5.webp", "alt": "mojepict-5" },
-      { "src": "/portfolios/mojepict/6.webp", "alt": "mojepict-6" },
-      { "src": "/portfolios/mojepict/7.webp", "alt": "mojepict-7" },
-      { "src": "/portfolios/mojepict/8.webp", "alt": "mojepict-8" }
-    ],
+    "thumbnail": "/portfolios/mojepict-showcase.avif",
     "tech": ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
@@ -38,15 +28,7 @@
     "description": "Randomix is a smart and engaging platform that automatically generates balanced and fair teams for games or group activities. Users can input player names with corresponding skill levels (beginner, intermediate, or pro), and the system uses an algorithm to create evenly matched teams. Designed for both casual gamers and sports enthusiasts, Randomix delivers fairness, simplicity, and fun in every draw.",
     "story": "Randomix emerged from my own struggles when organizing sports games or friendly matches with friends. Dividing teams fairly based on player skill levels was often messy: teams ended up unbalanced, and the process took too long. I wanted something smarter, that could also generate tournament brackets (who plays who, and who advances next) while being easy to share. That’s how Randomix came to life: as a balance-focused and social-friendly team generator.",
     "systemTags": ["Web Utility", "SaaS Tool"],
-    "thumbnail": "/portfolios/randomix/thumbnail.png",
-    "images": [
-      { "src": "/portfolios/randomix/1.png", "alt": "randomix-1" },
-      { "src": "/portfolios/randomix/2.png", "alt": "randomix-2" },
-      { "src": "/portfolios/randomix/3.png", "alt": "randomix-3" },
-      { "src": "/portfolios/randomix/4.png", "alt": "randomix-4" },
-      { "src": "/portfolios/randomix/5.png", "alt": "randomix-5" },
-      { "src": "/portfolios/randomix/6.png", "alt": "randomix-6" }
-    ],
+    "thumbnail": "/portfolios/randomix.webp",
     "tech": ["Nuxt.js", "TypeScript", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
@@ -62,7 +44,6 @@
     "story": "Voyage Pulse began as a personal curiosity. I wanted to understand how people interacted with my own projects: which pages they visited, what they clicked, and which features were most used. Instead of relying on large analytics tools, I aimed to create something lightweight, privacy-friendly, and focused on core insights. Voyage Pulse became my way of visualizing engagement data simply, yet meaningfully.",
     "systemTags": ["Analytics Dashboard", "SaaS"],
     "thumbnail": "/portfolios/voyagepulse.svg",
-    "images": [],
     "tech": [
       "React.js",
       "Node.js",
@@ -84,16 +65,7 @@
     "description": "Vistee is a modern web-based visual CV builder that empowers users to create stunning, professional resumes in minutes. With live editing, customizable templates, and an intuitive drag-and-drop interface, users can design resumes that reflect their personality and professional identity. Built for freelancers, students, and professionals alike, Vistee focuses on accessibility, speed, and visual appeal, making personal branding effortless.",
     "story": "Vistee was inspired by my own and my friends’ struggles in crafting CVs. We often spent hours finding design inspiration, choosing the right words, and aligning elements manually. I wanted to simplify the process by making it fast yet flexible, with templates that could adapt to anyone’s style. Vistee was born as a smart CV builder that merges speed, beauty, and personalization in one smooth experience.",
     "systemTags": ["SaaS Builder", "Document Builder"],
-    "thumbnail": "/portfolios/vistee-showcase.png",
-    "images": [
-      { "src": "/portfolios/vistee/1.png", "alt": "vistee-1" },
-      { "src": "/portfolios/vistee/2.png", "alt": "vistee-2" },
-      { "src": "/portfolios/vistee/3.png", "alt": "vistee-3" },
-      { "src": "/portfolios/vistee/4.png", "alt": "vistee-4" },
-      { "src": "/portfolios/vistee/5.png", "alt": "vistee-5" },
-      { "src": "/portfolios/vistee/6.png", "alt": "vistee-6" },
-      { "src": "/portfolios/vistee/7.png", "alt": "vistee-7" }
-    ],
+    "thumbnail": "/portfolios/vistee-showcase.avif",
     "tech": ["React.js", "TypeScript", "JavaScript", "CSS"],
     "links": [
       {
@@ -107,8 +79,7 @@
     "description": "Mojest is a streamlined, web-based API testing client designed for developers who need speed and efficiency without the overhead. It allows users to execute HTTP requests, inspect responses, and debug endpoints directly from the browser. With a clean interface and zero-configuration approach, Mojest serves as a lightweight alternative to bulky desktop applications, focusing on the essentials of API interaction.",
     "story": "The idea for Mojest came from my frustration when I needed to test an API endpoint quickly but didn't want to open heavy software or deal with account logins and saved workspaces. I wanted a 'temporary' yet powerful tool, something web-based that doesn't hoard resources or require a setup process. I built Mojest to be that instant solution: just open the site, test your API, and get results immediately without any friction.",
     "systemTags": ["Developer Tool", "SaaS"],
-    "thumbnail": "/portfolios/mojest.png",
-    "images": [],
+    "thumbnail": "/portfolios/mojest.webp",
     "tech": ["React.js", "JavaScript", "Tailwind CSS", "CSS"],
     "links": [
       {
@@ -120,19 +91,11 @@
   },
   {
     "title": "Mekar Ayu",
+    "featured": true,
     "description": "Mekar Ayu is a private menstrual cycle tracker that keeps every entry on the user's own device: no account, no backend, no data ever leaving the browser. It predicts period, fertile window, and ovulation phases on a simple calendar, while letting users log flow intensity, symptoms, and mood each day. Built-in tools let users back up their data as JSON, generate PDF or Excel reports, or share a quick summary straight to WhatsApp.",
     "story": "Mekar Ayu came from wanting a cycle-tracking tool that treats personal health data as actually personal, since most apps push everything to the cloud and bury insights behind accounts and ads. I built Mekar Ayu to keep everything local to the device by default, with clear phase predictions and simple daily logging, plus easy export for anyone who wants to share a summary with a doctor or partner.",
     "systemTags": ["Health Tracker", "PWA"],
-    "thumbnail": "/portfolios/mekar-ayu-showcase.png",
-    "images": [
-      { "src": "/portfolios/mekar-ayu/1.png", "alt": "mekar-ayu-1" },
-      { "src": "/portfolios/mekar-ayu/2.png", "alt": "mekar-ayu-2" },
-      { "src": "/portfolios/mekar-ayu/3.png", "alt": "mekar-ayu-3" },
-      { "src": "/portfolios/mekar-ayu/4.png", "alt": "mekar-ayu-4" },
-      { "src": "/portfolios/mekar-ayu/5.png", "alt": "mekar-ayu-5" },
-      { "src": "/portfolios/mekar-ayu/6.png", "alt": "mekar-ayu-6" },
-      { "src": "/portfolios/mekar-ayu/7.png", "alt": "mekar-ayu-7" }
-    ],
+    "thumbnail": "/portfolios/mekar-ayu-showcase.avif",
     "tech": ["React.js", "TypeScript", "JavaScript", "IndexedDB", "CSS"],
     "links": [
       {
@@ -143,10 +106,10 @@
   },
   {
     "title": "WorkDesk",
+    "featured": true,
     "description": "WorkDesk is an internal daily reporting and HRIS hub that brings a team's whole workday into one place. It covers daily task reports, attendance, leave, overtime and business trip requests, a shared work calendar, team chat, and master data management, with one-click exports to Excel and PDF. Built with a clean bilingual (English/Indonesian) interface and light/dark themes for fast, everyday use.",
     "systemTags": ["HRIS", "Daily Report", "Internal Tool"],
-    "thumbnail": "/portfolios/workdesk-showcase.png",
-    "images": [],
+    "thumbnail": "/portfolios/workdesk-showcase.avif",
     "tech": [
       "React.js",
       "TypeScript",
@@ -164,10 +127,10 @@
   },
   {
     "title": "StockDesk",
+    "featured": true,
     "description": "StockDesk is an inventory and warehouse management system for multi-warehouse operations. It provides bin-level WMS, FEFO picking, stock opname, and FIFO/average stock valuation, alongside a dashboard showing stock value, inbound vs outbound trends, and a map of the warehouse network. Reports can be exported to Excel, and the interface supports bilingual use with light/dark themes.",
     "systemTags": ["Inventory Management", "WMS"],
-    "thumbnail": "/portfolios/stockdesk-showcase.png",
-    "images": [],
+    "thumbnail": "/portfolios/stockdesk-showcase.avif",
     "tech": [
       "React.js",
       "TypeScript",

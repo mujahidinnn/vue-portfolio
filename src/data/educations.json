@@ -1,6 +1,6 @@
 [
   {
-    "image": "/education/UT.png",
+    "image": "/education/UT.webp",
     "alt": "Universitas Terbuka",
     "name": "Bachelor of Information Systems",
     "subname": "Universitas Terbuka",
@@ -9,16 +9,16 @@
     "description": "Studying core computer science, software engineering, and data architecture while balancing coursework with hands-on development work. Learned to manage my own study schedule and apply what I learn in class to real projects."
   },
   {
-    "image": "/education/PIT.png",
+    "image": "/education/PIT.webp",
     "alt": "Pondok IT",
     "name": "Web Engineering Program",
     "subname": "Pondok IT",
     "location": "Yogyakarta, Indonesia",
-    "period": "Jan 2021 - Dec 2024",
+    "period": "Jan 2022 - Dec 2024",
     "description": "Completed an intensive web engineering program alongside character-building and personal development training. Worked through simulated high-pressure development projects in teams, which built leadership, accountability, and communication skills for real industry workflows."
   },
   {
-    "image": "/education/PIN.png",
+    "image": "/education/PIN.webp",
     "alt": "PPTQ Imam An Nawawi",
     "name": "Islamic Studies",
     "subname": "PPTQ Imam An Nawawi",

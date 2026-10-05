@@ -7,27 +7,20 @@ import "./app.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faCircleNodes,
-  faCompass,
-  faFeather,
-  faRocket,
-  faUserAstronaut,
+  faArrowRight,
   faBriefcase,
-  faBuilding,
-  faChevronLeft,
-  faChevronRight,
+  faCheck,
   faChevronUp,
+  faCopy,
   faDownload,
   faEnvelope,
-  faGraduationCap,
-  faLaptopCode,
-  faHashtag,
+  faHouse,
+  faLayerGroup,
   faLink,
-  faLocationDot,
   faMoon,
   faSun,
+  faUser,
   faXmark,
-  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
@@ -35,45 +28,53 @@ import {
   faInstagram,
   faLinkedin,
   faMedium,
-  faSquareLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import createPlausible from "./plugins/plausible";
+import { syncThemeColor } from "./theme";
 
 library.add(
-  faCircleNodes,
-  faCompass,
-  faFeather,
-  faRocket,
-  faUserAstronaut,
+  faArrowRight,
   faBriefcase,
-  faBuilding,
-  faChevronLeft,
-  faChevronRight,
+  faCheck,
   faChevronUp,
+  faCopy,
   faDownload,
   faEnvelope,
-  faGraduationCap,
-  faLaptopCode,
-  faHashtag,
+  faHouse,
+  faLayerGroup,
   faLink,
-  faLocationDot,
   faMoon,
   faSun,
+  faUser,
   faXmark,
-  faArrowRight,
   faDiscord,
   faGithub,
   faInstagram,
   faLinkedin,
-  faMedium,
-  faSquareLinkedin
+  faMedium
 );
+
+syncThemeColor();
 
 const app = createApp(App);
 
 app.use(router);
 
 app.component("FontAwesomeIcon", FontAwesomeIcon);
+
+// v-inview: menandai elemen (data-active) saat melintas pita tengah layar.
+// Pengganti hover di perangkat sentuh: logo/ikon berwarna mengikuti scroll.
+const inviewObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries)
+      (entry.target as HTMLElement).dataset.active = String(entry.isIntersecting);
+  },
+  { rootMargin: "-35% 0px -35% 0px" }
+);
+app.directive("inview", {
+  mounted: (el: HTMLElement) => inviewObserver.observe(el),
+  unmounted: (el: HTMLElement) => inviewObserver.unobserve(el),
+});
 
 // Pasang Plausible
 createPlausible({ domain: "mujahidin.vercel.app", router });

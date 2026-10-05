@@ -1,50 +1,50 @@
 [
-  { "icon": "/uses/html.png", "name": "HTML" },
-  { "icon": "/uses/css.png", "name": "CSS" },
-  { "icon": "/uses/javascript.png", "name": "Javascript" },
-  { "icon": "/uses/typescript.png", "name": "Typescript" },
-  { "icon": "/uses/sass.png", "name": "Sass" },
+  { "icon": "/uses/html.webp", "name": "HTML", "category": "Language" },
+  { "icon": "/uses/css.webp", "name": "CSS", "category": "Language" },
+  { "icon": "/uses/javascript.webp", "name": "Javascript", "category": "Language" },
+  { "icon": "/uses/typescript.webp", "name": "Typescript", "category": "Language" },
+  { "icon": "/uses/sass.webp", "name": "Sass", "category": "Language" },
 
-  { "icon": "/uses/mysql.png", "name": "My SQL" },
+  { "icon": "/uses/mysql.webp", "name": "My SQL", "category": "Language" },
 
-  { "icon": "/uses/reactjs.png", "name": "React Js" },
-  { "icon": "/uses/nextjs.png", "name": "Next Js" },
-  { "icon": "/uses/vuejs.png", "name": "Vue Js" },
-  { "icon": "/uses/nuxtjs.png", "name": "Nuxt Js" },
+  { "icon": "/uses/reactjs.webp", "name": "React Js", "category": "Framework" },
+  { "icon": "/uses/nextjs.webp", "name": "Next Js", "category": "Framework" },
+  { "icon": "/uses/vuejs.webp", "name": "Vue Js", "category": "Framework" },
+  { "icon": "/uses/nuxtjs.webp", "name": "Nuxt Js", "category": "Framework" },
 
-  { "icon": "/uses/reactjs.png", "name": "React Native" },
-  { "icon": "/uses/redux.png", "name": "Redux" },
-  { "icon": "/uses/pinia.png", "name": "Pinia" },
-  { "icon": "/uses/zustand.png", "name": "Zustand" },
+  { "icon": "/uses/reactjs.webp", "name": "React Native", "category": "Framework" },
+  { "icon": "/uses/redux.webp", "name": "Redux", "category": "Framework" },
+  { "icon": "/uses/pinia.webp", "name": "Pinia", "category": "Framework" },
+  { "icon": "/uses/zustand.webp", "name": "Zustand", "category": "Framework" },
 
-  { "icon": "/uses/bootstrap.png", "name": "Bootstrap" },
-  { "icon": "/uses/tailwind.png", "name": "Tailwind" },
+  { "icon": "/uses/bootstrap.webp", "name": "Bootstrap", "category": "Framework" },
+  { "icon": "/uses/tailwind.webp", "name": "Tailwind", "category": "Framework" },
 
-  { "icon": "/uses/nodejs.png", "name": "Node Js" },
-  { "icon": "/uses/python.png", "name": "Python" },
-  { "icon": "/uses/php.png", "name": "PHP" },
+  { "icon": "/uses/nodejs.webp", "name": "Node Js", "category": "Framework" },
+  { "icon": "/uses/python.webp", "name": "Python", "category": "Language" },
+  { "icon": "/uses/php.webp", "name": "PHP", "category": "Language" },
 
-  { "icon": "/uses/docker.png", "name": "Docker" },
-  { "icon": "/uses/claude.png", "name": "Claude" },
+  { "icon": "/uses/docker.webp", "name": "Docker", "category": "Tooling" },
+  { "icon": "/uses/claude.webp", "name": "Claude", "category": "Tooling" },
 
-  { "icon": "/uses/npm.png", "name": "NPM" },
-  { "icon": "/uses/yarn.png", "name": "Yarn" },
-  { "icon": "/uses/pnpm.png", "name": "pnpm" },
+  { "icon": "/uses/npm.webp", "name": "NPM", "category": "Tooling" },
+  { "icon": "/uses/yarn.webp", "name": "Yarn", "category": "Tooling" },
+  { "icon": "/uses/pnpm.webp", "name": "pnpm", "category": "Tooling" },
 
-  { "icon": "/uses/git.png", "name": "Git" },
-  { "icon": "/uses/postman.png", "name": "Postman" },
-  { "icon": "/uses/swagger.png", "name": "Swagger" },
-  { "icon": "/uses/insomnia.png", "name": "Insomnia" },
+  { "icon": "/uses/git.webp", "name": "Git", "category": "Tooling" },
+  { "icon": "/uses/postman.webp", "name": "Postman", "category": "Tooling" },
+  { "icon": "/uses/swagger.webp", "name": "Swagger", "category": "Tooling" },
+  { "icon": "/uses/insomnia.webp", "name": "Insomnia", "category": "Tooling" },
 
-  { "icon": "/uses/leaflet.png", "name": "Leaflet" },
-  { "icon": "/uses/maplibre.png", "name": "MapLibre" },
-  { "icon": "/uses/turf.png", "name": "Turf Js" },
+  { "icon": "/uses/leaflet.webp", "name": "Leaflet", "category": "Framework" },
+  { "icon": "/uses/maplibre.webp", "name": "MapLibre", "category": "Framework" },
+  { "icon": "/uses/turf.webp", "name": "Turf Js", "category": "Framework" },
 
-  { "icon": "/uses/nginx.png", "name": "Nginx" },
+  { "icon": "/uses/nginx.webp", "name": "Nginx", "category": "Tooling" },
 
-  { "icon": "/uses/vercel.png", "name": "Vercel" },
-  { "icon": "/uses/netlify.png", "name": "Netlify" },
+  { "icon": "/uses/vercel.webp", "name": "Vercel", "category": "Tooling" },
+  { "icon": "/uses/netlify.webp", "name": "Netlify", "category": "Tooling" },
 
-  { "icon": "/uses/figma.png", "name": "Figma" },
-  { "icon": "/uses/canva.png", "name": "Canva" }
+  { "icon": "/uses/figma.webp", "name": "Figma", "category": "Design" },
+  { "icon": "/uses/canva.webp", "name": "Canva", "category": "Design" }
 ]

@@ -1,107 +1,54 @@
 <template>
-  <nav
-    class="sticky top-0 z-50 w-full mx-auto px-8 py-4 flex justify-between items-center transition-all duration-300"
+  <header
+    class="sticky top-0 z-40 border-b"
     :class="
-      scrollYVal > 0
-        ? 'shadow-bottom bg-background/80 dark:bg-background-dark/80 backdrop-blur-md'
-        : 'bg-transparent'
+      scrolled
+        ? 'border-border bg-background/85 backdrop-blur-md'
+        : 'border-transparent'
     "
   >
-    <!-- Left -->
-    <div class="flex items-start w-8 h-8">
-      <transition name="fade" mode="out-in">
-        <img
-          v-if="scrollYVal > 150 || isMobile"
-          key="photo"
-          src="/me.webp"
-          alt="Mujahidin"
-          class="w-8 h-8 rounded-full transition-all duration-200"
-        />
-        <span v-else key="icon">&nbsp;</span>
-      </transition>
-    </div>
-
-    <!-- Desktop Menu -->
-    <ul
-      class="hidden md:flex gap-6 text-sm text-secondary dark:text-secondary-dark items-center"
+    <nav
+      class="wrap flex h-12 items-center justify-between md:h-18"
+      aria-label="Primary"
     >
-      <NavLinks :is-dark="isDark" @toggle-theme="toggleTheme" />
-    </ul>
+      <RouterLink
+        to="/"
+        class="display inline-flex min-h-11 items-center text-2xl md:text-[1.75rem]"
+        aria-label="Mujahidin, go to Home"
+      >
+        Mujahidin
+      </RouterLink>
 
-    <!-- Theme Toggle -->
-    <button
-      class="block md:hidden mt-2 md:mt-0 transition cursor-pointer"
-      @click="toggleTheme"
-    >
-      <FontAwesomeIcon
-        :icon="isDark ? ['fas', 'sun'] : ['fas', 'moon']"
-        class="text-sm transition-transform duration-300 text-yellow-500"
-      />
-    </button>
-  </nav>
+      <div class="flex items-center gap-2">
+        <ul class="hidden items-center md:flex">
+          <NavLinks />
+        </ul>
+
+        <button
+          type="button"
+          class="-mr-3 grid size-11 cursor-pointer place-items-center rounded-card text-secondary hover:bg-background-2 hover:text-primary"
+          :aria-label="isDark ? 'Switch to light theme' : 'Switch to dark theme'"
+          @click="toggleTheme"
+        >
+          <FontAwesomeIcon :icon="['fas', isDark ? 'sun' : 'moon']" />
+        </button>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script setup>
-import { ref, onMounted, inject, computed } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+import { RouterLink } from "vue-router";
 import NavLinks from "./NavLinks.vue";
+import { isDark, toggleTheme } from "../theme";
 
-const isMobile = inject("isMobile");
-const scrollY = inject("scrollY", ref(0));
-const scrollYVal = computed(() => scrollY?.value || 0);
-
-const isDark = ref(false);
-
-function applyTheme() {
-  const root = document.documentElement;
-  if (isDark.value) {
-    root.classList.add("dark");
-    localStorage.setItem("my-theme", "dark");
-  } else {
-    root.classList.remove("dark");
-    localStorage.setItem("my-theme", "light");
-  }
-}
-
-function toggleTheme() {
-  isDark.value = !isDark.value;
-  applyTheme();
-}
+const scrolled = ref(false);
+const onScroll = () => (scrolled.value = window.scrollY > 8);
 
 onMounted(() => {
-  const storedTheme = localStorage.getItem("my-theme");
-  if (
-    storedTheme === "dark" ||
-    (!storedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    isDark.value = true;
-  }
-  applyTheme();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 });
+onUnmounted(() => window.removeEventListener("scroll", onScroll));
 </script>
-
-<style scoped>
-.fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-.fade-leave-active {
-  transition: all 0.05s ease-in;
-}
-
-.fade-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
-}
-.fade-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-</style>

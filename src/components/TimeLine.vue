@@ -1,84 +1,51 @@
 <template>
-  <ol
-    class="relative border-s border-dashed border-accent/20 dark:border-accent-dark/20 -ml-4 sm:ml-3 sm:border-s-2"
-  >
-    <li v-for="(item, idx) in items" :key="idx" class="mb-8 last:mb-0 ms-6 sm:ms-8">
-      <!-- Marker -->
-      <span
-        class="absolute flex items-center justify-center w-5 h-5 -start-2.5 mt-2.5 sm:w-6 sm:h-6 sm:-start-3 sm:mt-1.5 rotate-45 rounded-md"
-        :class="
-          isCurrent(item.period)
-            ? 'bg-accent/20 dark:bg-accent-dark/20'
-            : 'bg-secondary-2/10 dark:bg-secondary-dark-2/10'
-        "
+  <!-- Garis waktu sebagai skala tegak: satu tik per entri, tik aksen untuk yang masih berjalan -->
+  <ol class="border-l border-primary">
+    <li
+      v-for="(item, idx) in items"
+      :key="idx"
+      class="relative grid gap-x-8 gap-y-2 pb-10 pl-8 last:pb-0 before:absolute before:top-3 before:left-0 before:h-px md:grid-cols-[11rem_1fr] md:pl-10 md:before:top-10"
+      :class="
+        isCurrent(item.period)
+          ? 'before:w-6 before:bg-accent'
+          : 'before:w-3 before:bg-primary'
+      "
+    >
+      <p
+        class="note pt-0.5 md:pt-7.5"
+        :class="isCurrent(item.period) && 'text-accent'"
       >
-        <span
-          class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-sm"
-          :class="
-            isCurrent(item.period)
-              ? 'bg-accent dark:bg-accent-dark'
-              : 'bg-secondary-2/40 dark:bg-secondary-dark-2/40'
-          "
-        ></span>
-      </span>
+        {{ item.period }}
+      </p>
 
-      <div class="flex items-center gap-3">
+      <!-- Mobile: deskripsi melebar penuh di bawah logo + judul. Desktop: deskripsi di kolom teks -->
+      <div class="grid grid-cols-[auto_1fr] items-start gap-x-4 gap-y-3 md:gap-x-6 md:gap-y-0">
         <div
-          class="h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 flex items-center justify-center bg-white rounded-lg sm:rounded-xl p-1.5 border border-gray-100 dark:border-gray-800"
+          class="size-12 shrink-0 rounded-card border border-border bg-paper p-2 md:row-span-2 md:size-20 md:p-3"
         >
           <img
             :src="item.image"
             :alt="item.alt"
-            width="40"
-            height="40"
-            class="w-full h-full object-contain"
+            width="80"
+            height="80"
             loading="lazy"
+            class="h-full w-full object-contain"
           />
         </div>
 
-        <div class="flex-1 min-w-0 flex items-start justify-between gap-3">
-          <h4
-            class="text-sm sm:text-base font-semibold text-primary dark:text-primary-dark"
-          >
+        <div class="min-w-0">
+          <h3 class="text-[1.0625rem] font-semibold text-primary">
             {{ item.name }}
-          </h4>
-          <span
-            class="shrink-0 text-[11px] sm:text-xs whitespace-nowrap mt-0.5"
-            :class="
-              isCurrent(item.period)
-                ? 'text-accent dark:text-accent-dark font-semibold'
-                : 'text-secondary-2 dark:text-secondary-dark-2 font-medium'
-            "
-          >
-            {{ item.period }}
-          </span>
+          </h3>
+          <p class="text-[0.9375rem] text-secondary-2">
+            {{ item.subname }}, {{ item.location }}
+          </p>
         </div>
-      </div>
 
-      <div
-        class="mt-2 space-y-0.5 text-xs sm:text-sm text-secondary-2 dark:text-secondary-dark-2"
-      >
-        <p class="flex items-center gap-1.5">
-          <FontAwesomeIcon
-            :icon="['fas', 'building']"
-            class="text-[10px] text-accent dark:text-accent-dark opacity-70"
-          />
-          {{ item.subname }}
-        </p>
-        <p class="flex items-center gap-1.5">
-          <FontAwesomeIcon
-            :icon="['fas', 'location-dot']"
-            class="text-[10px] text-accent dark:text-accent-dark opacity-70"
-          />
-          {{ item.location }}
+        <p class="col-span-2 max-w-[70ch] text-base md:col-span-1 md:col-start-2 md:mt-3">
+          {{ item.description }}
         </p>
       </div>
-
-      <p
-        class="text-xs sm:text-sm text-secondary dark:text-secondary-dark leading-relaxed mt-2"
-      >
-        {{ item.description }}
-      </p>
     </li>
   </ol>
 </template>

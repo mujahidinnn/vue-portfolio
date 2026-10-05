@@ -1,57 +1,83 @@
 <template>
-  <div
-    id="container"
-    class="font-sans bg-main-content text-text min-h-screen flex flex-col bg-background dark:bg-background-dark"
+  <a
+    href="#main"
+    class="skip-link btn btn-primary"
+    @click.prevent="mainEl.focus()"
   >
-    <Navbar />
+    Skip to content
+  </a>
 
-    <main class="relative isolate overflow-hidden flex-1 px-8">
-      <div
-        class="pointer-events-none fixed -z-10 -top-16 left-1/2 -translate-x-1/2 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-accent-glow/35 dark:bg-glow-dark/8 blur-3xl"
-      ></div>
-      <RouterView />
-    </main>
+  <Navbar />
 
-    <Footer />
-    <NavbarBottom />
-  </div>
+  <main
+    id="main"
+    ref="mainEl"
+    tabindex="-1"
+    class="flex-1 overflow-x-clip outline-none"
+    @touchstart.passive="onTouchStart"
+    @touchend.passive="onTouchEnd"
+  >
+    <RouterView v-slot="{ Component }">
+      <Transition :name="transitionName" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
+  </main>
+
+  <Footer />
+  <NavbarBottom />
   <ToTop />
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { RouterView, useRoute, useRouter } from "vue-router";
 import NavbarBottom from "./components/NavbarBottom.vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import ToTop from "./components/ToTop.vue";
-import { ref, onMounted, onUnmounted, provide } from "vue";
-import { RouterView } from "vue-router";
+import { navLinks } from "./site";
 
-const activePopoverId = ref(null);
-const isMobile = ref(window.innerWidth < 768);
+const mainEl = ref(null);
+const route = useRoute();
+const router = useRouter();
 
-const checkIsMobile = () => {
-  isMobile.value = window.innerWidth < 768;
-};
+// Mobile: halaman meluncur ala stack sesuai urutan tab, dan bisa digeser ke tab sebelah.
+// Desktop: fade biasa. Gaya transisi ada di app.css.
+const order = navLinks.map((link) => link.to);
+const isMobile = () => matchMedia("(max-width: 767px)").matches;
+const transitionName = ref("page");
 
-onMounted(() => {
-  window.addEventListener("resize", checkIsMobile);
-  checkIsMobile();
+router.beforeEach((to, from) => {
+  const next = order.indexOf(to.path);
+  const prev = order.indexOf(from.path);
+  transitionName.value =
+    !isMobile() || next < 0 || prev < 0
+      ? "page"
+      : next > prev
+        ? "slide-left"
+        : "slide-right";
 });
 
-onUnmounted(() => {
-  window.removeEventListener("resize", checkIsMobile);
-});
+const SWIPE_MIN = 70; // px mendatar minimum agar dihitung sebagai geseran
+let start = null;
 
-const scrollY = ref(0);
-
-function handleScroll() {
-  scrollY.value = window.scrollY;
+function onTouchStart(event) {
+  const touch = event.touches[0];
+  start = event.touches.length === 1 ? { x: touch.clientX, y: touch.clientY } : null;
 }
 
-onMounted(() => window.addEventListener("scroll", handleScroll));
-onUnmounted(() => window.removeEventListener("scroll", handleScroll));
+function onTouchEnd(event) {
+  if (!start || !isMobile() || document.querySelector("dialog[open]")) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - start.x;
+  const dy = touch.clientY - start.y;
+  start = null;
+  // abaikan guliran tegak dan geseran miring
+  if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) < Math.abs(dy) * 2.5) return;
 
-provide("scrollY", scrollY);
-provide("isMobile", isMobile);
-provide("activePopoverId", activePopoverId);
+  const current = order.indexOf(route.path);
+  const target = order[current + (dx < 0 ? 1 : -1)];
+  if (current >= 0 && target) router.push(target);
+}
 </script>
