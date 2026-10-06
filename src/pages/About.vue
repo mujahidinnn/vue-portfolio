@@ -102,15 +102,15 @@ for (const tool of uses) (groupedUses[tool.category ?? "Other"] ??= []).push(too
 const story = [
   {
     title: "What I do",
-    body: "I’m a front-end developer with over 4 years of experience building clean, responsive, and user-focused web applications. I combine minimalist design with performance, making every project both functional and visually engaging. Most of my work is data-heavy: admin dashboards, management systems, and enterprise portals for government and business clients, built mainly with React, Next.js, and Vue. I specialize in WebGIS, turning spatial data into interactive maps with Leaflet, MapLibre, and Turf.js. I care about the details users never notice when they work well: clear hierarchy, fast loading, and layouts that hold up on any screen.",
+    body: "I’m a front-end developer with over 4 years of experience building clean, responsive, and user-focused web applications. I combine minimalist design with performance, making every project both functional and visually engaging. Most of my work is data-heavy, from admin dashboards and management systems to enterprise portals for government and business clients, built mainly with React, Next.js, and Vue. I specialize in WebGIS, turning spatial data into interactive maps with Leaflet, MapLibre, and Turf.js. I care about the details users never notice when they work well, things like clear hierarchy, fast loading, and layouts that hold up on any screen.",
   },
   {
     title: "Away from the screen",
-    body: "I keep things simple: coffee with palm sugar, a bowl of mie ayam, and time with people I care about. Movies and games are where I switch off, while music and books give me space to recharge and come back with a clearer head.",
+    body: "I keep things simple, just coffee with palm sugar, a bowl of mie ayam, and time with people I care about. Movies and games are where I switch off, while a good playlist and books give me space to recharge and come back with a clearer head.",
   },
   {
     title: "What shapes my eye",
-    body: "I love traveling for the journey as much as the destination, and I photograph the small details that often go unnoticed. Interior design and fashion pull me in the same way: mixing styles, trying themes, and noticing how a space or an outfit comes together. That habit of looking closely is what I bring back into my interfaces.",
+    body: "I love traveling for the journey as much as the destination, and I photograph the small details that often go unnoticed. Interior design and fashion pull me in the same way, I like mixing styles, trying themes, and noticing how a space or an outfit comes together. That habit of looking closely is what I bring back into my interfaces.",
   },
   {
     title: "Outlook",
