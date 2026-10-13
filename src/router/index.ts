@@ -74,10 +74,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(_, __, savedPosition) {
-    // Tunggu fade-out halaman lama (.page-leave-active di app.css) sebelum scroll
-    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200;
+    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 0
+      : 200;
     return new Promise((resolve) =>
-      setTimeout(() => resolve(savedPosition || { top: 0 }), delay)
+      setTimeout(() => resolve(savedPosition || { top: 0 }), delay),
     );
   },
 });
@@ -97,13 +98,13 @@ router.afterEach((to) => {
   const robotsTag = document.querySelector('meta[name="robots"]');
   if (robotsTag) robotsTag.setAttribute("content", robots);
 
-  const canonicalTag = document.querySelector('link[rel="canonical"]');
-  if (canonicalTag) {
-    canonicalTag.setAttribute(
-      "href",
-      `https://mujahidin.my.id${to.path === "/" ? "" : to.path}`
-    );
+  let canonicalTag = document.querySelector('link[rel="canonical"]');
+  if (!canonicalTag) {
+    canonicalTag = document.createElement("link");
+    canonicalTag.setAttribute("rel", "canonical");
+    document.head.appendChild(canonicalTag);
   }
+  canonicalTag.setAttribute("href", `https://mujahidin.my.id${to.path}`);
 });
 
 export default router;
