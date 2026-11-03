@@ -145,5 +145,48 @@
         "desc": ""
       }
     ]
+  },
+  {
+    "title": "Sopi",
+    "featured": true,
+    "description": "Sopi is an omnichannel sales system for multi-outlet retail. The online store, in-store POS, and B2B sales team work from one catalog, one stock count, one price logic, and one customer base. It covers shift-based cashiering, quote-to-invoice with credit control, stackable promotions, a loyalty program, and sales commission, with permissions and pricing enforced on the server. The interface is bilingual with light/dark themes.",
+    "systemTags": ["Omnichannel Retail", "POS", "E-Commerce"],
+    "thumbnail": "/portfolios/sopi.avif",
+    "tech": [
+      "Vue.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Supabase",
+      "CSS"
+    ],
+    "links": [
+      {
+        "link": "https://sopi.mujahidin.my.id",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "title": "Ruang Materi",
+    "featured": true,
+    "description": "Ruang Materi is a free learning platform with programming courses in Bahasa Indonesia, built from lecture and training slide decks. Every course is split into chapters to read in the browser, with quizzes that give instant feedback, code exercises run and checked in the browser, spaced-repetition flashcards, and a server-graded final exam. It offers 17 courses and 3 roadmaps, verifiable certificates, and works as an installable PWA with offline mode.",
+    "systemTags": ["Learning Platform", "LMS", "PWA"],
+    "thumbnail": "/portfolios/ruang-materi.avif",
+    "tech": [
+      "Astro",
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Supabase",
+      "CSS"
+    ],
+    "links": [
+      {
+        "link": "https://ruang-materi.mujahidin.my.id",
+        "desc": ""
+      }
+    ]
   }
 ]

@@ -121,9 +121,7 @@
           </RouterLink>
         </div>
         <div class="ruler" aria-hidden="true"></div>
-        <div class="mt-8 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          <Card v-for="item in group.items" :key="item.title" v-bind="item" />
-        </div>
+        <CardCarousel :items="group.items" :limit="PER_GROUP" class="mt-8" />
       </div>
     </section>
 
@@ -143,7 +141,7 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
-import Card from "../components/Card.vue";
+import CardCarousel from "../components/CardCarousel.vue";
 import ContourField from "../components/ContourField.vue";
 import TimeLine from "../components/TimeLine.vue";
 import workExperiences from "../data/work-experiences.json";
@@ -169,7 +167,7 @@ const stats = [
   { value: portfolios.filter((p) => !p.hidden).length, label: "Personal portfolios" },
 ];
 
-// Satu baris, tiga kartu per kelompok (karya featured sesuai urutan data)
+// Desktop: satu baris tiga kartu; mobile: semua karya featured dalam carousel
 const PER_GROUP = 3;
 const isFeatured = (item) => item.featured && !item.hidden;
 const selectedWork = [
@@ -177,13 +175,13 @@ const selectedWork = [
     title: "Client projects",
     to: "/projects",
     linkLabel: "View all projects",
-    items: [...projects].reverse().filter(isFeatured).slice(0, PER_GROUP),
+    items: [...projects].reverse().filter(isFeatured),
   },
   {
     title: "Personal portfolios",
     to: "/portfolios",
     linkLabel: "View all portfolios",
-    items: portfolios.filter(isFeatured).slice(0, PER_GROUP),
+    items: portfolios.filter(isFeatured),
   },
 ];
 </script>

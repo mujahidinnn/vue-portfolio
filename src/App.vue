@@ -62,9 +62,20 @@ router.beforeEach((to, from) => {
 const SWIPE_MIN = 70; // px mendatar minimum agar dihitung sebagai geseran
 let start = null;
 
+// Geseran di dalam elemen yang bisa di-scroll mendatar (mis. carousel) milik elemen itu
+function inHorizontalScroller(el) {
+  for (; el && el !== document.body; el = el.parentElement) {
+    if (el.scrollWidth > el.clientWidth && /auto|scroll/.test(getComputedStyle(el).overflowX)) return true;
+  }
+  return false;
+}
+
 function onTouchStart(event) {
   const touch = event.touches[0];
-  start = event.touches.length === 1 ? { x: touch.clientX, y: touch.clientY } : null;
+  start =
+    event.touches.length === 1 && !inHorizontalScroller(event.target)
+      ? { x: touch.clientX, y: touch.clientY }
+      : null;
 }
 
 function onTouchEnd(event) {
