@@ -107,7 +107,7 @@
   {
     "title": "WorkDesk",
     "featured": true,
-    "description": "WorkDesk is an internal daily reporting and HRIS hub that brings a team's whole workday into one place. It covers daily task reports, attendance, leave, overtime and business trip requests, a shared work calendar, team chat, and master data management, with one-click exports to Excel and PDF. Built with a clean bilingual (English/Indonesian) interface and light/dark themes for fast, everyday use.",
+    "description": "WorkDesk is an internal daily reporting and HRIS hub that brings a team's whole workday into one place. It covers daily task reports, attendance, leave, overtime and business trip requests, payroll, a shared work calendar, team chat, and master data management, with one-click exports to Excel and PDF. An AI command bar lets users type plain requests to get answers or prepare actions, such as creating tasks, which they confirm before anything is saved. Permissions are enforced in the database with Row Level Security, and the interface is bilingual (English/Indonesian) with light/dark themes.",
     "systemTags": ["HRIS", "Daily Report", "Internal Tool"],
     "thumbnail": "/portfolios/workdesk.avif",
     "tech": [
