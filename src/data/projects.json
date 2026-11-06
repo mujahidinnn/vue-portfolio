@@ -259,5 +259,24 @@
     "role": "Frontend Developer",
     "tech": ["Astro", "TypeScript", "Tailwind CSS"],
     "links": []
+  },
+  {
+    "title": "Emondadu: Village Dashboard",
+    "featured": true,
+    "description": "Emondadu (Emonografi Desa Terpadu) is a village planning and budgeting dashboard. It guides each fiscal year from RT profile classification and verification, through RT proposals, deliberation and selection, to the village work plan (RKP Desa), fund disbursement, and progress reporting. Village and RT admins get role-based views, geotagged photo evidence on a map, and an adjustment request flow with approvals.",
+    "systemTags": ["e-Government", "WebGIS", "Village Planning", "Dashboard"],
+    "thumbnail": "/projects/emondadu.avif",
+    "role": "Frontend Developer",
+    "tech": [
+      "React.js",
+      "Redux",
+      "Vite",
+      "Django",
+      "JavaScript",
+      "Bootstrap",
+      "Sass",
+      "Leaflet"
+    ],
+    "links": []
   }
 ]
