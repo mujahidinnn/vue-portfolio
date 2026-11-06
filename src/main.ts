@@ -1,6 +1,6 @@
-import { createApp } from "vue";
+import { ViteSSG } from "vite-ssg";
 import App from "./App.vue";
-import router from "./router";
+import { routes, scrollBehavior, syncHead } from "./router";
 import "./app.css";
 
 // FontAwesome: only the icons actually used in the app, not the full icon sets
@@ -53,26 +53,32 @@ library.add(
   faMedium
 );
 
-syncThemeColor();
+export const createApp = ViteSSG(
+  App,
+  { routes, scrollBehavior },
+  ({ app, router, isClient }) => {
+    app.component("FontAwesomeIcon", FontAwesomeIcon);
 
-const app = createApp(App);
+    // v-inview: menandai elemen (data-active) saat melintas pita tengah layar.
+    // Pengganti hover di perangkat sentuh: logo/ikon berwarna mengikuti scroll.
+    // Saat prerender (tanpa DOM) direktifnya no-op.
+    const inviewObserver = isClient
+      ? new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries)
+              (entry.target as HTMLElement).dataset.active = String(entry.isIntersecting);
+          },
+          { rootMargin: "-35% 0px -35% 0px" }
+        )
+      : null;
+    app.directive("inview", {
+      mounted: (el: HTMLElement) => inviewObserver?.observe(el),
+      unmounted: (el: HTMLElement) => inviewObserver?.unobserve(el),
+    });
 
-app.use(router);
-
-app.component("FontAwesomeIcon", FontAwesomeIcon);
-
-// v-inview: menandai elemen (data-active) saat melintas pita tengah layar.
-// Pengganti hover di perangkat sentuh: logo/ikon berwarna mengikuti scroll.
-const inviewObserver = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries)
-      (entry.target as HTMLElement).dataset.active = String(entry.isIntersecting);
-  },
-  { rootMargin: "-35% 0px -35% 0px" }
+    if (isClient) {
+      syncThemeColor();
+      router.afterEach(syncHead);
+    }
+  }
 );
-app.directive("inview", {
-  mounted: (el: HTMLElement) => inviewObserver.observe(el),
-  unmounted: (el: HTMLElement) => inviewObserver.unobserve(el),
-});
-
-app.mount("#app");

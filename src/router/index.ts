@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+import type { RouteRecordRaw, RouterScrollBehavior } from "vue-router";
+import { notFound, origin, pages } from "../seo";
 import Home from "../pages/Home.vue";
 const About = () => import("../pages/About.vue");
 const Contact = () => import("../pages/Contact.vue");
@@ -6,105 +7,38 @@ const Portfolios = () => import("../pages/Portfolios.vue");
 const Projects = () => import("../pages/Projects.vue");
 const NotFound = () => import("../pages/NotFound.vue");
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-    meta: {
-      title:
-        "Mujahidin | Frontend Web Developer | React, Next.js, Vue.js, Nuxt.js & WebGIS",
-      description:
-        "Mujahidin is a Frontend Web Developer based in Jakarta, Indonesia with 4+ years building React & Vue.js admin dashboards and WebGIS / geospatial applications.",
-    },
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
-    meta: {
-      title: "About Mujahidin | Frontend Web Developer",
-      description:
-        "Learn more about Mujahidin, a frontend developer specializing in React, Vue.js, and WebGIS, plus the tools and stack used to build production web applications.",
-    },
-  },
-  {
-    path: "/portfolios",
-    name: "Portfolios",
-    component: Portfolios,
-    meta: {
-      title: "Portfolio | Mujahidin | Frontend Web Developer",
-      description:
-        "Explore Mujahidin's portfolio of admin dashboards, management systems, and geospatial web applications built with React, Vue.js, Next.js, and WebGIS tools.",
-    },
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-    component: Projects,
-    meta: {
-      title: "Projects | Mujahidin | Frontend Web Developer",
-      description:
-        "Browse projects built by Mujahidin, including government and enterprise platforms using React, Vue.js, Next.js, Leaflet, and Django.",
-    },
-  },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
-    meta: {
-      title: "Contact Mujahidin | Frontend Web Developer",
-      description:
-        "Get in touch with Mujahidin for frontend development opportunities and collaboration via email, LinkedIn, GitHub, or Instagram.",
-    },
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: NotFound,
-    meta: {
-      title: "Page Not Found | Mujahidin",
-      description: "The page you're looking for doesn't exist.",
-      robots: "noindex, follow",
-    },
-  },
+export const routes: RouteRecordRaw[] = [
+  { path: "/", name: "Home", component: Home, meta: pages["/"] },
+  { path: "/about", name: "About", component: About, meta: pages["/about"] },
+  { path: "/portfolios", name: "Portfolios", component: Portfolios, meta: pages["/portfolios"] },
+  { path: "/projects", name: "Projects", component: Projects, meta: pages["/projects"] },
+  { path: "/contact", name: "Contact", component: Contact, meta: pages["/contact"] },
+  { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound, meta: notFound },
 ];
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior(_, __, savedPosition) {
-    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? 0
-      : 200;
-    return new Promise((resolve) =>
-      setTimeout(() => resolve(savedPosition || { top: 0 }), delay),
-    );
-  },
-});
+export const scrollBehavior: RouterScrollBehavior = (_, __, savedPosition) => {
+  const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200;
+  return new Promise((resolve) =>
+    setTimeout(() => resolve(savedPosition || { top: 0 }), delay),
+  );
+};
 
-router.afterEach((to) => {
-  const title = to.meta.title as string | undefined;
-  const description = to.meta.description as string | undefined;
-  const robots = (to.meta.robots as string | undefined) ?? "index, follow";
+// Client only: pada prerender, tag head diisi lewat onPageRendered di vite.config.ts
+export function syncHead(to: { path: string; meta: Record<string, unknown> }) {
+  const { title, description, robots = "index, follow" } = to.meta as {
+    title?: string; description?: string; robots?: string;
+  };
 
   if (title) document.title = title;
+  if (description)
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+  document.querySelector('meta[name="robots"]')?.setAttribute("content", robots);
 
-  if (description) {
-    const descTag = document.querySelector('meta[name="description"]');
-    if (descTag) descTag.setAttribute("content", description);
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
   }
-
-  const robotsTag = document.querySelector('meta[name="robots"]');
-  if (robotsTag) robotsTag.setAttribute("content", robots);
-
-  let canonicalTag = document.querySelector('link[rel="canonical"]');
-  if (!canonicalTag) {
-    canonicalTag = document.createElement("link");
-    canonicalTag.setAttribute("rel", "canonical");
-    document.head.appendChild(canonicalTag);
-  }
-  canonicalTag.setAttribute("href", `https://mujahidin.my.id${to.path}`);
-});
-
-export default router;
+  canonical.setAttribute("href", `${origin}${to.path}`);
+}

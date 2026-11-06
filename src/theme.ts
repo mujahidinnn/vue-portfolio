@@ -1,9 +1,9 @@
 import { ref } from "vue";
 
 // Kelas .dark awal dipasang oleh inline script di index.html (sebelum render pertama)
-const root = document.documentElement;
+const root = typeof document === "undefined" ? null! : document.documentElement;
 
-export const isDark = ref(root.classList.contains("dark"));
+export const isDark = ref(root?.classList.contains("dark") ?? false);
 
 export function syncThemeColor() {
   const color = getComputedStyle(root)

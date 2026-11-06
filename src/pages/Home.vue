@@ -46,7 +46,7 @@
 
           <!-- Di mobile tombol naik ke atas paragraf agar CTA terlihat tanpa menggulir -->
           <div class="flex flex-col">
-            <p class="note mt-2 lg:mt-0">Mujahidin, frontend web developer</p>
+            <p class="note mt-2 lg:mt-0">Mujahidin, frontend (FE) web developer</p>
             <h1 class="display mt-1 text-h1 lg:mt-4">
               Elegant, intuitive web experiences.
             </h1>

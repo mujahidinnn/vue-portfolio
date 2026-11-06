@@ -45,7 +45,7 @@ const router = useRouter();
 // Mobile: halaman meluncur ala stack sesuai urutan tab, dan bisa digeser ke tab sebelah.
 // Desktop: fade biasa. Gaya transisi ada di app.css.
 const order = navLinks.map((link) => link.to);
-const isMobile = () => matchMedia("(max-width: 767px)").matches;
+const isMobile = () => typeof matchMedia !== "undefined" && matchMedia("(max-width: 767px)").matches;
 const transitionName = ref("page");
 
 router.beforeEach((to, from) => {

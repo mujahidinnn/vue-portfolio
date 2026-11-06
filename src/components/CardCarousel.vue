@@ -91,14 +91,15 @@ const go = (i) =>
     inline: "center",
   });
 
-const mq = window.matchMedia("(max-width: 639px)");
+let mq;
 onMounted(() => {
+  mq = window.matchMedia("(max-width: 639px)");
   center();
   mq.addEventListener("change", center);
 });
 onUnmounted(() => {
   clearTimeout(settle);
-  mq.removeEventListener("change", center);
+  mq?.removeEventListener("change", center);
 });
 </script>
 
