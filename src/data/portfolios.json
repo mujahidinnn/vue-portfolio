@@ -128,7 +128,7 @@
   {
     "title": "StockDesk",
     "featured": true,
-    "description": "StockDesk is an inventory and warehouse management system for multi-warehouse operations. It provides bin-level WMS, FEFO picking, stock opname, and FIFO/average stock valuation, alongside a dashboard showing stock value, inbound vs outbound trends, and a map of the warehouse network. Reports can be exported to Excel, and the interface supports bilingual use with light/dark themes.",
+    "description": "StockDesk is an inventory and warehouse management system for multi-warehouse operations. It provides bin-level WMS, FEFO picking, stock opname, and FIFO/average stock valuation, alongside a dashboard showing stock value, inbound vs outbound trends, and a map of the warehouse network. A read-only AI assistant on the dashboard answers plain-language questions about stock, orders, receipts, transfers and counts using the user's own permissions, and links to the right page without ever changing stock. Reports can be exported to Excel, and the interface supports bilingual use with light/dark themes.",
     "systemTags": ["Inventory Management", "WMS"],
     "thumbnail": "/portfolios/stockdesk.avif",
     "tech": [
